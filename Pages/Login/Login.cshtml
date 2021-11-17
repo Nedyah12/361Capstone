@@ -1,0 +1,39 @@
+﻿@page
+@model _361.Pages.Login.LoginModel
+@{
+}
+
+<div class="text-center">
+    <div class="general-container">
+        <h1 class="display-4">
+            Log In
+        </h1>
+        <br />
+        <form>
+            <div>
+                <input type="email" placeholder="Email Address" asp-for=" Email" />
+                <br />
+                <span asp-validation-for="Email" style="color: red"></span>
+            </div>
+            <br />
+            <div>
+                <input type="password" placeholder="Password" asp-for="Password" />
+                <br />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+            <div>
+                <input type="submit" value="Submit" />
+                <br />
+            </div>
+            <br />
+            <div>
+                <a href="/CreateAccount">Create an Account</a>
+                <br />
+            </div>
+        </form>
+
+    </div>
+   
+    @section Scripts {
+        @{ await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    }
