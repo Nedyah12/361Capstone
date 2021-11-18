@@ -15,9 +15,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\hayde\\source\\repos\\361Capstone\\361Capstone\\361Capstone\\361Capstone.csproj",
-      "projectName": "361Capstone",
-      "projectPath": "C:\\Users\\hayde\\source\\repos\\361Capstone\\361Capstone\\361Capstone\\361Capstone.csproj",
+      "projectUniqueName": "C:\\Users\\hayde\\source\\repos\\361Capstone\\361Capstone\\361Capstone\\Capstone.csproj",
+      "projectName": "Capstone",
+      "projectPath": "C:\\Users\\hayde\\source\\repos\\361Capstone\\361Capstone\\361Capstone\\Capstone.csproj",
       "packagesPath": "C:\\Users\\hayde\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\hayde\\source\\repos\\361Capstone\\361Capstone\\361Capstone\\obj\\",
       "projectStyle": "PackageReference",
