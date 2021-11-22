@@ -1,0 +1,73 @@
+﻿@{
+    Layout = "_Layout";
+
+    ViewBag.Title = ViewData["Title"];
+
+}
+<html>
+
+<head>
+
+    <link href="@Url.Content("~/CSS/AccountList.css")" rel="stylesheet" type="text/css" asp-append-version="true" />
+
+    <link href="@Url.Content("~/CSS/List.css")" rel="stylesheet" type="text/css" asp-append-version="true" />
+
+
+</head>
+
+<body>
+
+    <div class="grid-container">
+
+        <div class="list">
+
+            <h1>@ViewData["Title"]</h1>
+
+            <!--Lists items-->
+
+            <ul style="list-style-type:none;" class="item">
+
+                @foreach (SportsItem item in (List<SportsItem>)ViewData["Items"])
+                {
+                    <li>
+
+                        @item.GetContent()
+                        <button type="button" class="quanitity" onclick="decrementQuantity(@item.GetItemId())">
+                            decrease
+                        </button>
+                        <input type="text" class="value" value="@item.GetQuantity()" readonly="readonly" />
+                        <button type="button" class="quanitity" onclick="incrementQuantity(@item.GetItemId())">
+                            increase
+                        </button>
+
+                        <button type="button" class="edit" onclick="editItem(@item.GetItemId())">
+                            Edit
+                        </button>
+                        <button type="button" class="remove" onclick="removeItem(@item.GetItemId())">
+                            Remove
+                        </button>
+
+                    </li>
+                }
+            </ul>
+
+            <!--For loop to add spaces-->
+            <ul style="list-style-type:none;" class="space">
+                
+            </ul>
+        </div>
+
+
+        <div class="add">
+            <form autocomplete="off">
+                <input type="text" id="content" placeholder="Add an item"><br><br>
+                <input type="button" class="add" value="Add" onclick="addItem(document.getElementById('content').value, @ViewData["ListId"])">
+            </form>
+        </div>
+    </div>
+</body>
+</html>
+
+<script>
+    //functions to manipulate lists
+</script>

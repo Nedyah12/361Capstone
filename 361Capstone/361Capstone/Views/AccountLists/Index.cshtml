@@ -1,0 +1,46 @@
+﻿@{
+    Layout = "_Layout";
+    ViewBag.Title = "User's Lists";
+}
+<!-- Using Capstone.Models-->
+
+<html>
+
+<head>
+    <link href="@Url.Content("~/CSS/AccountList.css")" rel="stylesheet" type="text/css" asp-append-version="true" />
+    <link href="@Url.Content("~/CSS/List.css")" rel="stylesheet" type="text/css" asp-append-version="true" />
+
+</head>
+
+<body>
+    <div class="grid-container">
+        <div class="list">
+
+            <h1>Lists</h1>
+
+            <!--For each loop to list all lists-->
+           <ul style="list-style-type:none;" class="item">
+                
+            </ul>
+
+            <!--Adds space between lists-->
+            <ul style="list-style-type:none;" class="space">
+               
+            </ul>
+        </div>
+
+        <div class="add">
+            <form autocomplete="off">
+                <input type="text" id="title" placeholder="Add new list"><br><br>
+                <input type="button" class="add" value="Add" onclick="addList(document.getElementById('title').value, @ViewData["UserId"])">
+            </form>
+        </div>
+    </div>
+</body>
+</html>
+
+<script>
+
+     //allows the user to add list
+
+</script>

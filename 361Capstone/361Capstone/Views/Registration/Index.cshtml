@@ -1,0 +1,61 @@
+﻿<html>
+
+<head>
+
+    <link href="@Url.Content("~/CSS/Login.css")" rel="stylesheet" type="text/css" asp-append-version="true" />
+
+</head>
+
+<body>
+
+    <div class="logo">
+
+        <!-- Add image-->
+
+    </div>
+
+    <div class="login">
+
+        <form autocomplete="off">
+
+            <label for="username"><b>Username</b></label>
+
+            <input type="text" class="txtInput" id="email" placeholder="Enter Username"><br>
+
+
+            <label for="password"><b>Password</b></label>
+
+            <input type="password" class="txtInput" id="password" placeholder="Enter Password"><br>
+
+            <input type="button" class="submit" id="submit" value="Register" onclick="register(document.getElementById('username').value, document.getElementById('password').value)"><br>
+
+        </form>
+
+    </div>
+
+</body>
+
+</html>
+
+<script>
+
+    function register(username, password) {
+
+        location.href = '@Url.Action("Check", "Registrate")?email=' + username + '&password=' + password;
+
+    }
+    var inputPassword = document.getElementById("password");
+
+    inputPassword.addEventListener("keyup", function (event) {
+
+        if (event.keyCode === 13) {
+
+            event.preventDefault();
+
+            document.getElementById("submit").click();
+
+        }
+
+    });
+
+</script>
