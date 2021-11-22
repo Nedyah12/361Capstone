@@ -7,5 +7,7 @@ namespace _Capstone.Engine
 {
     interface ILoginEngine
     {
+        void AutheticateLogin(string email, string password);
+        int AnotherUser(string email, string password);
     }
 }

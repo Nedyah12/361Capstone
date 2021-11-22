@@ -2,8 +2,10 @@
   "ExpandedNodes": [
     "",
     "\\361Capstone",
-    "\\361Capstone\\361Capstone"
+    "\\361Capstone\\361Capstone",
+    "\\361Capstone\\361Capstone\\Engine",
+    "\\361Capstone\\361Capstone\\Manager"
   ],
-  "SelectedNode": "\\361Capstone\\361Capstone.sln",
+  "SelectedNode": "\\361Capstone\\361Capstone\\Engine\\IAuthenticationEngine.cs",
   "PreviewInSolutionExplorer": false
 }
