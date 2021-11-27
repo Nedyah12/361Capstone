@@ -19,12 +19,6 @@ namespace _Capstone.Manager
 
         }
 
-        public void changeEmail(int IdUser, string newEmail)
-        {
-            Manager.changeEmail(IdUser, newEmail);
-            return;
-        }
-
         public Users GetUsers(int IdUser)
         {
             return Manager.GetUsers(IdUser);

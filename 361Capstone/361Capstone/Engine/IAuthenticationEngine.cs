@@ -7,7 +7,7 @@ namespace _Capstone.Engine
 {
     interface IAuthenticationEngine
     {
-        bool AuthenticateEmail(string email);
+        bool AuthenticateUser(string username);
         bool AuthenticatePassword(string password);
     }
 }

@@ -5,7 +5,16 @@ using System.Threading.Tasks;
 
 namespace _Capstone.Engine
 {
-    public class AuthenticationEngine
+    public class AuthenticationEngine : IAuthenticationEngine
     {
+        public bool AuthenticatePassword(string password)
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool AuthenticateUser(string username)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

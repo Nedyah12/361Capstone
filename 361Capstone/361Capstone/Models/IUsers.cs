@@ -8,7 +8,6 @@ namespace _361Capstone.Models
     public interface IUsers
     {
         string GetUserId();
-        string GetEmail();
         string GetPassword();
         int Total();
         void AddList(List list);
