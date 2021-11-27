@@ -7,5 +7,6 @@ namespace _Capstone.Manager
 {
     public class LoginManager
     {
+        public bool AuthenticateLogin(string Login, int IdUser);
     }
 }

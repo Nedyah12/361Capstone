@@ -7,5 +7,6 @@ namespace _Capstone.Manager
 {
     interface ILoginManager
     {
+        bool AuthenticateLogin(string Login, int IdUser);
     }
 }

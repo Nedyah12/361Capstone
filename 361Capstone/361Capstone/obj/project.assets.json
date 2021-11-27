@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Isa\\source\\repos\\361Capstone_\\361Capstone\\361Capstone\\Capstone.csproj",
+      "projectUniqueName": "C:\\Users\\Isa\\Source\\Repos\\361Capstone_Good\\361Capstone\\361Capstone\\Capstone.csproj",
       "projectName": "Capstone",
-      "projectPath": "C:\\Users\\Isa\\source\\repos\\361Capstone_\\361Capstone\\361Capstone\\Capstone.csproj",
+      "projectPath": "C:\\Users\\Isa\\Source\\Repos\\361Capstone_Good\\361Capstone\\361Capstone\\Capstone.csproj",
       "packagesPath": "C:\\Users\\Isa\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Isa\\source\\repos\\361Capstone_\\361Capstone\\361Capstone\\obj\\",
+      "outputPath": "C:\\Users\\Isa\\Source\\Repos\\361Capstone_Good\\361Capstone\\361Capstone\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Isa\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -7,5 +7,7 @@ namespace _Capstone.Manager
 {
     interface IRegisterManager
     {
+        void AuthenticateLogin(string username, string password);
+        int AddUsers(string username, string password);
     }
 }
