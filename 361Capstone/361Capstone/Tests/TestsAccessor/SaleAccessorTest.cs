@@ -13,7 +13,7 @@ namespace _361Capstone.Tests.TestsAccessor
     public class SaleAccessorTest
     {
         [Test]
-        public GetSaleInfo_Pass()
+        public void GetSaleInfo_Pass()
         {
             SaleAccessor accessor = new SaleAccessor();
 

@@ -13,6 +13,5 @@ namespace _361Capstone.Tests.UnitTesting.TestsEngine
     public class AuthenticatePasswordTest
     {
         [Test]
-
     }
 }

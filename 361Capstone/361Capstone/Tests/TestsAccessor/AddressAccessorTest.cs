@@ -13,7 +13,7 @@ namespace _361Capstone.Tests.TestsAccessor
     public class AddressAccessorTest
     {
         [Test]
-        public GetAddressInfoTest_Pass()
+        public void GetAddressInfoTest_Pass()
         {
             AddressAccessor accessor = new AddressAccessor();
 

@@ -13,7 +13,7 @@ namespace _361Capstone.Tests.TestsAccessor
     public class PaymentAccessorTest
     {
         [Test]
-        public GetPaymentInfo_Pass()
+        public void GetPaymentInfo_Pass()
         {
             PaymentAccessor accessor = new PaymentAccessor();
 

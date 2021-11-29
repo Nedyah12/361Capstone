@@ -13,7 +13,7 @@ namespace _361Capstone.Tests.TestsAccessor
     public class CartProductAccessorTest
     {
         [Test]
-        public ChangeQuantity_Pass()
+        public void ChangeQuantity_Pass()
         {
             CartProductAccessor accessor = new CartProductAccessor();
             CartProduct item = accessor.GetCart(2);
