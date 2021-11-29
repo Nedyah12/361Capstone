@@ -17,7 +17,8 @@ namespace _Capstone.Manager
 
         public void AuthenticateLogin(string username, string password)
         {
-            return Manager.AuthenticateLogin(username, password);
+            Manager.AuthenticateLogin(username, password);
+            return;
         }
     }
 }
