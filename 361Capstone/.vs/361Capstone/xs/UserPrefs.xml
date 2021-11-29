@@ -1,26 +1,25 @@
 ﻿<Properties StartupConfiguration="{C3E13A12-E063-4169-AEAF-D6EBC06DEC8B}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="361Capstone/Tests/TestsEngine/AuthenticatePasswordTest.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="361Capstone/Tests/TestsAccessor/UserAccessorChangePasswordTest.cs">
     <Files>
-      <File FileName="361Capstone/Tests/TestsManager/ManagerTest.cs" Line="1" Column="1" />
-      <File FileName="361Capstone/Tests/TestsEngine/AuthenticatePasswordTest.cs" Line="1" Column="1" />
-      <File FileName="361Capstone/Tests/TestsAccessor/EmptyClass.cs" Line="1" Column="1" />
+      <File FileName="361Capstone/Models/Users.cs" Line="1" Column="1" />
+      <File FileName="361Capstone/Accessors/DatabaseConnection.cs" Line="8" Column="39" />
+      <File FileName="361Capstone/Accessors/UserAccessor.cs" Line="212" Column="1" />
+      <File FileName="361Capstone/Tests/TestsAccessor/UserAccessorChangePasswordTest.cs" Line="19" Column="43" />
+      <File FileName="361Capstone/Tests/TestsAccessor/AddressAccessorGetAddressInfoTest.cs" Line="1" Column="1" />
+      <File FileName="361Capstone/Accessors/AddressAccessor.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="361Capstone" expanded="True">
             <Node name="Capstone" expanded="True">
-              <Node name="Dependencies" expanded="True">
-                <Node name="FrameworkReferences" expanded="True" />
-                <Node name="PackageDependencies" expanded="True" />
-              </Node>
               <Node name="Accessors" expanded="True" />
-              <Node name="Manager" expanded="True" />
+              <Node name="Models" expanded="True" />
               <Node name="Tests" expanded="True">
-                <Node name="TestsAccessor" expanded="True" />
-                <Node name="TestsEngine" expanded="True">
-                  <Node name="AuthenticatePasswordTest.cs" selected="True" />
+                <Node name="TestsAccessor" expanded="True">
+                  <Node name="UserAccessorChangePasswordTest.cs" selected="True" />
                 </Node>
+                <Node name="TestsEngine" expanded="True" />
               </Node>
             </Node>
           </Node>
@@ -37,7 +36,9 @@
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/Users/jettdurante/Desktop/361Capstone/361Capstone/361Capstone/Accessors/DatabaseConnection.cs" relfile="361Capstone/Accessors/DatabaseConnection.cs" line="3" column="1" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
 </Properties>

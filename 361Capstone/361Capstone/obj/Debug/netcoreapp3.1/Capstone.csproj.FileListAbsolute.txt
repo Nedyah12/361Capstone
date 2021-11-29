@@ -1,0 +1,8 @@
+/Users/jettdurante/Desktop/361Capstone/361Capstone/361Capstone/obj/Debug/netcoreapp3.1/Capstone.csproj.AssemblyReference.cache
+/Users/jettdurante/Desktop/361Capstone/361Capstone/361Capstone/obj/Debug/netcoreapp3.1/Capstone.GeneratedMSBuildEditorConfig.editorconfig
+/Users/jettdurante/Desktop/361Capstone/361Capstone/361Capstone/obj/Debug/netcoreapp3.1/Capstone.AssemblyInfoInputs.cache
+/Users/jettdurante/Desktop/361Capstone/361Capstone/361Capstone/obj/Debug/netcoreapp3.1/Capstone.AssemblyInfo.cs
+/Users/jettdurante/Desktop/361Capstone/361Capstone/361Capstone/obj/Debug/netcoreapp3.1/Capstone.csproj.CoreCompileInputs.cache
+/Users/jettdurante/Desktop/361Capstone/361Capstone/361Capstone/obj/Debug/netcoreapp3.1/Capstone.MvcApplicationPartsAssemblyInfo.cache
+/Users/jettdurante/Desktop/361Capstone/361Capstone/361Capstone/obj/Debug/netcoreapp3.1/Capstone.RazorAssemblyInfo.cache
+/Users/jettdurante/Desktop/361Capstone/361Capstone/361Capstone/obj/Debug/netcoreapp3.1/Capstone.RazorAssemblyInfo.cs

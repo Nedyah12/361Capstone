@@ -8,7 +8,6 @@
   <ItemGroup>
     <Folder Include="Manager\" />
     <Folder Include="Engine\" />
-    <Folder Include="Accessor\" />
     <Folder Include="StartCode\" />
     <Folder Include="Views\AccountLists\" />
     <Folder Include="Views\Products\" />
