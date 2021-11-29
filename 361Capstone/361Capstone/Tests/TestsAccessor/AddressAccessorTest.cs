@@ -10,24 +10,26 @@ using NUnit.Framework;
 namespace _361Capstone.Tests.TestsAccessor
 {
     [TestClass]
-    public class AddressAccessorGetAddressInfoTest
+    public class AddressAccessorTest
     {
         [Test]
-        public AddressAccessorGetAddressInfoTest()
+        public GetAddressInfoTest_Pass()
         {
             AddressAccessor accessor = new AddressAccessor();
 
             List <String> addy = accessor.GetAddressInfo(2);
 
-            List<String> expected = { "My Swamp Ct.", "Anytown", "NE", "12345", "AnyCountry" };
+            List <String> expected = { "My Swamp Ct.", "Anytown", "NE", "12345", "AnyCountry" };
                 for (int i = 0; i < 5; i++)
             {
                 if (!addy[i].Equals(expected[i]))
                 {
-                    Microsoft.VisualStudio.TestTools.UnitTesting.Assert.Fail();
-                }
+                    Microsoft.VisualStudio.TestTools.UnitTesting.Assert(false);
+                    return;
+                } 
             }
-             
+            Microsoft.VisualStudio.TestTools.UnitTesting.Assert(true);
+
             return;
         }
     }

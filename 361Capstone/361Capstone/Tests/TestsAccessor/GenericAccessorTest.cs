@@ -10,10 +10,13 @@ using NUnit.Framework;
 namespace _361Capstone.Tests.TestsAccessor
 {
     [TestClass]
-    public class GenericAccTest
+    public class TestName
     {
         [Test]
-
+        public SpecificTest_ExpectedValue()
+        {
+            //A, A, A
+        }
     }
 }
 

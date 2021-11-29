@@ -10,10 +10,10 @@ using NUnit.Framework;
 namespace _361Capstone.Tests.TestsAccessor
 {
     [TestClass]
-    public class UserAccessorChangePasswordTest
+    public class UserAccessorTest
     {
         [Test]
-        public void ChangePassword_ReturnTrue()
+        public void ChangePassword_Pass()
         {
             UserListsAccessor accessor = new UserListsAccessor();
             User user = accessor.GetUser(2);
@@ -24,8 +24,11 @@ namespace _361Capstone.Tests.TestsAccessor
 
             if (!user.GetPassword().Equals(newPass))
             {
-                Microsoft.VisualStudio.TestTools.UnitTesting.Assert.Fail();
-            } 
+                Microsoft.VisualStudio.TestTools.UnitTesting.Assert(false);
+            } else
+            {
+                Microsoft.VisualStudio.TestTools.UnitTesting.Assert(true);
+            }
 
             return;
         }

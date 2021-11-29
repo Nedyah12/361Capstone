@@ -1,12 +1,12 @@
 ﻿<Properties StartupConfiguration="{C3E13A12-E063-4169-AEAF-D6EBC06DEC8B}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="361Capstone/Tests/TestsAccessor/UserAccessorChangePasswordTest.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="361Capstone/Tests/TestsAccessor/PaymentAccessorTest.cs">
     <Files>
-      <File FileName="361Capstone/Models/Users.cs" Line="1" Column="1" />
-      <File FileName="361Capstone/Accessors/DatabaseConnection.cs" Line="8" Column="39" />
-      <File FileName="361Capstone/Accessors/UserAccessor.cs" Line="212" Column="1" />
-      <File FileName="361Capstone/Tests/TestsAccessor/UserAccessorChangePasswordTest.cs" Line="19" Column="43" />
-      <File FileName="361Capstone/Tests/TestsAccessor/AddressAccessorGetAddressInfoTest.cs" Line="1" Column="1" />
-      <File FileName="361Capstone/Accessors/AddressAccessor.cs" Line="1" Column="1" />
+      <File FileName="361Capstone/Tests/TestsAccessor/PaymentAccessorTest.cs" Line="18" Column="22" />
+      <File FileName="361Capstone/Tests/TestsAccessor/ProductAccessorTest.cs" Line="24" Column="14" />
+      <File FileName="361Capstone/Accessors/ProductAccessor.cs" Line="1" Column="1" />
+      <File FileName="361Capstone/Tests/TestsAccessor/SaleAccessorTest.cs" Line="7" Column="52" />
+      <File FileName="361Capstone/Accessors/SaleAccessor.cs" Line="1" Column="1" />
+      <File FileName="361Capstone/Accessors/PaymentInfoAccessor.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -17,9 +17,10 @@
               <Node name="Models" expanded="True" />
               <Node name="Tests" expanded="True">
                 <Node name="TestsAccessor" expanded="True">
-                  <Node name="UserAccessorChangePasswordTest.cs" selected="True" />
+                  <Node name="PaymentAccessorTest.cs" selected="True" />
                 </Node>
                 <Node name="TestsEngine" expanded="True" />
+                <Node name="TestsManager" expanded="True" />
               </Node>
             </Node>
           </Node>
