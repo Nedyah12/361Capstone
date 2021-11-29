@@ -8,11 +8,10 @@ namespace _Capstone.Engine
 {
     interface IListEngine
     {
-        Products AddProducts(Products product);
-        bool Exist(Products product);
-        List GetList(int IdList);
-        void EditProduct(Products products, string newElement);
-        void RemoveProduct(Products product);
+        void InsertCartProduct(int cartId, int productId, int quantity);
+        void RemoveCartProduct(int cartId, int productId);
+        void ChangeCartProductQuantity(int cartId, int productId, int newQuantity);
+        List<string> GetProductInfo(int productId);
 
     }
 }

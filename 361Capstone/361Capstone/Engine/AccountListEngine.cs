@@ -11,7 +11,7 @@ namespace _Capstone.Engine
     {
 
         //Accessor here
-
+        UserAccessor UserAccessor { get; set; } = new UserAccessor();
 
         public void AddList(List list)
         {

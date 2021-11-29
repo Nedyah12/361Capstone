@@ -7,6 +7,5 @@ namespace _Capstone.Engine
 {
     interface ILoginEngine
     {
-        
     }
 }
