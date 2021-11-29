@@ -13,6 +13,7 @@
     <Folder Include="Views\AccountLists\" />
     <Folder Include="Views\Products\" />
     <Folder Include="Views\Registration\" />
+    <Folder Include="Tests\TestsAccessor\" />
   </ItemGroup>
 
   <ItemGroup>
@@ -20,4 +21,12 @@
     <PackageReference Include="NUnit" Version="3.13.2" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Remove="Tests\TestsAccessor\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="Tests\TestsEngine\AuthenticatePasswordTest.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+  </ItemGroup>
 </Project>
