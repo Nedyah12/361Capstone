@@ -32,5 +32,27 @@ namespace _361Capstone.Tests.TestsAccessor
 
             return;
         }
+
+        [Test]
+        public void ChangePassword_Fail()
+        {
+            UserListsAccessor accessor = new UserListsAccessor();
+            User user = accessor.GetUser(0);
+            string newPass = "shouldnt matter, 0 doesnt exist";
+
+            accessor.changePassword(0, newPass);
+            user = accessor.GetUser(0);
+
+            if (!user.GetPassword().Equals(newPass))
+            {
+                Microsoft.VisualStudio.TestTools.UnitTesting.Assert(false);
+            }
+            else
+            {
+                Microsoft.VisualStudio.TestTools.UnitTesting.Assert(true);
+            }
+
+            return;
+        }
     }
 }

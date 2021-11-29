@@ -1,9 +1,5 @@
 ﻿<Properties StartupConfiguration="{C3E13A12-E063-4169-AEAF-D6EBC06DEC8B}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="361Capstone/Tests/TestsEngine/AuthenticatePasswordTest.cs">
-    <Files>
-      <File FileName="361Capstone/Tests/TestsEngine/AuthenticatePasswordTest.cs" Line="15" Column="15" />
-      <File FileName="361Capstone/Tests/TestsAccessor/UserAccessorTest.cs" Line="1" Column="1" />
-    </Files>
+  <MonoDevelop.Ide.Workbench>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
@@ -12,10 +8,10 @@
               <Node name="Accessors" expanded="True" />
               <Node name="Models" expanded="True" />
               <Node name="Tests" expanded="True">
-                <Node name="TestsAccessor" expanded="True" />
-                <Node name="TestsEngine" expanded="True">
-                  <Node name="AuthenticatePasswordTest.cs" selected="True" />
+                <Node name="TestsAccessor" expanded="True">
+                  <Node name="AddressAccessorTest.cs" selected="True" />
                 </Node>
+                <Node name="TestsEngine" expanded="True" />
                 <Node name="TestsManager" expanded="True" />
               </Node>
             </Node>

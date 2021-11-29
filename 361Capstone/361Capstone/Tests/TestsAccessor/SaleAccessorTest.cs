@@ -32,6 +32,27 @@ namespace _361Capstone.Tests.TestsAccessor
 
             return;
         }
+
+        [Test]
+        public void GetSaleInfo_Fail()
+        {
+            SaleAccessor accessor = new SaleAccessor();
+
+            List<String> saleInfo = accessor.GetSaleInfo(0);
+
+            List<String> expected = { "dev sale", "20", "2021-12-01", "2022-01-01" };
+            for (int i = 0; i < 4; i++)
+            {
+                if (!saleInfo[i].Equals(expected[i]))
+                {
+                    Microsoft.VisualStudio.TestTools.UnitTesting.Assert(false);
+                    return;
+                }
+            }
+            Microsoft.VisualStudio.TestTools.UnitTesting.Assert(true);
+
+            return;
+        }
     }
 }
 

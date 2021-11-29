@@ -31,6 +31,27 @@ namespace _361Capstone.Tests.TestsAccessor
 
             return;
         }
+
+        [Test]
+        public void ChangeQuantity_Pass2()
+        {
+            CartProductAccessor accessor = new CartProductAccessor();
+            CartProduct item = accessor.GetCart(2);
+
+            accessor.ChangeCartProductQuantity(2, 1, 2);
+            n = accessor.GetQuantity(2, 1);
+
+            if (n == 2)
+            {
+                Microsoft.VisualStudio.TestTools.UnitTesting.Assert(true);
+            }
+            else
+            {
+                Microsoft.VisualStudio.TestTools.UnitTesting.Assert(false);
+            }
+
+            return;
+        }
     }
 }
 
