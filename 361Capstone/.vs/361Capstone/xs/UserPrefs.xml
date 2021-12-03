@@ -1,8 +1,7 @@
 ﻿<Properties StartupConfiguration="{C3E13A12-E063-4169-AEAF-D6EBC06DEC8B}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="361Capstone/Tests/TestsAccessor/SaleAccessorTest.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="361Capstone/Tests/TestsAccessor/UserAccessorTest.cs">
     <Files>
-      <File FileName="361Capstone/Tests/TestsAccessor/SaleAccessorTest.cs" Line="36" Column="20" />
-      <File FileName="361Capstone/Tests/TestsAccessor/UserAccessorTest.cs" />
+      <File FileName="361Capstone/Tests/TestsAccessor/UserAccessorTest.cs" Line="36" Column="12" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -11,7 +10,7 @@
             <Node name="Capstone" expanded="True">
               <Node name="Tests" expanded="True">
                 <Node name="TestsAccessor" expanded="True">
-                  <Node name="SaleAccessorTest.cs" selected="True" />
+                  <Node name="UserAccessorTest.cs" selected="True" />
                 </Node>
               </Node>
             </Node>
