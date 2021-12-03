@@ -12,6 +12,6 @@ namespace _361Capstone.Tests.UnitTesting.TestsManager
     [TestClass]
     public class Test
     {
-        [Test]
+        //[Test]
     }
 }
