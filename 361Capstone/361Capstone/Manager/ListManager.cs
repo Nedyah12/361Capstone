@@ -11,27 +11,27 @@ namespace _Capstone.Manager
     {
         ListEngine Engine { get; set; } = new ListEngine();
 
-        public Products AddProducts(Products product)
+        public Product AddProducts(Product product)
         {
             throw new NotImplementedException();
         }
 
-        public void EditProduct(Products products, string newElement)
+        public void EditProduct(Product products, string newElement)
         {
             throw new NotImplementedException();
         }
 
-        public bool Exist(Products product)
+        public bool Exist(Product product)
         {
             throw new NotImplementedException();
         }
 
-        public List GetList(int IdList)
+        public Cart GetCart(int IdCart)
         {
-            return Engine.GetList(IdList);
+            throw new NotImplementedException();
         }
 
-        public void RemoveProduct(Products product)
+        public void RemoveProduct(Product product)
         {
             throw new NotImplementedException();
         }
