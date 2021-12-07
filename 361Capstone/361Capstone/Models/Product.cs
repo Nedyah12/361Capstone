@@ -5,8 +5,9 @@ using System.Threading.Tasks;
 
 namespace _361Capstone.Models
 {
-    public class Product
+    public class Product : IProduct
     {
+       
         private int ProductId { get; set; }
         private int CategoryId { get; set; }
         private int SaleId { get; set; }
@@ -19,51 +20,63 @@ namespace _361Capstone.Models
         private string Sku { get; set; }
         private int StockCount { get; set; }
 
-        //private int IdProduct { get; set; }
-        //private string description { get; set; }
-        //private int IdList { get; set; }
 
-        int GetProductId()
+        public Product(int productId, int categoryId, int saleId, string name, string desc, string manInfo, string dims, double weight, double rating, string sku, int stockCount)
+        {
+            ProductId = productId;
+            CategoryId = categoryId;
+            SaleId = saleId;
+            Name = name;
+            Description = desc;
+            ManInfo = manInfo;
+            Dimensions = dims;
+            Weight = weight;
+            Rating = rating;
+            Sku = sku;
+            StockCount = stockCount;
+        }
+
+        public int GetProductId()
         {
             return ProductId;
         }
-        int GetCategoryId()
+        public int GetCategoryId()
         {
             return CategoryId;
         }
-        int GetSaleId()
+        public int GetSaleId()
         {
             return SaleId;
         }
-        string GetName()
+        public string GetName()
         {
             return Name;
         }
-        string GetDescription()
+        public string GetDescription()
         {
             return Description;
         }
-        string GetManInfo()
+        public string GetManInfo()
         {
             return ManInfo;
         }
-        string GetDimensions()
+        public string GetDimensions()
         {
             return Dimensions;
         }
-        double GetWeight()
+        public double GetWeight()
         {
             return Weight;
         }
-        double GetRating()
+        public double GetRating()
         {
             return Rating;
         }
-        string GetSku()
+        public string GetSku()
         {
             return Sku;
         }
-        int GetStockCount()
+        public int GetStockCount()
         {
             return StockCount;
         }
