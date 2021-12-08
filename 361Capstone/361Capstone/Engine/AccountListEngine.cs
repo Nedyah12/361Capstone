@@ -9,23 +9,41 @@ namespace _361Capstone.Engine
 {
     public class AccountListEngine : IAccountListEngine
     {
-
         //Accessor here
         UserAccessor UserAccessor { get; set; } = new UserAccessor();
+        //CartAccessor CartAccessor { get; set; } = new CartAccessor();
+        //CartProductAccessor accessor { get; set; } = new CartProductAccessor(); ??
+
+        public User getUser(int userId)
+        {
+            throw new NotImplementedException();
+        }
 
         /*public void AddList(List list)
+        
+        public void RemoveList(int IdList)
         {
             throw new NotImplementedException();
         }*/
 
-        public User GetUser(int IdUser)
+        /*
+         public void InsertCart(int userId)
+         {
+
+         }
+        */
+
+        /*
+        public void InsertCartProduct(int cartId, int productId, int quantity)
         {
             throw new NotImplementedException();
         }
 
-        public void RemoveList(int IdList)
+        public void RemoveCartProduct(int cartId, int productId)
         {
             throw new NotImplementedException();
         }
+        */
+
     }
 }

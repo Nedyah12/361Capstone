@@ -8,8 +8,10 @@ namespace _361Capstone.Engine
 {
     interface IAccountListEngine
     {
-        User GetUser(int IdUser);
-        //void AddList(List list);
+        User getUser(int userId);
         void RemoveList(int IdList);
+        //void InsertCartProduct(int cartId, int productId, int quantity);
+        //void RemoveCartProduct(int cartId, int productId);
+        // void InsertCart(int userId);
     }
 }

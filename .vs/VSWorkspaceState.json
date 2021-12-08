@@ -1,11 +1,7 @@
 {
   "ExpandedNodes": [
-    "",
-    "\\361Capstone",
-    "\\361Capstone\\361Capstone",
-    "\\361Capstone\\361Capstone\\Engine",
-    "\\361Capstone\\361Capstone\\Manager"
+    ""
   ],
-  "SelectedNode": "\\361Capstone\\361Capstone\\Engine\\LoginEngine.cs",
+  "SelectedNode": "\\361Capstone.sln",
   "PreviewInSolutionExplorer": false
 }

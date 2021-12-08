@@ -13,12 +13,19 @@ namespace _361Capstone.Engine
 
         public int AddUsers(string username, string password)
         {
-            throw new NotImplementedException();
+            User user = new User(0, username, password, 0);
+            // Is this right?
+            Accessor.insertUser(username, password);
+            return user.GetUserId();
         }
 
         public void AuthenticateLogin(string username, string password)
         {
-            throw new NotImplementedException();
+            if (username == null || password == null)
+            {
+                return;
+            }
+
         }
     }
 }

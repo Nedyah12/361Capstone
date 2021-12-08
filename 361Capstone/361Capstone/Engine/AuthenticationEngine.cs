@@ -9,12 +9,29 @@ namespace _361Capstone.Engine
     {
         public bool AuthenticatePassword(string password)
         {
-            throw new NotImplementedException();
+            if (password == null)
+            {
+                throw new ArgumentNullException();
+            }
+            else if (password.Equals(string.Empty))
+            {
+                throw new Exception();
+            }
+            return password.Length >= 10;
         }
 
         public bool AuthenticateUser(string username)
         {
-            throw new NotImplementedException();
+            if (username == null)
+            {
+                throw new ArgumentNullException();
+            }
+            else if (username.Equals(string.Empty))
+            {
+                throw new Exception();
+            }
+
+
         }
     }
 }
