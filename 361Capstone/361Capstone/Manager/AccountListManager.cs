@@ -11,17 +11,18 @@ namespace _361Capstone.Manager
     {
         AccountListEngine Manager { get; set; } = new AccountListEngine();
 
-        /*public void AddList(List list)
+        /*
+        public void AddList(List list)
         {
             Manager.AddList(list);
             return;
 
 
-        }*/
-
-        public User GetUsers(int IdUser)
+        }
+        */
+        public User GetUser(int IdUser)
         {
-            return Manager.GetUser(IdUser);
+            return Manager.getUser(IdUser);
         }
 
         public void RemoveList(int IdList)

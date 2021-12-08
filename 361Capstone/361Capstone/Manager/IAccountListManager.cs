@@ -8,7 +8,7 @@ namespace _361Capstone.Manager
 {
     public interface IAccountListManager
     {
-        User GetUsers(int IdUser);
+        User GetUser(int IdUser);
         //void AddList(List list);
         void RemoveList(int IdList);
     }
