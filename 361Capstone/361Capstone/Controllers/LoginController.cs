@@ -41,7 +41,7 @@ namespace _361Capstone.Controllers
                 return RedirectToAction("Index", new { incorrectPassword, incorrectUsername });
             }
 
-            //need the security manager to handle passwords
+            //How to handle passwords?
             return RedirectToAction("Index", new { incorrectPassword, incorrectUsername });
         }
 

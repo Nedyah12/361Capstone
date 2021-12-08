@@ -35,8 +35,7 @@ namespace _361Capstone.Controllers
                 return RedirectToAction("Index");
             }
 
-            //I need the Security manager to secure password and then add the user
-            // to the database
+            // secure password and then add the user to the database
             
         }
         public int AddUsers(string username, string password) {

@@ -17,7 +17,7 @@ namespace _361Capstone.Controllers
         public ActionResult Index(int userId)
         {
 
-            User user = Manager.GetUsers(userId);
+            User user = Manager.GetUser(userId);
 
             ViewData["UserId"] = userId;
             ViewData["Carts"] = user.GetCartId();
