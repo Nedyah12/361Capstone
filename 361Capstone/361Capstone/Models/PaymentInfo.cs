@@ -36,6 +36,10 @@ namespace _361Capstone.Models
         {
             return ExpirationMonth;
         }
+        public int GetExpirationYear()
+        {
+            return ExpirationYear;
+        }
         public int GetCvv()
         {
             return Cvv;
