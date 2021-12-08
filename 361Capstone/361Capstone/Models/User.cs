@@ -10,8 +10,10 @@ namespace _361Capstone.Models
         private int UserId { get; set; }
         private string Username { get; set; }
         private string Password { get; set; }
-
+        
         private int CartId { get; set; }
+        private List<Product> CartProducts { get; set; }
+        private List<Int16> CartQuantities { get; set; }
 
         public User(int userId)
         {
@@ -41,6 +43,15 @@ namespace _361Capstone.Models
         public int GetCartId()
         {
             return CartId;
+        }
+
+        public List<Product> GetCartProducts()
+        {
+            return CartProducts;
+        }
+        public List<Int16> GetCartQuantities()
+        {
+            return CartQuantities;
         }
     }
 }
