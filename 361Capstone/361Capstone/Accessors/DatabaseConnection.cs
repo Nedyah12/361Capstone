@@ -1,8 +1,7 @@
 ﻿using System;
-//using System.Data.SqlClient;
 using MySql.Data.MySqlClient;
 
-namespace OnlineStore.Accessors {
+namespace _361Capstone.Accessors {
     public class DatabaseConnection : IDatabaseConnection {
         public MySqlConnection getConnection() {
             string server = "127.0.0.1";

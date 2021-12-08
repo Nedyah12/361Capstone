@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 using System.Drawing;
 
-namespace OnlineStore.Accessors {
+namespace _361Capstone.Accessors {
     interface IProductAccessor {
         int InsertProduct(int categoryId, string name,
                           string description, string manufInfo,

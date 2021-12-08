@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 using MySql.Data.MySqlClient;
 
-namespace OnlineStore.Accessors {
+namespace _361Capstone.Accessors {
     public class AddressAccessor : IAddressAccessor {
         private MySqlConnection conn;
         private DatabaseConnection dbConnection = new DatabaseConnection();

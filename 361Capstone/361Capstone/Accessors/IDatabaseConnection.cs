@@ -1,6 +1,6 @@
 ﻿using MySql.Data.MySqlClient;
 
-namespace OnlineStore.Accessors {
+namespace _361Capstone.Accessors {
     interface IDatabaseConnection {
         MySqlConnection getConnection();
     }

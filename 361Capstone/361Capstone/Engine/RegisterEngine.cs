@@ -1,11 +1,11 @@
 ﻿using System;
 using _361Capstone.Models;
-using OnlineStore.Accessors;
+using _361Capstone.Accessors;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace _Capstone.Engine
+namespace _361Capstone.Engine
 {
     public class RegisterEngine : IRegisterEngine
     {

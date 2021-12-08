@@ -1,9 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System;
 using _361Capstone.Models;
-using _Capstone.Manager;
-using _Capstone.Engine;
-using OnlineStore.Accessors;
+using _361Capstone.Manager;
+using _361Capstone.Engine;
+using _361Capstone.Accessors;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -19,9 +19,9 @@ namespace _361Capstone.Controllers
             return View();
         }
 
-        public ActionResult SuccessfulLogin(int userId)
+        public bool SuccessfulLogin(int userId)
         {
-
+            return true;
         }
 
         public ActionResult AuthenticateUser(string username, string password)
@@ -45,10 +45,10 @@ namespace _361Capstone.Controllers
             return RedirectToAction("Index", new { incorrectPassword, incorrectUsername });
         }
 
-        public ActionResult Logout()
+        public bool Logout()
         {
             //Should have Login manager ready to implement this
-            
+            return true;
             
         }
     }

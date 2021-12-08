@@ -1,8 +1,8 @@
 ﻿using System;
 using _361Capstone.Models;
-using _Capstone.Manager;
-using _Capstone.Engine;
-using OnlineStore.Accessors;
+using _361Capstone.Manager;
+using _361Capstone.Engine;
+using _361Capstone.Accessors;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -37,10 +37,11 @@ namespace _361Capstone.Controllers
 
             //I need the Security manager to secure password and then add the user
             // to the database
-            public int AddUsers(string username, string password)
-            {
-                
-            }
+            
+        }
+        public int AddUsers(string username, string password) {
+            UserAccessor userAccessor = new UserAccessor();
+            return userAccessor.insertUser(username, password);
         }
     }
 }

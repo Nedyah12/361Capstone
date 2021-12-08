@@ -9,7 +9,7 @@ using System.Drawing;
 using System.IO;
 using System.ComponentModel;
 
-namespace OnlineStore.Accessors {
+namespace _361Capstone.Accessors {
     class ProductAccessor : IProductAccessor {
         private MySqlConnection conn;
         private DatabaseConnection dbConnection = new DatabaseConnection();

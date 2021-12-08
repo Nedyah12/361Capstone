@@ -1,5 +1,5 @@
 ﻿using System;
-using _Capstone.Accessors;
+using _361Capstone.Accessors;
 using _361Capstone.Models;
 using System.Collections.Generic;
 using System.Linq;
@@ -32,7 +32,7 @@ namespace _361Capstone.Tests.TestsAccessor
 
         //    return;
 
-        Microsoft.VisualStudio.TestTools.UnitTesting.Assert(true);
+        //Microsoft.VisualStudio.TestTools.UnitTesting.Assert(true);
         return;
         }
 
@@ -56,7 +56,7 @@ namespace _361Capstone.Tests.TestsAccessor
         //}
 
         //return;
-        Microsoft.VisualStudio.TestTools.UnitTesting.Assert(true);
+        //Microsoft.VisualStudio.TestTools.UnitTesting.Assert(true);
         return;
     }
     }

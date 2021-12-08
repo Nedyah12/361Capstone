@@ -4,12 +4,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace _Capstone.Engine
+namespace _361Capstone.Engine
 {
     interface IAccountListEngine
     {
-        Users GetUsers(int IdUser);
-        void AddList(List list);
+        User GetUser(int IdUser);
+        //void AddList(List list);
         void RemoveList(int IdList);
     }
 }

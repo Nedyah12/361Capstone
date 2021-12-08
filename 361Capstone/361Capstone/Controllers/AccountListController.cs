@@ -1,8 +1,8 @@
 ﻿using System;
 using _361Capstone.Models;
-using _Capstone.Manager;
-using _Capstone.Engine;
-using OnlineStore.Accessors;
+using _361Capstone.Manager;
+using _361Capstone.Engine;
+using _361Capstone.Accessors;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;

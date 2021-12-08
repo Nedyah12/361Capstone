@@ -1,12 +1,12 @@
 ﻿
 using _361Capstone.Models;
 using System;
-using OnlineStore.Accessors;
+using _361Capstone.Accessors;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace _Capstone.Engine
+namespace _361Capstone.Engine
 {
     public class ListEngine : IListEngine
     {

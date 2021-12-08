@@ -1,8 +1,8 @@
 ﻿using System;
 using _361Capstone.Models;
-using _Capstone.Manager;
-using _Capstone.Engine;
-using OnlineStore.Accessors;
+using _361Capstone.Manager;
+using _361Capstone.Engine;
+using _361Capstone.Accessors;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -37,25 +37,25 @@ namespace _361Capstone.Controllers
             //Authenticate Login
 
             //Product product = new Product();??
-            ListManager.AddProducts(product);
+            //ListManager.AddProducts(product);
 
             return RedirectToAction("Index", new { CartId });
         }
 
-        public ActionResult Edit(int CartId, int ProductId, string NewProduct)
+        public bool Edit(int CartId, int ProductId, string NewProduct) // was ActionResult
         {
-
+            return true;
         }
 
-        public ActionResult Delete(int ProductId, int CartId)
+        public bool Delete(int ProductId, int CartId) // was ActionResult
         {
             Cart cart = ListManager.GetCart(CartId);
             int userId = cart.getUserId();
             //Authenticate Login
 
             //Product poduct = new Product();???
-            ListManager.RemoveProduct(product);
-
+            //ListManager.RemoveProduct(product);
+            return true;
         }
         
 

@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
-namespace OnlineStore.Accessors {
+
+namespace _361Capstone.Accessors {
     interface IUserAccessor {
         int insertUser(string email, string password);
         void changePassword(int userId, string newPassword);

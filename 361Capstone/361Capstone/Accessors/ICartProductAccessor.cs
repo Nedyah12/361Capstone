@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OnlineStore.Accessors {
+namespace _361Capstone.Accessors {
     interface ICartProductAccessor {
         void InsertCartProduct(int cartId, int productId, int quantity);
         void RemoveCartProduct(int cartId, int productId);

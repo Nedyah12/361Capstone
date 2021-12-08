@@ -1,0 +1,61 @@
+﻿.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 285px 289px 30%;
+    grid-template-areas: "main main" "main main" "add add";
+    grid-gap: 30px;
+    padding-left: 30%;
+    padding-right: 30%;
+    padding-top: 30px;
+}
+
+.add {
+    grid-area: add;
+}
+
+/* Include the padding and border in an element's total width and height */
+* {
+    box-sizing: border-box;
+}
+
+
+/* Style the "Add" button */
+.addBtn {
+    padding: 10px;
+    width: 25%;
+    background: #d9d9d9;
+    color: #555;
+    float: left;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 0;
+    color: black;
+}
+
+    .addBtn:hover {
+        background-color: #bbb;
+    }
+
+.list {
+    font-size: 20px;
+    grid-area: main;
+    border: 2px solid;
+    border-color: black;
+    overflow-y: auto;
+    box-shadow: 0 4px 4px -4px rgba(0,0,0,.2);
+}
+
+    .list h1 {
+        font-size: 30px;
+        height: 100px;
+        padding-top: 25px;
+        margin: 0px;
+        text-align: center;
+        border-bottom: 2px solid;
+    }
+
+
+
+

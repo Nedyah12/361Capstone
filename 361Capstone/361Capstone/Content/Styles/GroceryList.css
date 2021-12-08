@@ -1,0 +1,143 @@
+﻿/* Include the padding and border in an element's total width and height */
+* {
+    box-sizing: border-box;
+}
+
+h1 {
+    text-align: center;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 285px 289px 30%;
+    grid-template-areas: "main main right" "main main right" "add add footer";
+    grid-gap: 30px;
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-top: 30px;
+}
+
+.list {
+    grid-area: main;
+    border: 2px solid;
+    border-color: black;
+    overflow-y: auto;
+    box-shadow: 0 4px 4px -4px rgba(0,0,0,.2);
+}
+
+    .list h1 {
+        height: 100px;
+        padding-top: 25px;
+        margin: 0px;
+        text-align: center;
+        border-bottom: 2px solid;
+    }
+
+.add {
+    grid-area: add;
+}
+
+.options {
+    grid-area: right;
+}
+
+/* Style the input */
+submit {
+    margin: 0;
+    border: none;
+    border-radius: 0;
+    width: 100%;
+    padding: 10px;
+    float: left;
+    font-size: 16px;
+}
+
+.quantityValue{
+    width: 20px;
+}
+
+/* Style the "Add" button */
+.addBtn {
+    padding: 10px;
+    width: 25%;
+    background: #d9d9d9;
+    color: #555;
+    float: left;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 0;
+    color: black;
+}
+
+    .addBtn:hover {
+        background-color: #bbb;
+    }
+
+
+/* Style the "Remove" button.*/
+.removeBtn {
+    position: absolute;
+    right: 20px;
+    height: 20px;
+    width: 60px;
+    text-align: center;
+}
+
+    .removeBtn:hover {
+        background-color: #bbb;
+    }
+
+/* Style the "Edit" button.*/
+.editBtn {
+    position: absolute;
+    right: 85px;
+    height: 20px;
+    width: 50px;
+    text-align:center;
+}
+
+    .editBtn:hover {
+        background-color: #bbb;
+    }
+
+/* Style the "Delete" button, which deletes the list. */
+.deleteBtn {
+    padding: 10px;
+    width: 100%;
+    background: #d9d9d9;
+    color: #555;
+    float: left;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 0;
+    color: black;
+}
+
+    .deleteBtn:hover {
+        background-color: #bbb;
+    }
+
+/* Style the "ChangeTitle" button, which changes the list title. */
+.changeTitleBtn {
+    padding: 10px;
+    margin-bottom: 20px;
+    width: 100%;
+    background: #d9d9d9;
+    color: #555;
+    float: left;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 0;
+    color: black;
+}
+
+    .changeTitleBtn:hover {
+        background-color: #bbb;
+    }

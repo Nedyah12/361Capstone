@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace _Capstone.Manager
+namespace _361Capstone.Manager
 {
     interface ILoginManager
     {
-        bool AuthenticateLogin(string Login, int IdUser);
+        public int CheckUsername(string username);
+        public string RetrievePassword(int userId);
     }
 }

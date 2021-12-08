@@ -1,0 +1,41 @@
+﻿/* Remove margins and padding from the list */
+ul {
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+    /* Style the list. */
+    ul li {
+        position: relative;
+        background: #eee;
+        padding: 12px 8px 12px 40px;
+        height: 50px;
+        font-size: 18px;
+        transition: 0.2s;
+        /* make the list items unselectable */
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+
+    /* Set all odd list items to a different color */
+    ul.item li:nth-child(odd) {
+        background: #f9f9f9;
+    }
+
+    /* Darker background-color on hover */
+    ul.item li:hover {
+        background: #ddd;
+    }
+
+    /* Pad the list with empty spaces, when there is an even number of items. */
+    ul.space li.startEven:nth-child(odd) {
+        background: #f9f9f9;
+    }
+
+    /* Pad the list with empty spaces, when there is an odd number of items. */
+    ul.space li.startOdd:nth-child(even) {
+        background: #f9f9f9;
+    }

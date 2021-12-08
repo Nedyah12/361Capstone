@@ -1,14 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-//using System.Data.SqlClient;
 using MySql.Data.MySqlClient;
-using System.Diagnostics;
 
-namespace OnlineStore.Accessors {
+
+namespace _361Capstone.Accessors {
     public class UserAccessor : IUserAccessor {
         private MySqlConnection conn;
         private DatabaseConnection dbConnection = new DatabaseConnection();

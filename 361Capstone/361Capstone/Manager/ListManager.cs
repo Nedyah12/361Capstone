@@ -1,11 +1,11 @@
 ﻿using System;
 using _361Capstone.Models;
-using _Capstone.Engine;
+using _361Capstone.Engine;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace _Capstone.Manager
+namespace _361Capstone.Manager
 {
     public class ListManager : IListManager
     {

@@ -1,5 +1,5 @@
 ﻿using System;
-using _Capstone.Manager;
+using _361Capstone.Manager;
 using _361Capstone.Models;
 using System.Collections.Generic;
 using System.Linq;

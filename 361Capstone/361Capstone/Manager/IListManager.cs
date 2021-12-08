@@ -4,7 +4,7 @@ using _361Capstone.Models;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace _Capstone.Manager
+namespace _361Capstone.Manager
 {
     interface IListManager
     {
