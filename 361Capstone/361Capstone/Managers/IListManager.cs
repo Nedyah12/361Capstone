@@ -8,10 +8,10 @@ namespace _361Capstone.Managers
 {
     interface IListManager
     {
-        Product AddProducts(Product product);
-        bool Exist(Product product);
+        void InsertCartProduct(int cartId, int productId, int quantity);
+        void RemoveCartProduct(int cartId, int productId);
+        void ChangeCartProductQuantity(int cartId, int productId, int newQuantity);
+        List<string> GetProductInfo(int productId);
         Cart GetCart(int IdCart);
-        void EditProduct(Product products, string newElement);
-        void RemoveProduct(Product product);
     }
 }

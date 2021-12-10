@@ -11,29 +11,49 @@ namespace _361Capstone.Managers
     {
         ListEngine Engine { get; set; } = new ListEngine();
 
-        public Product AddProducts(Product product)
+        public void ChangeCartProductQuantity(int cartId, int productId, int newQuantity)
         {
-            throw new NotImplementedException();
-        }
+            try
+            {
+                Engine.ChangeCartProductQuantity(cartId, productId, newQuantity);
 
-        public void EditProduct(Product products, string newElement)
-        {
-            throw new NotImplementedException();
-        }
+            }
+            catch (NullReferenceException)
+            {
+                return;
+            }
 
-        public bool Exist(Product product)
-        {
-            throw new NotImplementedException();
+            return;
         }
 
         public Cart GetCart(int IdCart)
         {
+
+        }
+
+        public List<string> GetProductInfo(int productId)
+        {
+            return Engine.GetProductInfo(productId);
+        }
+
+        public void InsertCartProduct(int cartId, int productId, int quantity)
+        {
             throw new NotImplementedException();
         }
 
-        public void RemoveProduct(Product product)
+        public void RemoveCartProduct(int cartId, int productId)
         {
-            throw new NotImplementedException();
+            try
+            {
+                Engine.RemoveCartProduct(cartId, productId);
+
+            }
+            catch (NullReferenceException)
+            {
+                return;
+            }
+
+            return;
         }
     }
 }
