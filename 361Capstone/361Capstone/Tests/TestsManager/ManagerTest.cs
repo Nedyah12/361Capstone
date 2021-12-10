@@ -10,8 +10,19 @@ using NUnit.Framework;
 namespace _361Capstone.Tests.UnitTesting.TestsManager
 {
     [TestClass]
-    public class Test
+    public class AccountListManagerTest
     {
         //[Test]
+        public void getUser_Pass()
+        {
+            AccountListManager accountListManager = new AccountListManager();
+
+            User user = accountListManager.GetUser(128);
+
+            if (user.GetUserId() != 128)
+            {
+                Microsoft.VisualStudio.TestTools.UnitTesting.Assert.Fail();
+            }
+        }
     }
 }

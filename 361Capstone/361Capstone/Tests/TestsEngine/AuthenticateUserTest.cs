@@ -13,5 +13,14 @@ namespace _361Capstone.Tests.UnitTesting.TestsEngine
     public class AuthenticateUserTest
     {
         //[Test]
+        public void AunthenticateUser_Pass()
+        {
+            AuthenticationEngine engine = new AuthenticationEngine();
+            string username = "";
+
+            bool test = engine.AuthenticateUser(username);
+
+            Microsoft.VisualStudio.TestTools.UnitTesting.Assert.IsTrue(test);
+        }
     }
 }
