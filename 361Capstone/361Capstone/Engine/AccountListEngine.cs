@@ -11,12 +11,12 @@ namespace _361Capstone.Engine
     {
         //Accessor here
         UserAccessor UserAccessor { get; set; } = new UserAccessor();
-        //CartAccessor CartAccessor { get; set; } = new CartAccessor();
-        //CartProductAccessor accessor { get; set; } = new CartProductAccessor(); ??
+        CartAccessor CartAccessor { get; set; } = new CartAccessor();
+        CartProductAccessor accessor { get; set; } = new CartProductAccessor();
 
-        public User getUser(int userId)
+        public string getUser(int userId)
         {
-            throw new NotImplementedException();
+            return UserAccessor.GetUsername(userId);
         }
 
         /*public void AddList(List list)
@@ -26,24 +26,42 @@ namespace _361Capstone.Engine
             throw new NotImplementedException();
         }*/
 
-        /*
-         public void InsertCart(int userId)
-         {
 
-         }
-        */
+        public void InsertCart(int userId)
+        {
+            Cart cart;
+
+            try
+            {
+
+            }
+            catch (ArgumentNullException)
+            {
+
+            }
+        }
 
         /*
         public void InsertCartProduct(int cartId, int productId, int quantity)
         {
-            throw new NotImplementedException();
+            
         }
 
         public void RemoveCartProduct(int cartId, int productId)
         {
-            throw new NotImplementedException();
+            try
+            {
+                accessor.RemoveCartProduct(cartId, productId);
+            } catch (ArgumentNullException)
+            {
+                return;
+            }
+
+            return;
         }
         */
+
+
 
     }
 }

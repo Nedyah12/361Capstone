@@ -8,10 +8,11 @@ namespace _361Capstone.Engine
 {
     interface IAccountListEngine
     {
-        User getUser(int userId);
-        //void RemoveList(int IdList);
+        string getUser(int userId);
         //void InsertCartProduct(int cartId, int productId, int quantity);
         //void RemoveCartProduct(int cartId, int productId);
-        // void InsertCart(int userId);
+        void InsertCart(int userId);
+        //We need to remove Cart or is it going to be removed when we get rid off the products in ListEngine ??
+        
     }
 }
