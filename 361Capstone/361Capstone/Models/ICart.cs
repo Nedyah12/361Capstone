@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 namespace _361Capstone.Models
 {
     public interface ICart
-    {   //TODO: need ICartProduct?
+    {   
         int GetCartId();
         int GetUserId();
+
+        List<CartProduct> GetCartProducts();
     }
 }
