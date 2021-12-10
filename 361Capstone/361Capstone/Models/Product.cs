@@ -8,7 +8,7 @@ namespace _361Capstone.Models
     public class Product : IProduct
     {
        
-        private int ProductId { get; set; }
+        /*private int ProductId { get; set; }
         private int CategoryId { get; set; }
         private int SaleId { get; set; }
         private string Name { get; set; }
@@ -18,10 +18,22 @@ namespace _361Capstone.Models
         private double Weight { get; set; }
         private double Rating { get; set; }
         private string Sku { get; set; }
-        private int StockCount { get; set; }
+        private int StockCount { get; set; }*/
+
+        private string ProductId { get; set; }
+        private string CategoryId { get; set; }
+        private string SaleId { get; set; }
+        private string Name { get; set; }
+        private string Description { get; set; }
+        private string ManInfo { get; set; }
+        private string Dimensions { get; set; }
+        private string Weight { get; set; }
+        private string Rating { get; set; }
+        private string Sku { get; set; }
+        private string StockCount { get; set; }
 
 
-        public Product(int productId, int categoryId, int saleId, string name, string desc, string manInfo, string dims, double weight, double rating, string sku, int stockCount)
+        public Product(string productId, string categoryId, string saleId, string name, string desc, string manInfo, string dims, string weight, string rating, string sku, string stockCount)
         {
             ProductId = productId;
             CategoryId = categoryId;
@@ -38,15 +50,18 @@ namespace _361Capstone.Models
 
         public int GetProductId()
         {
-            return ProductId;
+            return Convert.ToInt32(ProductId);
+            //return ProductId;
         }
         public int GetCategoryId()
         {
-            return CategoryId;
+            return Convert.ToInt32(CategoryId);
+            //return CategoryId;
         }
         public int GetSaleId()
         {
-            return SaleId;
+            return Convert.ToInt32(SaleId);
+            //return SaleId;
         }
         public string GetName()
         {
@@ -66,11 +81,13 @@ namespace _361Capstone.Models
         }
         public double GetWeight()
         {
-            return Weight;
+            return Convert.ToInt32(Weight);
+            //return Weight;
         }
         public double GetRating()
         {
-            return Rating;
+            return Convert.ToInt32(Rating);
+            //return Rating;
         }
         public string GetSku()
         {
@@ -78,7 +95,8 @@ namespace _361Capstone.Models
         }
         public int GetStockCount()
         {
-            return StockCount;
+            return Convert.ToInt32(StockCount);
+            //return StockCount;
         }
 
     }

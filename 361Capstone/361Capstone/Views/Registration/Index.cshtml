@@ -11,13 +11,13 @@
     </div>
     <div class="login">
         <form autocomplete="off">
-            <label for="email"><b>Email</b></label>
-            <input type="text" class="txtInput" id="email" placeholder="Enter Email"><br>
+            <label for="username"><b>Username</b></label>
+            <input type="text" class="txtInput" id="username" placeholder="Enter Username"><br>
 
             <label for="password"><b>Password</b></label>
             <input type="password" class="txtInput" id="password" placeholder="Enter Password"><br>
 
-            <input type="button" class="submitBtn" id="submitBtn" value="Create account" onclick="register(document.getElementById('email').value, document.getElementById('password').value)"><br>
+            <input type="button" class="submitBtn" id="submitBtn" value="Create account" onclick="register(document.getElementById('username').value, document.getElementById('password').value)"><br>
         </form>
     </div>
 </body>
@@ -25,8 +25,8 @@
 
 <script>
 
-    function register(email, password) {
-        location.href = '@Url.Action("AuthenticateInput", "Registration")?email=' + email + '&password=' + password;
+    function register(username, password) {
+        location.href = '@Url.Action("AuthenticateInput", "Registration")?username=' + username + '&password=' + password;
     }
 
     var inputPassword = document.getElementById("password");

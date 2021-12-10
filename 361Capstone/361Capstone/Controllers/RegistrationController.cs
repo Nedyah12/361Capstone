@@ -17,7 +17,7 @@ namespace _361Capstone.Controllers
             return View();
         }
 
-        public ActionResult AuthenticateLogin(string username, string password)
+        public ActionResult AuthenticateInput(string username, string password)
         {
             AuthenticationEngine engine = new AuthenticationEngine();
             UserAccessor user = new UserAccessor();
@@ -29,6 +29,7 @@ namespace _361Capstone.Controllers
             if (correctPassword && correctUsername)
             {
                 int userId = user.InsertUser(username, password);
+                Console.WriteLine("NEW USERID: " + userId);
                 return RedirectToAction("Index", "Login");
             } else {
                 return RedirectToAction("Index");

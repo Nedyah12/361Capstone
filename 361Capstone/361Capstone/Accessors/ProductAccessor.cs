@@ -238,5 +238,41 @@ namespace _361Capstone.Accessors {
             }
             return;
         }
+
+        public List<List<String>> GetAllProductInfo() {
+            List<List<String>> productInfoStrings = new List<List<String>>();
+            
+           // List<string> productInfo = new List<string>();
+
+            using (conn = dbConnection.GetConnection()) {
+                try {
+                    conn.Open();
+
+                    MySqlCommand cmd = new MySqlCommand("SELECT * FROM Product", conn);
+                    cmd.Prepare();
+
+                    try {
+                        MySqlDataReader reader = cmd.ExecuteReader();
+                        while (reader.Read()) {
+                            List<String> tempInfoList = new List<String>();
+                            for (int i = 0; i < 11; i++) {
+                                tempInfoList.Add(reader[i].ToString());
+                            }
+                            productInfoStrings.Add(tempInfoList);
+                        }
+
+                    } catch (InvalidOperationException ex) {
+                        Console.WriteLine("ERROR: " + ex.Message);
+                    }
+
+
+                    conn.Close();
+                } catch (MySql.Data.MySqlClient.MySqlException ex) {
+                    Console.WriteLine("SQL ERROR: " + ex.Message);
+                }
+
+            }
+            return productInfoStrings;
+        }
     }
 }

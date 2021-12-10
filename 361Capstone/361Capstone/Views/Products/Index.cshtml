@@ -29,11 +29,10 @@
 
             <ul style="list-style-type:none;" class="item">
 
-                @foreach (Product item in (List<Product>)ViewData["Items"]) {
+                @foreach (Product item in (List<Product>)ViewData["Products"]) {
                     <li>
 
-                        @item.GetProductId()
-                        <button type="button" class="quanitity" onclick="decrementQuantity(@item.GetProductId())">
+                        <!--<button type="button" class="quanitity" onclick="decrementQuantity(@item.GetProductId())">
                             decrease
                         </button>
                         <input type="text" class="value" value="@item.GetStockCount()" readonly="readonly" />
@@ -46,9 +45,12 @@
                         </button>
                         <button type="button" class="remove" onclick="removeItem(@item.GetProductId())">
                             Remove
-                        </button>
+                        </button>-->
+                        <h4 style="display:inline-block">@item.GetName()</h4>
+                        <button style="display:inline-block">View Product Page</button>
 
                     </li>
+
                 }
             </ul>
 

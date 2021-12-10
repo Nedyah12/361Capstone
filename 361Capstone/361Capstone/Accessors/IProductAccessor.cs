@@ -20,6 +20,8 @@ namespace _361Capstone.Accessors {
         void AttachSale(int productId, int saleId);
         void DetachSale(int productId);
 
+        List<List<String>> GetAllProductInfo();
+
 
     }
 }
