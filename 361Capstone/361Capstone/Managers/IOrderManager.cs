@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace _361Capstone.Managers
 {
-    interface IOrderManagercs
+    interface IOrderManager
     {
     }
 }

@@ -10,27 +10,58 @@ namespace _361Capstone.Engine
 {
     public class ListEngine : IListEngine
     {
+        CartAccessor CartAccessor { get; set; } = new CartAccessor();
         CartProductAccessor Accessor { get; set; } = new CartProductAccessor();
         ProductAccessor ProductAccessor { get; set; } = new ProductAccessor();
 
+        public ListEngine()
+        {
+            Accessor = new CartProductAccessor();
+            ProductAccessor = new ProductAccessor();
+        }
+
+        public void GetCart(int cartId)
+        {
+
+
+        }
+
         public void ChangeCartProductQuantity(int cartId, int productId, int newQuantity)
         {
-            throw new NotImplementedException();
+            try
+            {
+                Accessor.ChangeCartProductQuantity(cartId, productId, newQuantity);
+            }
+            catch (ArgumentNullException)
+            {
+                return;
+            }
+
+            return;
         }
 
         public List<string> GetProductInfo(int productId)
         {
-            throw new NotImplementedException();
+            return ProductAccessor.GetProductInfo(productId);
         }
 
         public void InsertCartProduct(int cartId, int productId, int quantity)
         {
-            throw new NotImplementedException();
+
         }
 
         public void RemoveCartProduct(int cartId, int productId)
         {
-            throw new NotImplementedException();
+            try
+            {
+                Accessor.RemoveCartProduct(cartId, productId);
+            }
+            catch (ArgumentNullException)
+            {
+                return;
+            }
+
+            return;
         }
     }
 }
