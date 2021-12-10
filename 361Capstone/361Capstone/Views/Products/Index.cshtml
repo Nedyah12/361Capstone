@@ -26,50 +26,41 @@
             <h1>@ViewData["Title"]</h1>
 
             <!--Lists items-->
+            @foreach (Category category in (List<Category>)ViewData["Categories"]) {
+                <h2>@category.GetTitle()</h2>
+                <ul style="list-style-type:none;" class="item">
+                    @foreach (Product item in (List<Product>)ViewData["Products"]) {
+                        if (item.GetCategoryId() == category.GetCategoryId()) {
+                            <li>
+                                
+                                <a href="@Url.Action("GoToProductPage", "Products")?productId=@item.GetProductId()"><h4 style="display:inline-block">@item.GetName()</h4></a>
+                                <!--<button style="display:inline-block">View Product Page</button>-->
 
-            <ul style="list-style-type:none;" class="item">
-
-                @foreach (Product item in (List<Product>)ViewData["Products"]) {
-                    <li>
-
-                        <!--<button type="button" class="quanitity" onclick="decrementQuantity(@item.GetProductId())">
-                            decrease
-                        </button>
-                        <input type="text" class="value" value="@item.GetStockCount()" readonly="readonly" />
-                        <button type="button" class="quanitity" onclick="incrementQuantity(@item.GetProductId())">
-                            increase
-                        </button>
-
-                        <button type="button" class="edit" onclick="editItem(@item.GetProductId())">
-                            Edit
-                        </button>
-                        <button type="button" class="remove" onclick="removeItem(@item.GetProductId())">
-                            Remove
-                        </button>-->
-                        <h4 style="display:inline-block">@item.GetName()</h4>
-                        <button style="display:inline-block">View Product Page</button>
-
-                    </li>
-
-                }
-            </ul>
-
-            <!--For loop to add spaces-->
-            <ul style="list-style-type:none;" class="space">
-            </ul>
-        </div>
+                            </li>
+                        }
 
 
-        <div class="add">
+                     }
+                 </ul>
+            }
+                <!--For loop to add spaces-->
+                <ul style="list-style-type:none;" class="space">
+                </ul>
+            </div>
+
+
+        <!--<div class="add">
             <form autocomplete="off">
                 <input type="text" id="content" placeholder="Add an item"><br><br>
                 <input type="button" class="add" value="Add" onclick="addItem(document.getElementById('content').value, @ViewData["ListId"])">
             </form>
-        </div>
+        </div>-->
     </div>
 </body>
 </html>
 
 <script>
-    //functions to manipulate lists
+    function goToProductPage(productId) {
+        location.href = '@Url.Action("GoToProductPage", "Products")?productId=' + productId;
+    }
 </script>

@@ -62,3 +62,4 @@ C:\Users\Owner\Source\Repos\361Capstone\361Capstone\361Capstone\obj\Debug\netcor
 C:\Users\Owner\Source\Repos\361Capstone\361Capstone\361Capstone\obj\Debug\netcoreapp3.1\Capstone.csproj.CopyComplete
 C:\Users\Owner\Source\Repos\361Capstone\361Capstone\361Capstone\obj\Debug\netcoreapp3.1\Capstone.genruntimeconfig.cache
 C:\Users\Owner\Source\Repos\361Capstone\361Capstone\361Capstone\obj\Debug\netcoreapp3.1\Capstone.csproj.AssemblyReference.cache
+C:\Users\Owner\Source\Repos\361Capstone\361Capstone\361Capstone\obj\Debug\netcoreapp3.1\Razor\Views\ProductDetails\Index.cshtml.g.cs

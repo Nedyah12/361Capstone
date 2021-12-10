@@ -17,9 +17,7 @@ namespace _361Capstone.Controllers
         public IActionResult Index() {
             //Retrieves the list from the database.
             List<Product> list = manager.GetAllStoreProducts();
-            foreach(Product p in list) {
-                Console.WriteLine("Name: " + p.GetName());
-            }
+            List<Category> categories = manager.GetAllCategories();
             //int userId = list.GetUserId();
 
             //Validates the session to ensure lists can only be edited by the user they belong to.
@@ -30,12 +28,20 @@ namespace _361Capstone.Controllers
 
             ViewData["Products"] = list;
             ViewData["ItemCount"] = list.Count();
+            ViewData["Categories"] = categories;
             //ViewData["ListId"] = listId;
             ViewData["Title"] = "Store Products";
             //ViewData["UserId"] = list.GetUserId();
 
             return View();
         }
+
+        public IActionResult GoToProductPage(int productId) {
+            //string key = userId.ToString();
+            //HttpContext.Session.SetString("_Key", key);
+            return RedirectToAction("Index", "ProductDetails", new { productId });
+        }
+
 
     }
 }

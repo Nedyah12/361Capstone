@@ -77,7 +77,7 @@ namespace _361Capstone.Accessors {
                     try {
                         MySqlDataReader reader = cmd.ExecuteReader();
                         if (reader.Read()) {
-                            for (int i = 1; i < 11; i++) {
+                            for (int i = 0; i < 11; i++) {
                                 productInfo.Add(reader[i].ToString());
                             }
                         }

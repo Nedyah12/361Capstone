@@ -110,5 +110,34 @@ namespace _361Capstone.Accessors {
             }
             return;
         }
+
+        public List<List<String>> GetAllCategories() {
+            List<List<String>> allCategories = new List<List<String>>();
+
+            using (conn = dbConnection.GetConnection()) {
+                try {
+                    conn.Open();
+
+                    MySqlCommand cmd = new MySqlCommand("SELECT * FROM Category", conn);
+                    cmd.Prepare();
+
+                    MySqlDataReader reader = cmd.ExecuteReader();
+                    while (reader.Read()) {
+                        List<String> tempList = new List<String>();
+                        for(int i=0;i<3;i++) {
+                            tempList.Add(reader[i].ToString());
+                        }
+                        allCategories.Add(tempList);
+                    }
+
+                        conn.Close();
+                } catch (MySql.Data.MySqlClient.MySqlException ex) {
+                    Console.WriteLine("SQL ERROR: " + ex.Message);
+                }
+
+            }
+
+            return allCategories;
+        }
     }
 }

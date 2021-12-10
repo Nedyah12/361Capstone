@@ -81,12 +81,12 @@ namespace _361Capstone.Models
         }
         public double GetWeight()
         {
-            return Convert.ToInt32(Weight);
+            return Convert.ToDouble(Weight);
             //return Weight;
         }
         public double GetRating()
         {
-            return Convert.ToInt32(Rating);
+            return Convert.ToDouble(Rating);
             //return Rating;
         }
         public string GetSku()

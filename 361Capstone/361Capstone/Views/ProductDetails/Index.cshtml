@@ -1,0 +1,45 @@
+﻿@{
+    Layout = "_Layout";
+
+    ViewBag.Title = ViewData["Title"];
+
+}
+@using _361Capstone.Models;
+
+<html>
+
+<head>
+
+    <link href="@Url.Content("~/CSS/List.css")" rel="stylesheet" type="text/css" asp-append-version="true" />
+
+
+</head>
+
+<body>
+
+    <div class="grid-container">
+
+        <div class="list">
+
+            <h1>@ViewData["Title"]</h1>
+            <p>Description: @ViewData["Description"]</p>
+            <p>Manufacturer Info: @ViewData["ManInfo"]</p>
+            <p>Dimensions: @ViewData["Dimensions"]</p>
+            <p>Weight: @ViewData["Weight"]lbs</p>
+            <p>Rating: @ViewData["Rating"]</p>
+            <p>Amount in Stock: @ViewData["StockCount"]</p>
+
+            <!--Lists items-->
+            <!--For loop to add spaces-->
+            <ul style="list-style-type:none;" class="space">
+            </ul>
+        </div>
+
+
+    </div>
+</body>
+</html>
+
+<script>
+    //functions to manipulate lists
+</script>
