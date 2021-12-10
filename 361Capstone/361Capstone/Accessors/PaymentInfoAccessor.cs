@@ -9,18 +9,18 @@ using MySql.Data.MySqlClient;
 namespace _361Capstone.Accessors {
     class PaymentInfoAccessor : IPaymentInfoAccessor {
         private MySqlConnection conn;
-        private DatabaseConnection dbConnection = new DatabaseConnection();
+        private readonly DatabaseConnection dbConnection = new DatabaseConnection();
 
-        public void InsertPaymentInfo(int userId, int creditCardNumber, int expMonth, int expDay, int cvvCode) {
+        public void InsertPaymentInfo(int userId, int creditCardNumber, int expMonth, int expYear, int cvvCode) {
             if (userId < 1 || creditCardNumber <= 0 || cvvCode <= 0) {
                 return;
             } else if (expMonth < 1 || expMonth > 12) {
                 return;
-            } else if (expDay < 1 || expDay > 31) {
+            } else if (expYear < 1 || expYear > 31) {
                 return;
             }
 
-            using (conn = dbConnection.getConnection()) {
+            using (conn = dbConnection.GetConnection()) {
                 try {
                     conn.Open();
 
@@ -28,7 +28,7 @@ namespace _361Capstone.Accessors {
                     cmd.Parameters.AddWithValue("@userId", userId);
                     cmd.Parameters.AddWithValue("@ccn", creditCardNumber);
                     cmd.Parameters.AddWithValue("@expm", expMonth);
-                    cmd.Parameters.AddWithValue("@expd", expDay);
+                    cmd.Parameters.AddWithValue("@expd", expYear);
                     cmd.Parameters.AddWithValue("@cvv", cvvCode);
                     cmd.Prepare();
 
@@ -48,7 +48,7 @@ namespace _361Capstone.Accessors {
 
             List<string> paymentInfo = new List<string>();
 
-            using (conn = dbConnection.getConnection()) {
+            using (conn = dbConnection.GetConnection()) {
                 try {
                     conn.Open();
 

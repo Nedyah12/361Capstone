@@ -6,10 +6,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Manager\" />
+    <Folder Include="Managers\" />
     <Folder Include="Engine\" />
     <Folder Include="StartCode\" />
     <Folder Include="Views\AccountLists\" />
+    <Folder Include="Views\Login\" />
     <Folder Include="Views\Products\" />
     <Folder Include="Views\Registration\" />
     <Folder Include="Tests\TestsAccessor\" />

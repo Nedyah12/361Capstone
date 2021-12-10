@@ -12,7 +12,7 @@ using System.ComponentModel;
 namespace _361Capstone.Accessors {
     class ProductAccessor : IProductAccessor {
         private MySqlConnection conn;
-        private DatabaseConnection dbConnection = new DatabaseConnection();
+        private readonly DatabaseConnection dbConnection = new DatabaseConnection();
 
         public int InsertProduct(int categoryId, string name, 
                           string description, string manufInfo, 
@@ -28,7 +28,7 @@ namespace _361Capstone.Accessors {
 
             int productId = 0;
 
-            using (conn = dbConnection.getConnection()) {
+            using (conn = dbConnection.GetConnection()) {
                 try {
                     conn.Open();
 
@@ -66,7 +66,7 @@ namespace _361Capstone.Accessors {
 
             List<string> productInfo = new List<string>();
 
-            using (conn = dbConnection.getConnection()) {
+            using (conn = dbConnection.GetConnection()) {
                 try {
                     conn.Open();
 
@@ -103,7 +103,7 @@ namespace _361Capstone.Accessors {
 
             int productId = 0;
 
-            using (conn = dbConnection.getConnection()) {
+            using (conn = dbConnection.GetConnection()) {
                 try {
                     conn.Open();
 
@@ -131,7 +131,7 @@ namespace _361Capstone.Accessors {
 
             int updatedCount = 0;
 
-            using (conn = dbConnection.getConnection()) {
+            using (conn = dbConnection.GetConnection()) {
                 try {
                     conn.Open();
 
@@ -162,7 +162,7 @@ namespace _361Capstone.Accessors {
 
             int updatedCount = 0, currentCount = 0;
 
-            using (conn = dbConnection.getConnection()) {
+            using (conn = dbConnection.GetConnection()) {
                 try {
                     conn.Open();
 
@@ -199,7 +199,7 @@ namespace _361Capstone.Accessors {
                 return;
             }
 
-            using (conn = dbConnection.getConnection()) {
+            using (conn = dbConnection.GetConnection()) {
                 try {
                     conn.Open();
 
@@ -220,7 +220,7 @@ namespace _361Capstone.Accessors {
         }
 
         public void DetachSale(int productId) {
-            using (conn = dbConnection.getConnection()) {
+            using (conn = dbConnection.GetConnection()) {
                 try {
                     conn.Open();
 

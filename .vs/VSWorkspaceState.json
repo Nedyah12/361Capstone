@@ -1,7 +1,11 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\361Capstone",
+    "\\361Capstone\\361Capstone",
+    "\\361Capstone\\361Capstone\\Views",
+    "\\361Capstone\\361Capstone\\Views\\Registration"
   ],
-  "SelectedNode": "\\361Capstone.sln",
+  "SelectedNode": "\\361Capstone\\361Capstone\\Views\\Registration\\Index.cshtml",
   "PreviewInSolutionExplorer": false
 }

@@ -4,6 +4,8 @@
     ViewBag.Title = ViewData["Title"];
 
 }
+@using _361Capstone.Models;
+
 <html>
 
 <head>
@@ -27,23 +29,22 @@
 
             <ul style="list-style-type:none;" class="item">
 
-                @foreach (SportsItem item in (List<SportsItem>)ViewData["Items"])
-                {
+                @foreach (Product item in (List<Product>)ViewData["Items"]) {
                     <li>
 
-                        @item.GetContent()
-                        <button type="button" class="quanitity" onclick="decrementQuantity(@item.GetItemId())">
+                        @item.GetProductId()
+                        <button type="button" class="quanitity" onclick="decrementQuantity(@item.GetProductId())">
                             decrease
                         </button>
-                        <input type="text" class="value" value="@item.GetQuantity()" readonly="readonly" />
-                        <button type="button" class="quanitity" onclick="incrementQuantity(@item.GetItemId())">
+                        <input type="text" class="value" value="@item.GetStockCount()" readonly="readonly" />
+                        <button type="button" class="quanitity" onclick="incrementQuantity(@item.GetProductId())">
                             increase
                         </button>
 
-                        <button type="button" class="edit" onclick="editItem(@item.GetItemId())">
+                        <button type="button" class="edit" onclick="editItem(@item.GetProductId())">
                             Edit
                         </button>
-                        <button type="button" class="remove" onclick="removeItem(@item.GetItemId())">
+                        <button type="button" class="remove" onclick="removeItem(@item.GetProductId())">
                             Remove
                         </button>
 
@@ -53,7 +54,6 @@
 
             <!--For loop to add spaces-->
             <ul style="list-style-type:none;" class="space">
-                
             </ul>
         </div>
 

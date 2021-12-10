@@ -3,7 +3,7 @@ using MySql.Data.MySqlClient;
 
 namespace _361Capstone.Accessors {
     public class DatabaseConnection : IDatabaseConnection {
-        public MySqlConnection getConnection() {
+        public MySqlConnection GetConnection() {
             string server = "127.0.0.1";
             string database = "onlinestoredb";
             string port = "3306";

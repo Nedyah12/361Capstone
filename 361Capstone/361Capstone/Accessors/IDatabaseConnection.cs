@@ -2,6 +2,6 @@
 
 namespace _361Capstone.Accessors {
     interface IDatabaseConnection {
-        MySqlConnection getConnection();
+        MySqlConnection GetConnection();
     }
 }

@@ -1,41 +1,63 @@
-﻿@page
-
-@{
-}
-
-<div class="text-center">
-    <div class="general-container">
-        <h1 class="display-4">
-            Log In
-        </h1>
-        <br />
-        <form>
-            <div>
-                <input type="email" placeholder="Email Address" asp-for=" Email" />
-                <br />
-                <span asp-validation-for="Email" style="color: red"></span>
-            </div>
-            <br />
-            <div>
-                <input type="password" placeholder="Password" asp-for="Password" />
-                <br />
-                <span asp-validation-for="Password" class="text-danger"></span>
-            </div>
-            <div>
-                <input type="submit" value="Submit" />
-                <br />
-            </div>
-            <br />
-            <div>
-                <a href="/CreateAccount">Create an Account</a>
-                <br />
-            </div>
-        </form>
-
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@using _361Capstone.Managers;
+@using System.Web;
+<html>
+<head>
+    <link href="@Url.Content("~/Content/Styles/Login.css")" rel="stylesheet" type="text/css" asp-append-version="true" />
+</head>
+<body>
+    <div class="logo-container">
+        <img src="@Url.Content("~/Content/tmplogo.png")" class="logo">
     </div>
+    <div class="login">
+        <form autocomplete="off">
+            <label for="username"><b>Username</b></label>
+            <input type="text" class="txtInput" id="username" placeholder="Enter Username"><br>
 
-</div>
+            <label for="password"><b>Password</b></label>
+            <input type="password" class="txtInput" id="password" placeholder="Enter Password"><br>
 
-@section Scripts {
-    @{ await Html.RenderPartialAsync("_ValidationScriptsPartial");}
-}
+            <input type="button" class="submitBtn" id="submitBtn" value="Log in" onclick="login(document.getElementById('username').value, document.getElementById('password').value)"><br>
+        </form>
+    </div>
+    <div class="login">
+        <button type="button" class="registerBtn" onclick="location.href = '@Url.Action("Index", "Registration")'">
+            Create New Account
+        </button>
+    </div>
+</body>
+</html>
+
+<script>
+    function login(username, password) {
+        location.href = '@Url.Action("AuthenticateUser", "Login")?username=' + username + '&password=' + password;
+    }
+
+    //Displays a popup notification if a user has tried to log in with an incorrect username or password.
+    function checkForIncorrectValues() {
+        var usernameBool = '@ViewData["IncorrectUsername"]';
+        console.log(usernameBool);
+        var passwordBool = '@ViewData["IncorrectPassword"]';
+        if (usernameBool == 'True') {
+            alert("Incorrect username/password.");
+        }
+        if (passwordBool == 'True') {
+            alert("Incorrect username/password.");
+        }
+    }
+
+    checkForIncorrectValues();
+
+    //Allows users to submit login information by pressing the 'enter' key.
+    var inputPassword = document.getElementById("password");
+    inputPassword.addEventListener("keyup", function(event) {
+      if (event.keyCode === 13) {
+         event.preventDefault();
+         document.getElementById("submitBtn").click();
+      }
+    });
+
+</script>
+

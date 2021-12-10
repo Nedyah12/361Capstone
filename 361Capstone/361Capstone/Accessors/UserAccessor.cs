@@ -6,19 +6,19 @@ using MySql.Data.MySqlClient;
 namespace _361Capstone.Accessors {
     public class UserAccessor : IUserAccessor {
         private MySqlConnection conn;
-        private DatabaseConnection dbConnection = new DatabaseConnection();
+        private readonly DatabaseConnection dbConnection = new DatabaseConnection();
 
-        public int insertUser(string username, string password) {
+        public int InsertUser(string username, string password) {
             if (username == null || username == "" || password == null || password == "") {
                 return -1;
-            } else if(getUserIdFromUsername(username) != 0) {
+            } else if(GetUserIdFromUsername(username) != 0) {
                 return -1;
             }
 
 
             int userId = -1;
 
-            using (conn = dbConnection.getConnection()) {
+            using (conn = dbConnection.GetConnection()) {
                 try {
                     conn.Open();
 
@@ -46,12 +46,12 @@ namespace _361Capstone.Accessors {
 
         }
 
-        public void changePassword(int userId, string newPassword) {
+        public void ChangePassword(int userId, string newPassword) {
             if (userId < 1 || newPassword == null || newPassword == "") {
                 return;
             }
 
-            using (conn = dbConnection.getConnection()) {
+            using (conn = dbConnection.GetConnection()) {
                 try {
                     conn.Open();
 
@@ -71,14 +71,14 @@ namespace _361Capstone.Accessors {
             return;
         }
 
-        public bool validateUserInfo(string username, string password) {
+        public bool ValidateUserInfo(string username, string password) {
             if (username == null || username == "" || password == null || password == "") {
                 return false;
             }
 
             int userId = -1;
 
-            using (conn = dbConnection.getConnection()) {
+            using (conn = dbConnection.GetConnection()) {
                 try {
                     conn.Open();
 
@@ -95,7 +95,7 @@ namespace _361Capstone.Accessors {
                 }
 
             }
-            if(userId != -1) {
+            if(userId != 0) {
                 return true;
             }
             return false;
@@ -103,14 +103,14 @@ namespace _361Capstone.Accessors {
 
         // Checks whether the new email is available or not.
         // Returns true if email is not in use. Otherwise, returns false.
-        public int getUserIdFromUsername(string username) {
+        public int GetUserIdFromUsername(string username) {
             if (username == null || username == "") {
                 return -1;
             }
 
             int userId = -1;
 
-            using (conn = dbConnection.getConnection()) {
+            using (conn = dbConnection.GetConnection()) {
                 try {
                     conn.Open();
 
@@ -132,14 +132,14 @@ namespace _361Capstone.Accessors {
         }
 
 
-        public string getUsername(int userId) {
+        public string GetUsername(int userId) {
             if (userId < 1) {
                 return null;
             }
 
             string userUsername = "";
 
-            using (conn = dbConnection.getConnection()) {
+            using (conn = dbConnection.GetConnection()) {
                 try {
                     conn.Open();
 
@@ -166,14 +166,14 @@ namespace _361Capstone.Accessors {
             return userUsername;
         }
 
-        public string getPassword(int userId) {
+        public string GetPassword(int userId) {
             if (userId < 1) {
                 return null;
             }
 
             string userPassword = "";
 
-            using (conn = dbConnection.getConnection()) {
+            using (conn = dbConnection.GetConnection()) {
                 try {
                     conn.Open();
 
@@ -207,7 +207,7 @@ namespace _361Capstone.Accessors {
 
             List<int> productIdsAndQuantities = new List<int>();
 
-            using (conn = dbConnection.getConnection()) {
+            using (conn = dbConnection.GetConnection()) {
                 try {
                     conn.Open();
 

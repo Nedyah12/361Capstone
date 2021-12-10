@@ -9,14 +9,14 @@ using MySql.Data.MySqlClient;
 namespace _361Capstone.Accessors {
     class CartProductAccessor : ICartProductAccessor {
         private MySqlConnection conn;
-        private DatabaseConnection dbConnection = new DatabaseConnection();
+        private readonly DatabaseConnection dbConnection = new DatabaseConnection();
 
         public void InsertCartProduct(int cartId, int productId, int quantity) {
             if(cartId < 1 || productId < 1 || quantity < 1) {
                 return;
             }
 
-            using (conn = dbConnection.getConnection()) {
+            using (conn = dbConnection.GetConnection()) {
                 try {
                     conn.Open();
 
@@ -40,7 +40,7 @@ namespace _361Capstone.Accessors {
                 return;
             }
 
-            using (conn = dbConnection.getConnection()) {
+            using (conn = dbConnection.GetConnection()) {
                 try {
                     conn.Open();
 
@@ -63,7 +63,7 @@ namespace _361Capstone.Accessors {
                 return;
             }
 
-            using (conn = dbConnection.getConnection()) {
+            using (conn = dbConnection.GetConnection()) {
                 try {
                     conn.Open();
 

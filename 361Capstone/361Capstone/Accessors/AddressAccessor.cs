@@ -9,7 +9,7 @@ using MySql.Data.MySqlClient;
 namespace _361Capstone.Accessors {
     public class AddressAccessor : IAddressAccessor {
         private MySqlConnection conn;
-        private DatabaseConnection dbConnection = new DatabaseConnection();
+        private readonly DatabaseConnection dbConnection = new DatabaseConnection();
 
         public void InsertAddress(int userId, string street, string city, string state, int zipCode, string country) {
             if (userId < 1) {
@@ -23,7 +23,7 @@ namespace _361Capstone.Accessors {
             }
 
 
-            using (conn = dbConnection.getConnection()) {
+            using (conn = dbConnection.GetConnection()) {
                 try {
                     conn.Open();
 
@@ -52,7 +52,7 @@ namespace _361Capstone.Accessors {
 
             List<string> addressInfo = new List<string>();
 
-            using (conn = dbConnection.getConnection()) {
+            using (conn = dbConnection.GetConnection()) {
                 try {
                     conn.Open();
 

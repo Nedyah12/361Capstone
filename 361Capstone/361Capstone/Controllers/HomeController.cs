@@ -20,7 +20,9 @@ namespace _361Capstone.Controllers
 
         public IActionResult Index()
         {
-            return View();
+
+            return RedirectToAction("Index", "Login");
+            // return View();
         }
 
         public IActionResult Privacy()

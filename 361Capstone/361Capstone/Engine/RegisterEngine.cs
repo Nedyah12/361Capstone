@@ -15,7 +15,7 @@ namespace _361Capstone.Engine
         {
             User user = new User(0, username, password, 0);
             // Is this right?
-            Accessor.insertUser(username, password);
+            Accessor.InsertUser(username, password);
             return user.GetUserId();
         }
 

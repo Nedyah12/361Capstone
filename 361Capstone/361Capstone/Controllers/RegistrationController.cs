@@ -1,6 +1,6 @@
 ﻿using System;
 using _361Capstone.Models;
-using _361Capstone.Manager;
+using _361Capstone.Managers;
 using _361Capstone.Engine;
 using _361Capstone.Accessors;
 using System.Collections.Generic;
@@ -10,7 +10,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace _361Capstone.Controllers
 {
-    public class RegisterController : Controller
+    public class RegistrationController : Controller
     {
         public ActionResult Index()
         {
@@ -20,7 +20,6 @@ namespace _361Capstone.Controllers
         public ActionResult AuthenticateLogin(string username, string password)
         {
             AuthenticationEngine engine = new AuthenticationEngine();
-
             UserAccessor user = new UserAccessor();
 
 
@@ -29,7 +28,7 @@ namespace _361Capstone.Controllers
 
             if (correctPassword && correctUsername)
             {
-                int userId = AddUsers(username, password);
+                int userId = user.InsertUser(username, password);
                 return RedirectToAction("Index", "Login");
             } else {
                 return RedirectToAction("Index");
@@ -37,10 +36,6 @@ namespace _361Capstone.Controllers
 
             // secure password and then add the user to the database
             
-        }
-        public int AddUsers(string username, string password) {
-            UserAccessor userAccessor = new UserAccessor();
-            return userAccessor.insertUser(username, password);
         }
     }
 }

@@ -9,7 +9,7 @@ using MySql.Data.MySqlClient;
 namespace _361Capstone.Accessors {
     class CategoryAccessor : ICategoryAccessor {
         private MySqlConnection conn;
-        private DatabaseConnection dbConnection = new DatabaseConnection();
+        private readonly DatabaseConnection dbConnection = new DatabaseConnection();
 
         public int InsertCategory(string title) {
             if(title == null || title == "") {
@@ -18,7 +18,7 @@ namespace _361Capstone.Accessors {
 
             int categoryId = -1;
 
-            using (conn = dbConnection.getConnection()) {
+            using (conn = dbConnection.GetConnection()) {
                 try {
                     conn.Open();
 
@@ -46,7 +46,7 @@ namespace _361Capstone.Accessors {
 
             int categoryId = -1;
 
-            using (conn = dbConnection.getConnection()) {
+            using (conn = dbConnection.GetConnection()) {
                 try {
                     conn.Open();
 
@@ -71,7 +71,7 @@ namespace _361Capstone.Accessors {
                 return;
             }
 
-            using (conn = dbConnection.getConnection()) {
+            using (conn = dbConnection.GetConnection()) {
                 try {
                     conn.Open();
 
@@ -92,7 +92,7 @@ namespace _361Capstone.Accessors {
         }
 
         public void DetachSale(int categoryId) {
-            using (conn = dbConnection.getConnection()) {
+            using (conn = dbConnection.GetConnection()) {
                 try {
                     conn.Open();
 

@@ -9,14 +9,14 @@ using MySql.Data.MySqlClient;
 namespace _361Capstone.Accessors {
     class CartAccessor : ICartAccessor {
         private MySqlConnection conn;
-        private DatabaseConnection dbConnection = new DatabaseConnection();
+        private readonly DatabaseConnection dbConnection = new DatabaseConnection();
 
         public void InsertCart(int userId) {
             if (userId < 1) {
                 return;
             }
 
-            using (conn = dbConnection.getConnection()) {
+            using (conn = dbConnection.GetConnection()) {
                 try {
                     conn.Open();
 

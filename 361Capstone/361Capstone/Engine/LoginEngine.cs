@@ -9,7 +9,7 @@ namespace _361Capstone.Engine
 {
     public class LoginEngine : ILoginEngine
     {
-        private UserAccessor accessor;
+        private readonly UserAccessor accessor;
 
         public LoginEngine()
         {
@@ -18,7 +18,7 @@ namespace _361Capstone.Engine
 
         public int CheckUsername(string username)
         {
-            return accessor.getUserIdFromUsername(username);
+            return accessor.GetUserIdFromUsername(username);
         }
 
         public string RetrievePassword(int userId)

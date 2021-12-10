@@ -9,7 +9,7 @@ using MySql.Data.MySqlClient;
 namespace _361Capstone.Accessors {
     class SaleAccessor : ISaleAccessor {
         private MySqlConnection conn;
-        private DatabaseConnection dbConnection = new DatabaseConnection();
+        private readonly DatabaseConnection dbConnection = new DatabaseConnection();
         public int InsertSale(string title, int percentage, DateTime startDate, DateTime endDate) {
             if(percentage <= 0 || startDate == null || endDate == null) {
                 return -1;
@@ -17,7 +17,7 @@ namespace _361Capstone.Accessors {
 
             int saleId = -1;
 
-            using (conn = dbConnection.getConnection()) {
+            using (conn = dbConnection.GetConnection()) {
                 try {
                     conn.Open();
 
@@ -48,7 +48,7 @@ namespace _361Capstone.Accessors {
 
             List<string> saleInfo = new List<string>();
 
-            using (conn = dbConnection.getConnection()) {
+            using (conn = dbConnection.GetConnection()) {
                 try {
                     conn.Open();
 
@@ -84,7 +84,7 @@ namespace _361Capstone.Accessors {
 
             int saleId = -1;
 
-            using (conn = dbConnection.getConnection()) {
+            using (conn = dbConnection.GetConnection()) {
                 try {
                     conn.Open();
 
