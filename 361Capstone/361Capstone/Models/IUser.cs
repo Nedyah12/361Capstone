@@ -10,7 +10,9 @@ namespace _361Capstone.Models
         int GetUserId();
         string GetUsername();
         string GetPassword();
-        int GetCartId();
+        Cart GetCart();
+        Address GetAddress();
+        PaymentInfo GetPaymentInfo();
 
     }
 }

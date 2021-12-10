@@ -4,9 +4,10 @@ namespace _361Capstone.Models
     public class CartProduct : ICartProduct
     {
         private int CartProductId { get; set; }
-        private int CartId { get; set; }
         private Product Product { get; set; }
         private int Quantity { get; set; }
+
+        private int CartId { get; set; }
 
         public CartProduct(int cpId, int cId, Product prod, int quant)
         {

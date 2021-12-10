@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 namespace _361Capstone.Models
 {
     public class Cart : ICart
-    { 
+    {
         private int CartId { get; set; }
         private int UserId { get; set; }
 
@@ -14,15 +14,20 @@ namespace _361Capstone.Models
         private List<CartProduct> CartProducts { get; set; }
 
 
-        public List<CartProduct> GetCartProducts()
-        {
-            return CartProducts;
-        }
-
         public Cart(int userId, int cartId)
         {
             UserId = userId;
             CartId = cartId;
+        }
+        public Cart(int userId, int cartId, List<CartProduct> products)
+        {
+            UserId = userId;
+            CartId = cartId;
+            CartProducts = products;
+        }
+        public List<CartProduct> GetCartProducts()
+        {
+            return CartProducts;
         }
         public int GetCartId()
         {
