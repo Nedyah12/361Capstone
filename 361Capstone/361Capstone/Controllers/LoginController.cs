@@ -21,7 +21,7 @@ namespace _SportsStore.Controllers {
             string key = userId.ToString();
             HttpContext.Session.SetString("_Key", key);
             //return RedirectToAction("Index", "Products", new { userId });
-            return RedirectToAction("Index", "Products");
+            return RedirectToAction("Index", "Products", new { userId });
         }
 
         public IActionResult AuthenticateUser(string username, string password) {

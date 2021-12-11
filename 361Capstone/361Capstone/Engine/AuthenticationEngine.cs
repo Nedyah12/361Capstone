@@ -17,7 +17,7 @@ namespace _361Capstone.Engine
             {
                 throw new Exception();
             }
-            return password.Length >= 10;
+            return password.Length >= 1;
         }
 
         public bool AuthenticateUser(string username)

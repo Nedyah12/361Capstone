@@ -22,12 +22,12 @@
         <div class="list">
 
             <h1>@ViewData["Title"]</h1>
-            <p>Description: @ViewData["Description"]</p>
-            <p>Manufacturer Info: @ViewData["ManInfo"]</p>
-            <p>Dimensions: @ViewData["Dimensions"]</p>
-            <p>Weight: @ViewData["Weight"]lbs</p>
-            <p>Rating: @ViewData["Rating"]</p>
-            <p>Amount in Stock: @ViewData["StockCount"]</p>
+            <p><strong>Description:</strong> @ViewData["Description"]</p>
+            <p><strong>Manufacturer Info:</strong> @ViewData["ManInfo"]</p>
+            <p><strong>Dimensions:</strong> @ViewData["Dimensions"]</p>
+            <p><strong>Weight:</strong> @ViewData["Weight"]lbs</p>
+            <p><strong>Rating:</strong> @ViewData["Rating"]</p>
+            <p><strong>Amount in Stock:</strong> @ViewData["StockCount"]</p>
 
             <!--Lists items-->
             <!--For loop to add spaces-->
@@ -35,6 +35,21 @@
             </ul>
         </div>
 
+        <div class="addToCart">
+            <form autocomplete="off">
+                <hr />
+                <!--<label for="username"><b>Username</b></label>
+        <input type="text" class="txtInput" id="username" placeholder="Enter Username"><br>
+
+        <label for="password"><b>Password</b></label>
+        <input type="password" class="txtInput" id="password" placeholder="Enter Password"><br>-->
+                <!--<label for="itemQuantity">Add items to cart: </label>-->
+                <input type="number" name="itemQuantity" min="1" max='@ViewData["StockCount"]' />
+                <input type="button" class="submitBtn" id="submitBtn" value="Add to Cart" onclick=""><br>
+            </form>
+            <br /><br />
+            <a class="btn btn-primary" href='@Url.Action("Index", "Products")?userId=@ViewData["UserId"]' role="button">Back</a>
+        </div>
 
     </div>
 </body>

@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Http;
 
 namespace _361Capstone.Controllers
 {
@@ -14,32 +15,32 @@ namespace _361Capstone.Controllers
     {
         readonly ProductsManager manager = new ProductsManager();
 
-        public IActionResult Index() {
+        public IActionResult Index(int userId) {
             //Retrieves the list from the database.
             List<Product> list = manager.GetAllStoreProducts();
             List<Category> categories = manager.GetAllCategories();
-            //int userId = list.GetUserId();
 
             //Validates the session to ensure lists can only be edited by the user they belong to.
-            /*string key = HttpContext.Session.GetString("_Key");
+            SessionManager Sessionmgr = new SessionManager();
+            string key = HttpContext.Session.GetString("_Key");
             if (!Sessionmgr.ValidateKey(key, userId)) {
                 return RedirectToAction("Logout", "Login");
-            }*/
+            }
 
             ViewData["Products"] = list;
             ViewData["ItemCount"] = list.Count();
             ViewData["Categories"] = categories;
             //ViewData["ListId"] = listId;
             ViewData["Title"] = "Store Products";
-            //ViewData["UserId"] = list.GetUserId();
+            ViewData["UserId"] = userId;
 
             return View();
         }
 
-        public IActionResult GoToProductPage(int productId) {
+        public IActionResult GoToProductPage(int productId, int userId) {
             //string key = userId.ToString();
             //HttpContext.Session.SetString("_Key", key);
-            return RedirectToAction("Index", "ProductDetails", new { productId });
+            return RedirectToAction("Index", "ProductDetails", new { productId, userId });
         }
 
 

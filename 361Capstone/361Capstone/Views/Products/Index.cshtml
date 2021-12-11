@@ -33,7 +33,7 @@
                         if (item.GetCategoryId() == category.GetCategoryId()) {
                             <li>
                                 
-                                <a href="@Url.Action("GoToProductPage", "Products")?productId=@item.GetProductId()"><h4 style="display:inline-block">@item.GetName()</h4></a>
+                                <a href='@Url.Action("GoToProductPage", "Products")?productId=@item.GetProductId()&userId=@ViewData["UserId"]'><h4 style="display:inline-block">@item.GetName()</h4></a>
                                 <!--<button style="display:inline-block">View Product Page</button>-->
 
                             </li>
