@@ -12,6 +12,6 @@ namespace _361Capstone.Managers
         void RemoveCartProduct(int cartId, int productId);
         void ChangeCartProductQuantity(int cartId, int productId, int newQuantity);
         List<string> GetProductInfo(int productId);
-        Cart GetCart(int IdCart);
+        //Cart GetCart(int IdCart);
     }
 }

@@ -17,10 +17,10 @@ namespace _361Capstone.Controllers
         public ActionResult Index(int userId)
         {
 
-            User user = Manager.GetUser(userId);
+            //User user = Manager.GetUser(userId);
 
             ViewData["UserId"] = userId;
-            ViewData["Carts"] = user.GetCartId();
+            //ViewData["Carts"] = user.GetCartId();
             return View();
         }
 

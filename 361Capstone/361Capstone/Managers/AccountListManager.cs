@@ -20,10 +20,10 @@ namespace _361Capstone.Managers
 
         }
         */
-        public User GetUser(int IdUser)
+        /*public User GetUser(int IdUser)
         {
             return Manager.getUser(IdUser);
-        }
+        }*/
 
         public void RemoveList(int IdList)
         {

@@ -26,10 +26,10 @@ namespace _361Capstone.Managers
             return;
         }
 
-        public Cart GetCart(int IdCart)
+        /*public Cart GetCart(int IdCart)
         {
 
-        }
+        }*/
 
         public List<string> GetProductInfo(int productId)
         {
