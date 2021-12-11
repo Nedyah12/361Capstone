@@ -20,10 +20,10 @@ namespace _361Capstone.Engine
             ProductAccessor = new ProductAccessor();
         }
 
-        public void GetCart(int cartId)
+        public Cart GetCart(int cartId)
         {
 
-
+            
         }
 
         public void ChangeCartProductQuantity(int cartId, int productId, int newQuantity)

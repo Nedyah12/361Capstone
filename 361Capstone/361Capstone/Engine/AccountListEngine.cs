@@ -19,14 +19,6 @@ namespace _361Capstone.Engine
             return UserAccessor.GetUsername(userId);
         }
 
-        /*public void AddList(List list)
-        
-        public void RemoveList(int IdList)
-        {
-            throw new NotImplementedException();
-        }*/
-
-
         public void InsertCart(int userId)
         {
             Cart cart;
@@ -37,31 +29,12 @@ namespace _361Capstone.Engine
             }
             catch (ArgumentNullException)
             {
-
-            }
-        }
-
-        /*
-        public void InsertCartProduct(int cartId, int productId, int quantity)
-        {
-            
-        }
-
-        public void RemoveCartProduct(int cartId, int productId)
-        {
-            try
-            {
-                accessor.RemoveCartProduct(cartId, productId);
-            } catch (ArgumentNullException)
-            {
                 return;
             }
 
+            CartAccessor.InsertCart(userId);
             return;
+
         }
-        */
-
-
-
     }
 }
