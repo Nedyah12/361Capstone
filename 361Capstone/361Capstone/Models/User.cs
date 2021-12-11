@@ -10,22 +10,46 @@ namespace _361Capstone.Models
         private int UserId { get; set; }
         private string Username { get; set; }
         private string Password { get; set; }
-        
-        private int CartId { get; set; }
-        private List<Product> CartProducts { get; set; }
-        private List<Int16> CartQuantities { get; set; }
+        private Cart Cart { get; set; }
+        private Address Address { get; set; }
+        private PaymentInfo PaymentInfo { get; set; }
 
         public User(int userId)
         {
             UserId = userId;
         }
 
-        public User(int userId, string username, string password, int cartId)
+        public User(int userId, string username, string password)
         {
             UserId = userId;
             Username = username;
             Password = password;
-            CartId = cartId;
+        }
+
+        public User(int userId, string username, string password, Cart cart)
+        {
+            UserId = userId;
+            Username = username;
+            Password = password;
+            Cart = cart;
+        }
+
+        public User(int userId, string username, string password, Address address)
+        {
+            UserId = userId;
+            Username = username;
+            Password = password;
+            Address = address;
+        }
+
+        public User(int userId, string username, string password, Cart cart, Address address, PaymentInfo payment)
+        {
+            UserId = userId;
+            Username = username;
+            Password = password;
+            Address = address;
+            PaymentInfo = payment;
+            Cart = cart;
         }
 
         public int GetUserId()
@@ -40,18 +64,17 @@ namespace _361Capstone.Models
         {
             return Password;
         }
-        public int GetCartId()
+        public Cart GetCart()
         {
-            return CartId;
+            return Cart;
         }
-
-        public List<Product> GetCartProducts()
+        public Address GetAddress()
         {
-            return CartProducts;
+            return Address;
         }
-        public List<Int16> GetCartQuantities()
+        public PaymentInfo GetPaymentInfo()
         {
-            return CartQuantities;
+            return PaymentInfo;
         }
     }
 }

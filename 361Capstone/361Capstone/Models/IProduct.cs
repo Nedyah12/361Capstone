@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 namespace _361Capstone.Models
 {
     public interface IProduct
-    {//TODO: Constructor: see Models.Product.cs
+    {
         int GetProductId();
         int GetCategoryId();
         int GetSaleId();
