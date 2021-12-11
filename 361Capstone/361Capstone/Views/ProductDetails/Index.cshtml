@@ -48,7 +48,7 @@
                 <input type="button" class="submitBtn" id="submitBtn" value="Add to Cart" onclick=""><br>
             </form>
             <br /><br />
-            <a class="btn btn-primary" href='@Url.Action("Index", "Products")?userId=@ViewData["UserId"]' role="button">Back</a>
+            <a class="btn btn-primary" href='@Url.Action("Index", "Products")?userId=@ViewData["UserId"]' role="button">Go To Products Page</a>
         </div>
 
     </div>
@@ -56,5 +56,7 @@
 </html>
 
 <script>
-    //functions to manipulate lists
+    function addItemToCart(userId, productId, count) {
+
+    }
 </script>

@@ -8,6 +8,7 @@
 /Users/jettdurante/Desktop/361Capstone/361Capstone/361Capstone/obj/Debug/netcoreapp3.1/Capstone.RazorAssemblyInfo.cs
 /Users/jettdurante/Desktop/361Capstone/361Capstone/361Capstone/obj/Debug/netcoreapp3.1/Capstone.dll
 /Users/jettdurante/Desktop/361Capstone/361Capstone/361Capstone/obj/Debug/netcoreapp3.1/Capstone.pdb
+C:\Users\Owner\Source\Repos\361Capstone\361Capstone\361Capstone\obj\Debug\netcoreapp3.1\Capstone.csproj.AssemblyReference.cache
 C:\Users\Owner\Source\Repos\361Capstone\361Capstone\361Capstone\obj\Debug\netcoreapp3.1\Capstone.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Owner\Source\Repos\361Capstone\361Capstone\361Capstone\obj\Debug\netcoreapp3.1\Capstone.AssemblyInfoInputs.cache
 C:\Users\Owner\Source\Repos\361Capstone\361Capstone\361Capstone\obj\Debug\netcoreapp3.1\Capstone.AssemblyInfo.cs
@@ -15,8 +16,6 @@ C:\Users\Owner\Source\Repos\361Capstone\361Capstone\361Capstone\obj\Debug\netcor
 C:\Users\Owner\Source\Repos\361Capstone\361Capstone\361Capstone\obj\Debug\netcoreapp3.1\Capstone.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Owner\Source\Repos\361Capstone\361Capstone\361Capstone\obj\Debug\netcoreapp3.1\Capstone.RazorAssemblyInfo.cache
 C:\Users\Owner\Source\Repos\361Capstone\361Capstone\361Capstone\obj\Debug\netcoreapp3.1\Capstone.RazorAssemblyInfo.cs
-C:\Users\Owner\Source\Repos\361Capstone\361Capstone\361Capstone\obj\Debug\netcoreapp3.1\Capstone.dll
-C:\Users\Owner\Source\Repos\361Capstone\361Capstone\361Capstone\obj\Debug\netcoreapp3.1\Capstone.pdb
 C:\Users\Owner\Source\Repos\361Capstone\361Capstone\361Capstone\bin\Debug\netcoreapp3.1\appsettings.Development.json
 C:\Users\Owner\Source\Repos\361Capstone\361Capstone\361Capstone\bin\Debug\netcoreapp3.1\appsettings.json
 C:\Users\Owner\Source\Repos\361Capstone\361Capstone\361Capstone\bin\Debug\netcoreapp3.1\Tests\TestsEngine\AuthenticatePasswordTest.cs
@@ -57,11 +56,13 @@ C:\Users\Owner\Source\Repos\361Capstone\361Capstone\361Capstone\obj\Debug\netcor
 C:\Users\Owner\Source\Repos\361Capstone\361Capstone\361Capstone\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs
 C:\Users\Owner\Source\Repos\361Capstone\361Capstone\361Capstone\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
 C:\Users\Owner\Source\Repos\361Capstone\361Capstone\361Capstone\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
+C:\Users\Owner\Source\Repos\361Capstone\361Capstone\361Capstone\obj\Debug\netcoreapp3.1\Razor\Views\UserCart\Index.cshtml.g.cs
 C:\Users\Owner\Source\Repos\361Capstone\361Capstone\361Capstone\obj\Debug\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs
 C:\Users\Owner\Source\Repos\361Capstone\361Capstone\361Capstone\obj\Debug\netcoreapp3.1\Razor\Views\_ViewStart.cshtml.g.cs
 C:\Users\Owner\Source\Repos\361Capstone\361Capstone\361Capstone\obj\Debug\netcoreapp3.1\Capstone.RazorTargetAssemblyInfo.cache
 C:\Users\Owner\Source\Repos\361Capstone\361Capstone\361Capstone\obj\Debug\netcoreapp3.1\Capstone.RazorTargetAssemblyInfo.cs
 C:\Users\Owner\Source\Repos\361Capstone\361Capstone\361Capstone\obj\Debug\netcoreapp3.1\Capstone.Views.pdb
-C:\Users\Owner\Source\Repos\361Capstone\361Capstone\361Capstone\obj\Debug\netcoreapp3.1\Capstone.genruntimeconfig.cache
 C:\Users\Owner\Source\Repos\361Capstone\361Capstone\361Capstone\obj\Debug\netcoreapp3.1\Capstone.csproj.CopyComplete
-C:\Users\Owner\Source\Repos\361Capstone\361Capstone\361Capstone\obj\Debug\netcoreapp3.1\Capstone.csproj.AssemblyReference.cache
+C:\Users\Owner\Source\Repos\361Capstone\361Capstone\361Capstone\obj\Debug\netcoreapp3.1\Capstone.dll
+C:\Users\Owner\Source\Repos\361Capstone\361Capstone\361Capstone\obj\Debug\netcoreapp3.1\Capstone.pdb
+C:\Users\Owner\Source\Repos\361Capstone\361Capstone\361Capstone\obj\Debug\netcoreapp3.1\Capstone.genruntimeconfig.cache

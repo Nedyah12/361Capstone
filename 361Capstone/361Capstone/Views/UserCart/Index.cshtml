@@ -1,0 +1,67 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    Layout = "_Layout";
+    ViewBag.Title = "User's Cart";
+}
+@using _361Capstone.Models;
+
+<html>
+
+<head>
+    <link href="@Url.Content("~/Content/Styles/UserLists.css")" rel="stylesheet" type="text/css" asp-append-version="true" />
+    <link href="@Url.Content("~/Content/Styles/List.css")" rel="stylesheet" type="text/css" asp-append-version="true" />
+
+</head>
+
+<body>
+    <div class="grid-container">
+        <div class="list">
+
+            <h1>Items</h1>
+
+            <!--Lists all lists owned by the given user.-->
+            <ul style="list-style-type:none;" class="item">
+                @foreach (Product product in (List<Product>)ViewData["Products"])
+                {
+                    <li onclick="location.href='@Url.Action("Index", "ProductDetails", new { productId = @product.GetProductId(), userId = ViewData["UserId"]})'">
+                        @product.GetName()
+                    </li>
+                }
+            </ul>
+
+            <!--Pads the list with empty spaces, if needed.-->
+            <ul style="list-style-type:none;" class="space">
+                @for (int i = (int)ViewData["ListCount"]; i < 10; i++)
+                {
+                    if ((int)ViewData["ListCount"] % 2 == 0)
+                    {
+                        <li class="startEven"><p> </p></li>
+                    }
+                    else
+                    {
+                        <li class="startOdd"><p> </p></li>
+                    }
+                }
+            </ul>
+        </div>
+
+        <div class="add">
+            <form autocomplete="off">
+                <input type="text" id="title" placeholder="Add new item"><br><br>
+                <input type="button" class="addBtn" value="Add" onclick="addList(document.getElementById('title').value, @ViewData["UserId"])">
+            </form>
+        </div>
+    </div>
+</body>
+</html>
+
+<script>
+
+     function addList(title, userId) {
+        location.href = '@Url.Action("Add", "UserLists")?title=' + title + '&userId=' + userId;
+    }
+
+</script>
+

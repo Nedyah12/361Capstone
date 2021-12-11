@@ -23,7 +23,7 @@ namespace _361Capstone.Engine
         public Cart GetCart(int cartId)
         {
 
-            
+            return new Cart(0, 0);
         }
 
         public void ChangeCartProductQuantity(int cartId, int productId, int newQuantity)
