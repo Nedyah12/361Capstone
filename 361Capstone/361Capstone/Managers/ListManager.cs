@@ -26,10 +26,10 @@ namespace _361Capstone.Managers
             return;
         }
 
-        /*public Cart GetCart(int IdCart)
+        public Cart GetCart(int cartId)
         {
-
-        }*/
+            return Engine.GetCart(cartId);
+        }
 
         public List<string> GetProductInfo(int productId)
         {
@@ -38,7 +38,7 @@ namespace _361Capstone.Managers
 
         public void InsertCartProduct(int cartId, int productId, int quantity)
         {
-            throw new NotImplementedException();
+
         }
 
         public void RemoveCartProduct(int cartId, int productId)
@@ -56,4 +56,5 @@ namespace _361Capstone.Managers
             return;
         }
     }
+
 }

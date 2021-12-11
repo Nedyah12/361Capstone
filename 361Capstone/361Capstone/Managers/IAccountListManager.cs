@@ -8,8 +8,11 @@ namespace _361Capstone.Managers
 {
     public interface IAccountListManager
     {
-        //User GetUser(int IdUser);
-        //void AddList(List list);
-        void RemoveList(int IdList);
+        public interface IAccountListManager
+        {
+            string getUser(int userId);
+            void InsertCart(int userId);
+            //We need to remove Cart or is it going to be removed when we get rid off the products in ListEngine ??
+        }
     }
 }

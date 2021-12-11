@@ -9,27 +9,25 @@ namespace _361Capstone.Managers
 {
     public class AccountListManager : IAccountListManager
     {
-        AccountListEngine Manager { get; set; } = new AccountListEngine();
+        AccountListEngine Engine { get; set; } = new AccountListEngine();
 
-        /*
-        public void AddList(List list)
+
+        public string getUser(int IdUser)
         {
-            Manager.AddList(list);
-            return;
-
-
+            return Engine.getUser(IdUser);
         }
-        */
-        /*public User GetUser(int IdUser)
-        {
-            return Manager.getUser(IdUser);
-        }*/
 
-        public void RemoveList(int IdList)
+        public void InsertCart(int userId)
         {
-            //Manager.RemoveList(IdList);
+            Engine.InsertCart(userId);
             return;
         }
 
     }
 }
+
+
+
+
+
+
