@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using _361Capstone.Models;
 
-namespace _SportsStore.Controllers {
+namespace _361Capstone.Controllers {
     public class LoginController : Controller {
         public IActionResult Index(bool incorrectUsername = false, bool incorrectPassword = false) {
             ViewData["IncorrectUsername"] = incorrectUsername;

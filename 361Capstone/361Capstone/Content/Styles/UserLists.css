@@ -1,12 +1,14 @@
 ﻿.grid-container {
+    width: 110%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 285px 289px 30%;
     grid-template-areas: "main main" "main main" "add add";
     grid-gap: 30px;
-    padding-left: 30%;
-    padding-right: 30%;
+    padding-left: 25%;
+    padding-right: 35%;
     padding-top: 30px;
+    
 }
 
 /*.add {

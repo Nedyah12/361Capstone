@@ -1,0 +1,61 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@using _361Capstone.Managers;
+@using System.Web;
+<html>
+<head>
+    
+       <title>Insert Data</title>
+</head>
+<body>
+    <div class="alert alert-info" role="alert">
+        Our records show that you do not have any address/payment information! Please input the needed information to continue to check out.
+    </div>
+    <form>
+        <div class="paymentInfo">
+            <h3>Payment Information</h3>
+            <label for="creditCardNumber"><b>Credit Card Number: </b></label>
+            <input type="number" id="creditCardNumber" name="creditCardNumber" />
+            <br />
+            <label for="expMonth"><b>Expiration Month: </b></label>
+            <input type="number" id="expMonth" min="1" max="12" name="expMonth" />
+            <br />
+            <label for="expYear"><b>Expiration Year: </b></label>
+            <input type="number" id="expYear" min="2020" max="2999" name="expYear" />
+            <br />
+            <label for="cvvCode"><b>CVV Code: </b></label>
+            <input type="number" id="cvvCode" min="1" max="999" name="cvvCode" />
+        </div>
+        <hr />
+        <div class="addressInfo">
+            <h3>Address Information</h3>
+            <label for="street"><b>Street: </b></label>
+            <input type="text" name="street" />
+            <br />
+            <label for="city"><b>City: </b></label>
+            <input type="text" name="city" />
+            <br />
+            <label for="state"><b>State: </b></label>
+            <input type="text" name="state" />
+            <br />
+            <label for="zipCode"><b>Zip Code: </b></label>
+            <input type="text" name="zipCode" />
+            <br />
+            <label for="country"><b>Country: </b></label>
+            <input type="text" name="country" />
+        </div>
+    </form>
+    <br />
+    <a class="btn btn-success" href='' role="button">Save & Continue</a>
+
+
+
+</body>
+</html>
+
+<script>
+   
+
+</script>
+

@@ -11,7 +11,8 @@ namespace _361Capstone.Accessors {
         int InsertProduct(int categoryId, string name,
                           string description, string manufInfo,
                           string dimensions, double weight,
-                          double rating, int sku, int stockCount);
+                          double rating, int sku, int stockCount,
+                          double price);
 
         List<string> GetProductInfo(int productId);
         int GetIdFromName(string name);

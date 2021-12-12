@@ -37,6 +37,7 @@ namespace _361Capstone.Controllers
             ViewData["UserId"] = userId;
             ViewData["ProductId"] = product.GetProductId();
             ViewData["AddedItem"] = addedItem;
+            ViewData["Price"] = product.GetPrice();
 
             return View();
         }

@@ -20,7 +20,7 @@ namespace _361Capstone.Managers
             foreach(List<String> list in allProductInfo) {
                 productList.Add(new Product(list[0], list[1], list[2], list[3],
                                             list[4], list[5], list[6], list[7],
-                                            list[8], list[9], list[10]));
+                                            list[8], list[9], list[10], list[11]));
                 
             }
 
@@ -47,7 +47,7 @@ namespace _361Capstone.Managers
             List<String> info = new List<String>();
             info = productAccessor.GetProductInfo(productId);
             Product pulledProduct = new Product(info[0], info[1], info[2], info[3], info[4], info[5],
-                                                info[6], info[7], info[8], info[9], info[10]);
+                                                info[6], info[7], info[8], info[9], info[10], info[11]);
             return pulledProduct;
         }
     }

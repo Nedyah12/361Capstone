@@ -27,6 +27,10 @@ namespace _361Capstone.Controllers
             Address address = checkoutManager.GetAddress(userId);
             PaymentInfo paymentInfo = checkoutManager.GetPaymentInfo(userId);
 
+            if(address.GetAddressId() == 0 || paymentInfo.GetPaymentInfoId() == 0) {
+                return RedirectToAction("Index", "InsertData", new { userId });
+            }
+
 
             ViewData["Products"] = productList;
             ViewData["UserId"] = userId;

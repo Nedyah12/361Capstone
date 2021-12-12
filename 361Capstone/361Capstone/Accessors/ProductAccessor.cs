@@ -17,7 +17,8 @@ namespace _361Capstone.Accessors {
         public int InsertProduct(int categoryId, string name, 
                           string description, string manufInfo, 
                           string dimensions, double weight, 
-                          double rating, int sku, int stockCount) {
+                          double rating, int sku, int stockCount,
+                          double price) {
 
             if(categoryId <= 0 || weight <= 0 || sku <= 0 || stockCount < 0) {
                 return -1;
@@ -32,7 +33,7 @@ namespace _361Capstone.Accessors {
                 try {
                     conn.Open();
 
-                    MySqlCommand cmd = new MySqlCommand("INSERT INTO Product (categoryId, name, description, manufacturerInfo, dimensions, weight, productRating, sku, stockCount) VALUES(@categoryId, @name, @desc, @manufInfo, @dim, @weight, @rating, @sku, @count);", conn);
+                    MySqlCommand cmd = new MySqlCommand("INSERT INTO Product (categoryId, name, description, manufacturerInfo, dimensions, weight, productRating, sku, stockCount, price) VALUES(@categoryId, @name, @desc, @manufInfo, @dim, @weight, @rating, @sku, @count, @price);", conn);
                     cmd.Parameters.AddWithValue("@categoryId", categoryId);
                     cmd.Parameters.AddWithValue("@name", name);
                     cmd.Parameters.AddWithValue("@desc", description);
@@ -42,6 +43,7 @@ namespace _361Capstone.Accessors {
                     cmd.Parameters.AddWithValue("@rating", rating);
                     cmd.Parameters.AddWithValue("@sku", sku);
                     cmd.Parameters.AddWithValue("@count", stockCount);
+                    cmd.Parameters.AddWithValue("@price", price);
                     cmd.Prepare();
 
                     cmd.ExecuteNonQuery();
@@ -77,7 +79,7 @@ namespace _361Capstone.Accessors {
                     try {
                         MySqlDataReader reader = cmd.ExecuteReader();
                         if (reader.Read()) {
-                            for (int i = 0; i < 11; i++) {
+                            for (int i = 0; i < 12; i++) {
                                 productInfo.Add(reader[i].ToString());
                             }
                         }
@@ -255,7 +257,7 @@ namespace _361Capstone.Accessors {
                         MySqlDataReader reader = cmd.ExecuteReader();
                         while (reader.Read()) {
                             List<String> tempInfoList = new List<String>();
-                            for (int i = 0; i < 11; i++) {
+                            for (int i = 0; i < 12; i++) {
                                 tempInfoList.Add(reader[i].ToString());
                             }
                             productInfoStrings.Add(tempInfoList);

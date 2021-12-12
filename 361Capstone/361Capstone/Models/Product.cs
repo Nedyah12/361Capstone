@@ -32,8 +32,10 @@ namespace _361Capstone.Models
         private string Sku { get; set; }
         private string StockCount { get; set; }
 
+        private string Price { get; set; }
 
-        public Product(string productId, string categoryId, string saleId, string name, string desc, string manInfo, string dims, string weight, string rating, string sku, string stockCount)
+
+        public Product(string productId, string categoryId, string saleId, string name, string desc, string manInfo, string dims, string weight, string rating, string sku, string stockCount, string price)
         {
             ProductId = productId;
             CategoryId = categoryId;
@@ -46,6 +48,7 @@ namespace _361Capstone.Models
             Rating = rating;
             Sku = sku;
             StockCount = stockCount;
+            Price = price;
         }
 
         public int GetProductId()
@@ -97,6 +100,10 @@ namespace _361Capstone.Models
         {
             return Convert.ToInt32(StockCount);
             //return StockCount;
+        }
+
+        public double GetPrice() {
+            return Convert.ToDouble(Price);
         }
 
     }

@@ -67,3 +67,4 @@ C:\Users\Owner\Source\Repos\361Capstone\361Capstone\361Capstone\obj\Debug\netcor
 C:\Users\Owner\Source\Repos\361Capstone\361Capstone\361Capstone\obj\Debug\netcoreapp3.1\Capstone.pdb
 C:\Users\Owner\Source\Repos\361Capstone\361Capstone\361Capstone\obj\Debug\netcoreapp3.1\Capstone.genruntimeconfig.cache
 C:\Users\Owner\Source\Repos\361Capstone\361Capstone\361Capstone\obj\Debug\netcoreapp3.1\Razor\Views\Checkout\Index.cshtml.g.cs
+C:\Users\Owner\Source\Repos\361Capstone\361Capstone\361Capstone\obj\Debug\netcoreapp3.1\Razor\Views\InsertData\Index.cshtml.g.cs

@@ -32,7 +32,7 @@
             <ul id="cartUL" style="list-style-type:none;" class="item">
                 @foreach (Product product in (List<Product>)ViewData["Products"]) {
     <li id="cartLI">
-        <a href="@Url.Action("Index", "ProductDetails", new { productId = @product.GetProductId(), userId = ViewData["UserId"]})">@product.GetName()</a> (@product.GetStockCount()x)
+        <a href="@Url.Action("Index", "ProductDetails", new { productId = @product.GetProductId(), userId = ViewData["UserId"]})">@product.GetName()</a> (@product.GetStockCount()x): $@product.GetPrice()/ea
         <button style="position:relative;bottom:0.35em;float:right" type="button" class="btn btn-danger" onclick="removeItemFromCart(@ViewData["UserId"], @product.GetProductId())">Remove</button>
     </li>}
             </ul>
@@ -58,7 +58,7 @@
         </div>-->
     <div>
         <a class="btn btn-success" href='@Url.Action("Index", "Checkout", new { userId = ViewData["UserId"] })' role="button">Check Out</a>
-        <br />
+        <br /> <br />
         <a class="btn btn-primary" href='@Url.Action("Index", "Products")?userId=@ViewData["UserId"]' role="button">Go To Products Page</a>
     </div>
 
