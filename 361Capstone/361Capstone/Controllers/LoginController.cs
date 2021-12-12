@@ -57,19 +57,7 @@ namespace _SportsStore.Controllers {
                 return RedirectToAction("Index", new { incorrectUsername, incorrectPassword });
             }
 
-            /*if (userId != 0)
-            {
-                //string decryptedPassword = em.Decrypt(manager.RetrievePassword(userId));
-                if (password.Equals((decryptedPassword)))
-                {
-                    return RedirectToAction("Success", new { userId });
-                }
-                else
-                {
-                    incorrectPassword = true;
-                    return RedirectToAction("Index", new { incorrectEmail, incorrectPassword });
-                }
-            }*/
+       
             incorrectUsername = true;
             return RedirectToAction("Index", new { incorrectUsername, incorrectPassword });
         }

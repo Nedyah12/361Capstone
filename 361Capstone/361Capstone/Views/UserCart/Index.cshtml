@@ -24,9 +24,11 @@
             <!--Lists all lists owned by the given user.-->
             <ul id="cartUL" style="list-style-type:none;" class="item">
                 @foreach (Product product in (List<Product>)ViewData["Products"]) {
-                    <li id="cartLI" onclick="location.href='@Url.Action("Index", "ProductDetails", new { productId = @product.GetProductId(), userId = ViewData["UserId"]})'">
-                    @product.GetName() <span style="float:right">Quantity: @product.GetStockCount()</span>
-                    </li>}
+                    <li id="cartLI">
+                        <a href="@Url.Action("Index", "ProductDetails", new { productId = @product.GetProductId(), userId = ViewData["UserId"]})">@product.GetName()</a> (@product.GetStockCount()x) 
+                        <button style ="float:right" type="button" class="btn btn-danger">Remove</button>
+                    </li>
+                 }
             </ul>
 
             <!--Pads the list with empty spaces, if needed.-->
