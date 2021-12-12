@@ -17,12 +17,14 @@
 </head>
 
 <body>
+
     <div style="display:none" id="addSuccess" class="alert alert-success" role="alert">
         This item was successfully added to your cart.
     </div>
     <div style="display:none" id="addFail" class="alert alert-danger" role="alert">
         Error: There was a problem adding this item to your cart.
     </div>
+    <a style="float:right" class="btn btn-primary" href="@Url.Action("Index", "UserCart", new { userId = ViewData["UserId"] })" role="button">View Cart</a>
     <div class="grid-container">
 
 
@@ -51,7 +53,7 @@
                 <label for="password"><b>Password</b></label>
                 <input type="password" class="txtInput" id="password" placeholder="Enter Password"><br>-->
                 <!--<label for="itemQuantity">Add items to cart: </label>-->
-                <input type="number" id="quantity" name="itemQuantity" min="1" max='@ViewData["StockCount"]' />
+                <input type="number" id="quantity" name="itemQuantity" min="1" max='@ViewData["StockCount"]' value="1" />
                 <input type="button" class="submitBtn" id="submitBtn" value="Add to Cart" onclick="addItemToCart(@ViewData["UserId"], @ViewData["ProductId"], document.getElementById('quantity').value)"><br>
             </form>
             <br /><br />

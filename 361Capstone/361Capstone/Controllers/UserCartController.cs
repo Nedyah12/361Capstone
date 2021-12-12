@@ -16,7 +16,7 @@ namespace _361Capstone.Controllers
         private SessionManager SessionMgr { get; set; } = new SessionManager();
 
         //Displays a page listing all of the user's grocery lists.
-        public IActionResult Index(int userId)
+        public IActionResult Index(int userId, int removedItem)
         {
             /*string key = HttpContext.Session.GetString("_Key");
             if (!SessionMgr.ValidateKey(key, userId))
@@ -30,38 +30,24 @@ namespace _361Capstone.Controllers
             ViewData["Products"] = productList;
             ViewData["UserId"] = userId;
             ViewData["ListCount"] = productList.Count;
+            ViewData["RemovedItem"] = removedItem;
             return View();
         }
 
         //Retrieves values from an HTML form to add a new list to the database.
-        public IActionResult Add(string title, int userId)
-        {
-            string key = HttpContext.Session.GetString("_Key");
-            if (!SessionMgr.ValidateKey(key, userId))
-            {
-                return RedirectToAction("Logout", "Login");
+        public IActionResult RemoveItemFromCart(int userId, int productId) {
+            CartProductAccessor accessor = new CartProductAccessor();
+            int removedItem = 0;
+
+            bool returnVal = accessor.RemoveCartProduct(userId, productId);
+
+            if (returnVal) {
+                removedItem = 1;
+            } else {
+                removedItem = -1;
             }
 
-            //SportsItemList list = new SportsItemList(title, userId);
-            //Manager.AddList(list);
-
-            //Returns to the Index page after the list has been added.
-            return RedirectToAction("Index", new { userId });
-        }
-
-        //Removes a list from the database.
-        public IActionResult Remove(int listId, int userId)
-        {
-            string key = HttpContext.Session.GetString("_Key");
-
-            if (!SessionMgr.ValidateKey(key, userId))
-            {
-                return RedirectToAction("Logout", "Login");
-            }
-
-           // Manager.RemoveList(listId);
-            //Returns to the Index page after the item has been removed.
-            return RedirectToAction("Index", new {userId});
+            return RedirectToAction("Index", new { productId, userId, removedItem });
         }
     }
 }

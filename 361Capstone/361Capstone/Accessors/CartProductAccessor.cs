@@ -37,9 +37,9 @@ namespace _361Capstone.Accessors {
             return true;
         }
 
-        public void RemoveCartProduct(int cartId, int productId) {
+        public bool RemoveCartProduct(int cartId, int productId) {
             if (cartId < 1 || productId < 1) {
-                return;
+                return false;
             }
 
             using (conn = dbConnection.GetConnection()) {
@@ -56,8 +56,10 @@ namespace _361Capstone.Accessors {
                     conn.Close();
                 } catch (MySql.Data.MySqlClient.MySqlException ex) {
                     Console.WriteLine("SQL ERROR: " + ex.Message);
+                    return false;
                 }
             }
+            return true;
         }
 
         public void ChangeCartProductQuantity(int cartId, int productId, int newQuantity) {
