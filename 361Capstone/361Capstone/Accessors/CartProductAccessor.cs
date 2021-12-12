@@ -11,9 +11,9 @@ namespace _361Capstone.Accessors {
         private MySqlConnection conn;
         private readonly DatabaseConnection dbConnection = new DatabaseConnection();
 
-        public void InsertCartProduct(int cartId, int productId, int quantity) {
+        public bool InsertCartProduct(int cartId, int productId, int quantity) {
             if(cartId < 1 || productId < 1 || quantity < 1) {
-                return;
+                return false;
             }
 
             using (conn = dbConnection.GetConnection()) {
@@ -31,8 +31,10 @@ namespace _361Capstone.Accessors {
                     conn.Close();
                 } catch (MySql.Data.MySqlClient.MySqlException ex) {
                     Console.WriteLine("SQL ERROR: " + ex.Message);
+                    return false;
                 }
             }
+            return true;
         }
 
         public void RemoveCartProduct(int cartId, int productId) {

@@ -9,18 +9,18 @@
     padding-top: 30px;
 }
 
-.add {
+/*.add {
     grid-area: add;
-}
+}*/
 
 /* Include the padding and border in an element's total width and height */
-* {
+/** {
     box-sizing: border-box;
-}
+}*/
 
 
 /* Style the "Add" button */
-.addBtn {
+/*.addBtn {
     padding: 10px;
     width: 25%;
     background: #d9d9d9;
@@ -36,7 +36,7 @@
 
     .addBtn:hover {
         background-color: #bbb;
-    }
+    }*/
 
 .list {
     font-size: 20px;

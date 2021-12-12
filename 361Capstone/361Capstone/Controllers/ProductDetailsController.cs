@@ -15,7 +15,7 @@ namespace _361Capstone.Controllers
     {
         ProductsManager manager = new ProductsManager();
 
-        public IActionResult Index(int productId, int userId) {
+        public IActionResult Index(int productId, int userId, int addedItem) {
             //Retrieves the list from the database.
             Product product = manager.GetProduct(productId);
 
@@ -35,10 +35,26 @@ namespace _361Capstone.Controllers
             ViewData["Rating"] = product.GetRating();
             ViewData["StockCount"] = product.GetStockCount();
             ViewData["UserId"] = userId;
+            ViewData["ProductId"] = product.GetProductId();
+            ViewData["AddedItem"] = addedItem;
 
             return View();
         }
 
+        public IActionResult AddItemToCart(int userId, int productId, int count) {
+            CartProductAccessor accessor = new CartProductAccessor();
+            int addedItem = 0;
+
+            bool returnVal = accessor.InsertCartProduct(userId, productId, count);
+
+            if(returnVal) {
+                addedItem = 1;
+            } else {
+                addedItem = -1;
+            }
+
+            return RedirectToAction("Index", new { productId, userId, addedItem });
+        }
 
     }
 }
