@@ -56,9 +56,11 @@
                 <input type="button" class="addBtn" value="Add" onclick="addList(document.getElementById('title').value, @ViewData["UserId"])">
             </form>
         </div>-->
-        <div>
-            <a class="btn btn-primary" href='@Url.Action("Index", "Products")?userId=@ViewData["UserId"]' role="button">Go To Products Page</a>
-        </div>
+    <div>
+        <a class="btn btn-success" href='@Url.Action("Index", "Checkout", new { userId = ViewData["UserId"] })' role="button">Check Out</a>
+        <br />
+        <a class="btn btn-primary" href='@Url.Action("Index", "Products")?userId=@ViewData["UserId"]' role="button">Go To Products Page</a>
+    </div>
 
     </div>
 </body>

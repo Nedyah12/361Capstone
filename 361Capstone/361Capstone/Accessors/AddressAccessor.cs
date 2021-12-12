@@ -63,7 +63,7 @@ namespace _361Capstone.Accessors {
                     try {
                         MySqlDataReader reader = cmd.ExecuteReader();
                         if(reader.Read()) {
-                            for (int i = 2; i < 7; i++) {
+                            for (int i = 0; i < 7; i++) {
                                 addressInfo.Add(reader[i].ToString());
                             }
                         }

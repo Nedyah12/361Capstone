@@ -24,11 +24,11 @@ namespace _361Capstone.Accessors {
                 try {
                     conn.Open();
 
-                    MySqlCommand cmd = new MySqlCommand("INSERT INTO PaymentInfo (userId, creditCardNumber, expirationMonth, expirationDay, cvvCode) VALUES(@userId, @ccn, @expm, @expd, @cvv);", conn);
+                    MySqlCommand cmd = new MySqlCommand("INSERT INTO PaymentInfo (userId, creditCardNumber, expirationMonth, expirationYear, cvvCode) VALUES(@userId, @ccn, @expm, @expy, @cvv);", conn);
                     cmd.Parameters.AddWithValue("@userId", userId);
                     cmd.Parameters.AddWithValue("@ccn", creditCardNumber);
                     cmd.Parameters.AddWithValue("@expm", expMonth);
-                    cmd.Parameters.AddWithValue("@expd", expYear);
+                    cmd.Parameters.AddWithValue("@expy", expYear);
                     cmd.Parameters.AddWithValue("@cvv", cvvCode);
                     cmd.Prepare();
 
@@ -59,7 +59,7 @@ namespace _361Capstone.Accessors {
                     try {
                         MySqlDataReader reader = cmd.ExecuteReader();
                         if (reader.Read()) {
-                            for (int i = 2; i < 6; i++) {
+                            for (int i = 0; i < 6; i++) {
                                 paymentInfo.Add(reader[i].ToString());
                             }
                         }

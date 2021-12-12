@@ -1,0 +1,71 @@
+﻿@{
+    Layout = "_Layout";
+
+    ViewBag.Title = ViewData["Title"];
+
+}
+@using _361Capstone.Models;
+
+<html>
+
+<head>
+
+    <link href="@Url.Content("~/CSS/List.css")" rel="stylesheet" type="text/css" asp-append-version="true" />
+    <script src="@Url.Content("~/Content/Scripts/jquery-3.6.0.min.js")"></script>
+
+
+</head>
+
+<body>
+    <a style="float:right" class="btn btn-primary" href="@Url.Action("Index", "UserCart", new { userId = ViewData["UserId"] })" role="button">View Cart</a>
+    <div class="grid-container">
+
+
+        <div class="list">
+
+            <h1>Checkout</h1>
+            <h3>Cart Items</h3>
+
+            <ul class="list-group">
+                @foreach(Product item in (List<Product>)ViewData["Products"]) {
+                    <li class="list-group-item">@item.GetName() (@item.GetStockCount()x)</li>
+                }
+
+            </ul>
+
+            <!--Lists items-->
+            <!--For loop to add spaces-->
+            <ul style="list-style-type:none;" class="space">
+            </ul>
+        </div>
+        <hr />
+        <div class="paymentInfo">
+            <h3>Payment Information</h3>
+            <p>Credit Card Number: @ViewData["CreditCardNumber"]</p>
+            <p>Expiration Month/Year: @ViewData["ExpirationMonth"]/@ViewData["ExpirationYear"]</p>
+            <p>CVV Code: @ViewData["CVVCode"]</p>
+        </div>
+        <hr />
+        <div class="addressInfo">
+            <h3>Address Information</h3>
+            <p>Street: @ViewData["Street"]</p>
+            <p>City: @ViewData["City"]</p>
+            <p>State: @ViewData["State"]</p>
+            <p>Zip Code: @ViewData["ZipCode"]</p>
+            <p>Country: @ViewData["Country"]</p>
+        </div>
+
+        <a class="btn btn-success" href='' role="button">Complete Transaction</a>
+
+    </div>
+</body>
+</html>
+
+<script>
+
+
+
+    function addItemToCart(userId, productId, count) {
+        location.href = '@Url.Action("AddItemToCart", "ProductDetails")?userId=' + userId + '&productId=' + productId + "&count=" + count;
+    }
+</script>

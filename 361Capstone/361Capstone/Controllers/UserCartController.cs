@@ -18,11 +18,11 @@ namespace _361Capstone.Controllers
         //Displays a page listing all of the user's grocery lists.
         public IActionResult Index(int userId, int removedItem)
         {
-            /*string key = HttpContext.Session.GetString("_Key");
+            string key = HttpContext.Session.GetString("_Key");
             if (!SessionMgr.ValidateKey(key, userId))
             {
                 return RedirectToAction("Logout", "Login");
-            }*/
+            }
 
             //User user = Manager.GetUser(userId);
             List<Product> productList = Manager.GetUserCartProducts(userId);
