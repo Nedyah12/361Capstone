@@ -11,12 +11,12 @@ namespace _361Capstone.Engine
     {
         UserAccessor Accessor { get; set; } = new UserAccessor();
 
-        public int AddUsers(string username, string password)
+        public int AddUser(string username, string password)
         {
-            User user = new User(0, username, password, 0);
+            //User user = new User(0, username, password, new Cart());
             // Is this right?
-            Accessor.InsertUser(username, password);
-            return user.GetUserId();
+            int userId = Accessor.InsertUser(username, password);
+            return userId;
         }
 
         public void AuthenticateLogin(string username, string password)

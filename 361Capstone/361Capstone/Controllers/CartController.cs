@@ -17,12 +17,12 @@ namespace _361Capstone.Controllers
 
         public ActionResult Index(int CartId)
         {
-            Cart cart = ListManager.GetCart(CartId);
-            int UserId = cart.getUserId();
+            //Cart cart = ListManager.GetCart(CartId);
+            //int UserId = cart.getUserId();
 
             //Should we authenticate the login?
 
-            ViewData["UserId"] = cart.getUserId();
+            //ViewData["UserId"] = cart.getUserId();
             //GetProducts in cart model? 
             ViewData["Products"] = 
             ViewData["CartId"] = CartId;
@@ -32,8 +32,8 @@ namespace _361Capstone.Controllers
         
         public ActionResult Add(int ProductId, int CartId)
         {
-            Cart cart = ListManager.GetCart(CartId);
-            int userId = cart.getUserId();
+            //Cart cart = ListManager.GetCart(CartId);
+            //int userId = cart.getUserId();
             //Authenticate Login
 
             //Product product = new Product();??
@@ -49,8 +49,8 @@ namespace _361Capstone.Controllers
 
         public bool Delete(int ProductId, int CartId) // was ActionResult
         {
-            Cart cart = ListManager.GetCart(CartId);
-            int userId = cart.getUserId();
+            //Cart cart = ListManager.GetCart(CartId);
+            //int userId = cart.getUserId();
             //Authenticate Login
 
             //Product poduct = new Product();???

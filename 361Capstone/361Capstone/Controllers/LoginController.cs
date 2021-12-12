@@ -21,7 +21,7 @@ namespace _SportsStore.Controllers {
             string key = userId.ToString();
             HttpContext.Session.SetString("_Key", key);
             //return RedirectToAction("Index", "Products", new { userId });
-            return RedirectToAction("Index", "Products");
+            return RedirectToAction("Index", "Products", new { userId });
         }
 
         public IActionResult AuthenticateUser(string username, string password) {
@@ -57,19 +57,7 @@ namespace _SportsStore.Controllers {
                 return RedirectToAction("Index", new { incorrectUsername, incorrectPassword });
             }
 
-            /*if (userId != 0)
-            {
-                //string decryptedPassword = em.Decrypt(manager.RetrievePassword(userId));
-                if (password.Equals((decryptedPassword)))
-                {
-                    return RedirectToAction("Success", new { userId });
-                }
-                else
-                {
-                    incorrectPassword = true;
-                    return RedirectToAction("Index", new { incorrectEmail, incorrectPassword });
-                }
-            }*/
+       
             incorrectUsername = true;
             return RedirectToAction("Index", new { incorrectUsername, incorrectPassword });
         }

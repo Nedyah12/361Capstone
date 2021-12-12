@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Http;
 
 namespace _361Capstone.Controllers
 {
@@ -14,17 +15,18 @@ namespace _361Capstone.Controllers
     {
         ProductsManager manager = new ProductsManager();
 
-        public IActionResult Index(int productId) {
+        public IActionResult Index(int productId, int userId, int addedItem) {
             //Retrieves the list from the database.
             Product product = manager.GetProduct(productId);
 
             //Validates the session to ensure lists can only be edited by the user they belong to.
-            /*string key = HttpContext.Session.GetString("_Key");
+            SessionManager Sessionmgr = new SessionManager();
+            string key = HttpContext.Session.GetString("_Key");
             if (!Sessionmgr.ValidateKey(key, userId)) {
                 return RedirectToAction("Logout", "Login");
-            }*/
+            }
 
-
+            ViewData["Title"] = product.GetName();
             ViewData["ProductName"] = product.GetName();
             ViewData["Description"] = product.GetDescription();
             ViewData["ManInfo"] = product.GetManInfo();
@@ -32,18 +34,27 @@ namespace _361Capstone.Controllers
             ViewData["Weight"] = product.GetWeight();
             ViewData["Rating"] = product.GetRating();
             ViewData["StockCount"] = product.GetStockCount();
-
-
-            //ViewData["Products"] = list;
-            //ViewData["ItemCount"] = list.Count();
-            //ViewData["Categories"] = categories;
-            //ViewData["ListId"] = listId;
-            ViewData["Title"] = product.GetName();
-            //ViewData["UserId"] = list.GetUserId();
+            ViewData["UserId"] = userId;
+            ViewData["ProductId"] = product.GetProductId();
+            ViewData["AddedItem"] = addedItem;
 
             return View();
         }
 
+        public IActionResult AddItemToCart(int userId, int productId, int count) {
+            CartProductAccessor accessor = new CartProductAccessor();
+            int addedItem = 0;
+
+            bool returnVal = accessor.InsertCartProduct(userId, productId, count);
+
+            if(returnVal) {
+                addedItem = 1;
+            } else {
+                addedItem = -1;
+            }
+
+            return RedirectToAction("Index", new { productId, userId, addedItem });
+        }
 
     }
 }

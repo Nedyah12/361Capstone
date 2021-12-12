@@ -29,7 +29,6 @@ namespace _361Capstone.Controllers
             if (correctPassword && correctUsername)
             {
                 int userId = user.InsertUser(username, password);
-                Console.WriteLine("NEW USERID: " + userId);
                 return RedirectToAction("Index", "Login");
             } else {
                 return RedirectToAction("Index");

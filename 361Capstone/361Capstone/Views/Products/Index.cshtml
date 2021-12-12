@@ -1,7 +1,6 @@
 ﻿@{
     Layout = "_Layout";
 
-    ViewBag.Title = ViewData["Title"];
 
 }
 @using _361Capstone.Models;
@@ -13,49 +12,40 @@
     <link href="@Url.Content("~/CSS/AccountList.css")" rel="stylesheet" type="text/css" asp-append-version="true" />
 
     <link href="@Url.Content("~/CSS/List.css")" rel="stylesheet" type="text/css" asp-append-version="true" />
-
+    
 
 </head>
 
 <body>
+    <a style="float:right"class="btn btn-primary" href="@Url.Action("Index", "UserCart", new { userId = ViewData["UserId"] })" role="button">View Cart</a>
+    <div class="list">
 
-    <div class="grid-container">
+        <h1>@ViewData["Title"]</h1>
 
-        <div class="list">
+        <!--Lists items-->
+        @foreach (Category category in (List<Category>)ViewData["Categories"]) {
+            <h2>@category.GetTitle()</h2>
+            <ul style="list-style-type:none;" class="item">
+                @foreach (Product item in (List<Product>)ViewData["Products"]) {
+                    if (item.GetCategoryId() == category.GetCategoryId()) {
+                        <li>
 
-            <h1>@ViewData["Title"]</h1>
+                            <a href='@Url.Action("GoToProductPage", "Products")?productId=@item.GetProductId()&userId=@ViewData["UserId"]'><h4 style="display:inline-block">@item.GetName()</h4></a>
+                            <!--<button style="display:inline-block">View Product Page</button>-->
 
-            <!--Lists items-->
-            @foreach (Category category in (List<Category>)ViewData["Categories"]) {
-                <h2>@category.GetTitle()</h2>
-                <ul style="list-style-type:none;" class="item">
-                    @foreach (Product item in (List<Product>)ViewData["Products"]) {
-                        if (item.GetCategoryId() == category.GetCategoryId()) {
-                            <li>
-                                
-                                <a href="@Url.Action("GoToProductPage", "Products")?productId=@item.GetProductId()"><h4 style="display:inline-block">@item.GetName()</h4></a>
-                                <!--<button style="display:inline-block">View Product Page</button>-->
-
-                            </li>
-                        }
+                        </li>
+                    }
 
 
-                     }
-                 </ul>
-            }
-                <!--For loop to add spaces-->
-                <ul style="list-style-type:none;" class="space">
-                </ul>
-            </div>
-
-
-        <!--<div class="add">
-            <form autocomplete="off">
-                <input type="text" id="content" placeholder="Add an item"><br><br>
-                <input type="button" class="add" value="Add" onclick="addItem(document.getElementById('content').value, @ViewData["ListId"])">
-            </form>
-        </div>-->
+                }
+            </ul>
+        }
+        <!--For loop to add spaces-->
+        <ul style="list-style-type:none;" class="space">
+        </ul>
     </div>
+
+
 </body>
 </html>
 

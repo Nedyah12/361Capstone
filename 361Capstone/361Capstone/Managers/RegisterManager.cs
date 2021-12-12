@@ -12,7 +12,7 @@ namespace _361Capstone.Managers
 
         public int AddUsers(string username, string password)
         {
-            return Manager.AddUsers(username, password);
+            return Manager.AddUser(username, password);
         }
 
         public void AuthenticateLogin(string username, string password)

@@ -1,0 +1,90 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    
+}
+@using _361Capstone.Models;
+@using System.Web;
+
+<html>
+
+<head>
+    <link href="@Url.Content("~/Content/Styles/UserLists.css")" rel="stylesheet" type="text/css" asp-append-version="true" />
+    <link href="@Url.Content("~/Content/Styles/List.css")" rel="stylesheet" type="text/css" asp-append-version="true" />
+    <script src="@Url.Content("~/Content/Scripts/jquery-3.6.0.min.js")"></script>
+
+</head>
+
+<body>
+    <div style="display:none" id="removeSuccess" class="alert alert-success" role="alert">
+        Item was successfully removed from your cart.
+    </div>
+    <div style="display:none" id="removeFail" class="alert alert-danger" role="alert">
+        Error: There was a problem removing item from your cart.
+    </div>
+    <div class="grid-container">
+        <div class="list">
+
+            <h1>Items</h1>
+
+            <!--Lists all lists owned by the given user.-->
+            <ul id="cartUL" style="list-style-type:none;" class="item">
+                @foreach (Product product in (List<Product>)ViewData["Products"]) {
+    <li id="cartLI">
+        <a href="@Url.Action("Index", "ProductDetails", new { productId = @product.GetProductId(), userId = ViewData["UserId"]})">@product.GetName()</a> (@product.GetStockCount()x)
+        <button style="position:relative;bottom:0.35em;float:right" type="button" class="btn btn-danger" onclick="removeItemFromCart(@ViewData["UserId"], @product.GetProductId())">Remove</button>
+    </li>}
+            </ul>
+
+            <!--Pads the list with empty spaces, if needed.-->
+            <ul id="cartUL" style="list-style-type:none;" class="space">
+                @for (int i = (int)ViewData["ListCount"]; i < 10; i++) {
+                    if ((int)ViewData["ListCount"] % 2 == 0) {
+    <li id="cartLI" class="startEven"><p> </p></li>
+ } else {
+    <li id="cartLI" class="startOdd"><p> </p></li>}
+                }
+            </ul>
+        </div>
+
+
+
+        <!--<div class="add">
+            <form autocomplete="off">
+                <input type="text" id="title" placeholder="Add new item"><br><br>
+                <input type="button" class="addBtn" value="Add" onclick="addList(document.getElementById('title').value, @ViewData["UserId"])">
+            </form>
+        </div>-->
+        <div>
+            <a class="btn btn-primary" href='@Url.Action("Index", "Products")?userId=@ViewData["UserId"]' role="button">Go To Products Page</a>
+        </div>
+
+    </div>
+</body>
+</html>
+
+<script>
+    function checkForRemovedItem() {
+        var removedItem = @ViewData["RemovedItem"];
+        if (removedItem == 1) {
+            $('#removeSuccess').show();
+        } else if(removedItem == -1) {
+            $('#removeFail').show();
+        }
+    }
+
+    $(document).ready(function () {
+        $('#removeSuccess', '#removeFail').hide();
+
+        checkForRemovedItem();
+    })
+
+
+
+    function removeItemFromCart(userId, productId) {
+        location.href = '@Url.Action("RemoveItemFromCart", "UserCart")?userId=' + userId + '&productId=' + productId;
+    }
+
+</script>
+
