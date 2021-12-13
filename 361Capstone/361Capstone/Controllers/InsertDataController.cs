@@ -29,7 +29,8 @@ namespace _361Capstone.Controllers {
                                       int cvv, string street, string city, string state, 
                                       int zip, string country) {
 
-
+            manager.SendPaymentInfo(userId, ccn, expm, expy, cvv);
+            manager.SendAddress(userId, street, city, state, zip, country);
             return RedirectToAction("Index", "Checkout", new { userId });
         }
 

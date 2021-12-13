@@ -16,7 +16,7 @@ namespace _361Capstone.Accessors {
                 return;
             } else if (expMonth < 1 || expMonth > 12) {
                 return;
-            } else if (expYear < 1 || expYear > 31) {
+            } else if (expYear < 1 || expYear > 2999) {
                 return;
             }
 

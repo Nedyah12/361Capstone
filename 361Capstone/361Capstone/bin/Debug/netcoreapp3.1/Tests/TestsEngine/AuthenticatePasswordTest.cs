@@ -12,11 +12,11 @@ namespace _361Capstone.Tests.UnitTesting.TestsEngine
     [TestClass]
     public class AuthenticatePasswordTest
     {
-        //[Test]
+        [TestMethod]
         public void AuthenticatePassword_Pass()
         {
             AuthenticationEngine engine = new AuthenticationEngine();
-            string password = "";
+            string password = "123myPassword";
 
             bool test = engine.AuthenticatePassword(password);
 

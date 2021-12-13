@@ -17,7 +17,7 @@ namespace _361Capstone.Tests.UnitTesting.TestsManager
         {
             AccountListManager accountListManager = new AccountListManager();
 
-            User user = accountListManager.GetUser(128);
+            String username = accountListManager.getUser(128);
 
             /*if (user.GetUserId() != 128)
             {

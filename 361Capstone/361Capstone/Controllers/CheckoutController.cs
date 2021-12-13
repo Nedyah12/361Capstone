@@ -25,16 +25,31 @@ namespace _361Capstone.Controllers
 
             List<Product> productList = userCartManager.GetUserCartProducts(userId);
             Address address = checkoutManager.GetAddress(userId);
-            PaymentInfo paymentInfo = checkoutManager.GetPaymentInfo(userId);
+            PaymentInfo paymentInfo = checkoutManager.GetPaymentInfo(userId);  
 
             if(address.GetAddressId() == 0 || paymentInfo.GetPaymentInfoId() == 0) {
                 return RedirectToAction("Index", "InsertData", new { userId });
             }
 
+            double subtotal = 0;
+            foreach(Product product in productList) {
+                subtotal += product.GetPrice()*product.GetStockCount();
+            }
+
+            string tempcardNum = paymentInfo.GetCardNumber();
+            string safeCardNum = "";
+
+            for(int i=0;i<tempcardNum.Length;i++) {
+                if(i < tempcardNum.Length-4) {
+                    safeCardNum += "*";
+                } else {
+                    safeCardNum += tempcardNum[i];
+                }
+            }
 
             ViewData["Products"] = productList;
             ViewData["UserId"] = userId;
-            ViewData["CreditCardNumber"] = paymentInfo.GetCardNumber();
+            ViewData["CreditCardNumber"] = safeCardNum;
             ViewData["ExpirationMonth"] = paymentInfo.GetExpirationMonth();
             ViewData["ExpirationYear"] = paymentInfo.GetExpirationYear();
             ViewData["CVVCode"] = paymentInfo.GetCvv();
@@ -43,23 +58,14 @@ namespace _361Capstone.Controllers
             ViewData["State"] = address.GetState();
             ViewData["ZipCode"] = address.GetZipCode();
             ViewData["Country"] = address.GetCountry();
+            ViewData["Subtotal"] = subtotal;
 
             return View();
         }
 
-        public IActionResult AddItemToCart(int userId, int productId, int count) {
-            CartProductAccessor accessor = new CartProductAccessor();
-            int addedItem = 0;
-
-            bool returnVal = accessor.InsertCartProduct(userId, productId, count);
-
-            if(returnVal) {
-                addedItem = 1;
-            } else {
-                addedItem = -1;
-            }
-
-            return RedirectToAction("Index", new { productId, userId, addedItem });
+        public IActionResult CompleteTransaction(int userId) {
+            checkoutManager.CompleteTransaction(userId);
+            return RedirectToAction("Index", "UserCart", new { userId, removedItem = 0, transactionStatus = 1 });
         }
 
     }

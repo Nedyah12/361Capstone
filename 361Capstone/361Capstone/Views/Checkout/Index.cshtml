@@ -5,6 +5,7 @@
 
 }
 @using _361Capstone.Models;
+@using System;
 
 <html>
 
@@ -27,11 +28,16 @@
             <h3>Cart Items</h3>
 
             <ul class="list-group">
-                @foreach(Product item in (List<Product>)ViewData["Products"]) {
-                    <li class="list-group-item">@item.GetName() (@item.GetStockCount()x)</li>
+                @foreach (Product item in (List<Product>)ViewData["Products"]) {
+                    <li class="list-group-item">@item.GetName() (@item.GetStockCount()x)
+                        <p style="float:right">$@Decimal.Round((decimal)(item.GetPrice()*item.GetStockCount()), 2)</p>
+                    </li>
                 }
 
             </ul>
+            <h5 style="float:right">Subtotal: $@ViewData["Subtotal"]</h5>
+            <br />
+
 
             <!--Lists items-->
             <!--For loop to add spaces-->
@@ -55,7 +61,7 @@
             <p>Country: @ViewData["Country"]</p>
         </div>
 
-        <a class="btn btn-success" href='' role="button">Complete Transaction</a>
+        <a class="btn btn-success" href='@Url.Action("CompleteTransaction", "Checkout", new { userId = ViewData["UserId"] })' role="button">Complete Transaction</a>
 
     </div>
 </body>

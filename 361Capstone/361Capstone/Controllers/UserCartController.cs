@@ -16,7 +16,7 @@ namespace _361Capstone.Controllers
         private SessionManager SessionMgr { get; set; } = new SessionManager();
 
         //Displays a page listing all of the user's grocery lists.
-        public IActionResult Index(int userId, int removedItem)
+        public IActionResult Index(int userId, int removedItem, int transactionStatus)
         {
             string key = HttpContext.Session.GetString("_Key");
             if (!SessionMgr.ValidateKey(key, userId))
@@ -31,6 +31,7 @@ namespace _361Capstone.Controllers
             ViewData["UserId"] = userId;
             ViewData["ListCount"] = productList.Count;
             ViewData["RemovedItem"] = removedItem;
+            ViewData["Transaction"] = transactionStatus;
             return View();
         }
 

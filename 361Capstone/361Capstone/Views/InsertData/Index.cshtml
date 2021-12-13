@@ -48,12 +48,12 @@
     </form>
     <br />
     <a class="btn btn-success" role="button" onclick="
-    sendData(@ViewData["UserId"], document.getElementById('creditCardNumber'),
-        document.getElementById('expMonth'),
-        document.getElementById('expYear'), document.getElementById('cvvCode'),
-        document.getElementById('street'), document.getElementById('city'),
-        document.getElementById('state'), document.getElementById('zipCode'),
-        document.getElementById('country'))
+    sendData(@ViewData["UserId"], document.getElementById('creditCardNumber').value,
+        document.getElementById('expMonth').value,
+        document.getElementById('expYear').value, document.getElementById('cvvCode').value,
+        document.getElementById('street').value, document.getElementById('city').value,
+        document.getElementById('state').value, document.getElementById('zipCode').value,
+        document.getElementById('country').value)
     ">Save & Continue</a>
 
 

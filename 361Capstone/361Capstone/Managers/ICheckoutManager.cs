@@ -7,5 +7,6 @@ namespace _361Capstone.Managers
     {
         Address GetAddress(int userId);
         PaymentInfo GetPaymentInfo(int userId);
+        void CompleteTransaction(int userId);
     }
 }

@@ -23,6 +23,12 @@
     <div style="display:none" id="removeFail" class="alert alert-danger" role="alert">
         Error: There was a problem removing item from your cart.
     </div>
+    <div style="display:none" id="transactionSuccess" class="alert alert-success" role="alert">
+        Your transaction was completed.
+    </div>
+    <div style="display:none" id="transactionFail" class="alert alert-danger" role="alert">
+        Error: Your transaction was not completed.
+    </div>
     <div class="grid-container">
         <div class="list">
 
@@ -34,17 +40,18 @@
     <li id="cartLI">
         <a href="@Url.Action("Index", "ProductDetails", new { productId = @product.GetProductId(), userId = ViewData["UserId"]})">@product.GetName()</a> (@product.GetStockCount()x): $@product.GetPrice()/ea
         <button style="position:relative;bottom:0.35em;float:right" type="button" class="btn btn-danger" onclick="removeItemFromCart(@ViewData["UserId"], @product.GetProductId())">Remove</button>
-    </li>}
+    </li>
+}
             </ul>
 
             <!--Pads the list with empty spaces, if needed.-->
             <ul id="cartUL" style="list-style-type:none;" class="space">
                 @for (int i = (int)ViewData["ListCount"]; i < 10; i++) {
                     if ((int)ViewData["ListCount"] % 2 == 0) {
-    <li id="cartLI" class="startEven"><p> </p></li>
- } else {
-    <li id="cartLI" class="startOdd"><p> </p></li>}
-                }
+    <li id="cartLI" class="startEven"><p> </p></li> } else {
+    <li id="cartLI" class="startOdd"><p> </p></li>
+}
+}
             </ul>
         </div>
 
@@ -56,11 +63,11 @@
                 <input type="button" class="addBtn" value="Add" onclick="addList(document.getElementById('title').value, @ViewData["UserId"])">
             </form>
         </div>-->
-    <div>
-        <a class="btn btn-success" href='@Url.Action("Index", "Checkout", new { userId = ViewData["UserId"] })' role="button">Check Out</a>
-        <br /> <br />
-        <a class="btn btn-primary" href='@Url.Action("Index", "Products")?userId=@ViewData["UserId"]' role="button">Go To Products Page</a>
-    </div>
+        <div>
+            <a class="btn btn-success" href='@Url.Action("Index", "Checkout", new { userId = ViewData["UserId"] })' role="button">Check Out</a>
+            <br /> <br />
+            <a class="btn btn-primary" href='@Url.Action("Index", "Products")?userId=@ViewData["UserId"]' role="button">Go To Products Page</a>
+        </div>
 
     </div>
 </body>
@@ -76,10 +83,20 @@
         }
     }
 
+    function checkForTransaction() {
+        var transaction = @ViewData["Transaction"];
+        if (transaction == 1) {
+            $('#transactionSuccess').show();
+        } else if (transaction == -1) {
+            $('#transactionFail').show();
+        }
+    }
+
     $(document).ready(function () {
-        $('#removeSuccess', '#removeFail').hide();
+        $('#removeSuccess', '#removeFail', '#transactionSuccess', '#transactionFail').hide();
 
         checkForRemovedItem();
+        checkForTransaction();
     })
 
 

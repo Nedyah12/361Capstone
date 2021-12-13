@@ -40,6 +40,12 @@ namespace _361Capstone.Managers
                 return payment;
             }
             return payment;
-        }   
+        }  
+        
+        public void CompleteTransaction(int userId) {
+            UserCartManager userCartManager = new UserCartManager();
+            List<Product> products = userCartManager.GetUserCartProducts(userId);
+            Engine.CompleteTransaction(userId, products);
+        }
     }
 }

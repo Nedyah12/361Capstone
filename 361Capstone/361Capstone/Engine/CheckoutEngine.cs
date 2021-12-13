@@ -11,6 +11,8 @@ namespace _361Capstone.Engine
     {
         AddressAccessor addressAccessor = new AddressAccessor();
         PaymentInfoAccessor paymentInfoAccessor = new PaymentInfoAccessor();
+        ProductAccessor productAccessor = new ProductAccessor();
+        CartProductAccessor cartProductAccessor = new CartProductAccessor();
 
         public List<String> GetAddressInfo(int userId) {
             List<String> addressInfo = addressAccessor.GetAddressInfo(userId);
@@ -20,6 +22,13 @@ namespace _361Capstone.Engine
         public List<String> GetPaymentInfo(int userId) {
             List<String> paymentInfo = paymentInfoAccessor.GetPaymentInfo(userId);
             return paymentInfo;
+        }
+
+        public void CompleteTransaction(int userId, List<Product> products) {
+            foreach(Product product in products) {
+                productAccessor.DecrementStockCount(product.GetProductId(), product.GetStockCount());
+                cartProductAccessor.RemoveCartProduct(userId, product.GetProductId());           
+            }
         }
 
 
