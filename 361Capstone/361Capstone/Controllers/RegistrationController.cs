@@ -1,11 +1,5 @@
-﻿using System;
-using _361Capstone.Models;
-using _361Capstone.Managers;
-using _361Capstone.Engine;
+﻿using _361Capstone.Engine;
 using _361Capstone.Accessors;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 
 namespace _361Capstone.Controllers
@@ -34,7 +28,6 @@ namespace _361Capstone.Controllers
                 return RedirectToAction("Index");
             }
 
-            // secure password and then add the user to the database
             
         }
     }

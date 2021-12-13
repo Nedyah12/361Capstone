@@ -1,63 +1,46 @@
-﻿
-using _361Capstone.Models;
+﻿using _361Capstone.Models;
 using System;
 using _361Capstone.Accessors;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
-namespace _361Capstone.Engine
-{
-    public class ListEngine : IListEngine
-    {
+namespace _361Capstone.Engine {
+    public class ListEngine : IListEngine {
         CartAccessor CartAccessor { get; set; } = new CartAccessor();
         CartProductAccessor Accessor { get; set; } = new CartProductAccessor();
         ProductAccessor ProductAccessor { get; set; } = new ProductAccessor();
 
-        public ListEngine()
-        {
+        public ListEngine() {
             Accessor = new CartProductAccessor();
             ProductAccessor = new ProductAccessor();
         }
 
-        public Cart GetCart(int cartId)
-        {
+        public Cart GetCart(int cartId) {
 
             return new Cart(0, 0);
         }
 
-        public void ChangeCartProductQuantity(int cartId, int productId, int newQuantity)
-        {
-            try
-            {
+        public void ChangeCartProductQuantity(int cartId, int productId, int newQuantity) {
+            try {
                 Accessor.ChangeCartProductQuantity(cartId, productId, newQuantity);
-            }
-            catch (ArgumentNullException)
-            {
+            } catch (ArgumentNullException) {
                 return;
             }
 
             return;
         }
 
-        public List<string> GetProductInfo(int productId)
-        {
+        public List<string> GetProductInfo(int productId) {
             return ProductAccessor.GetProductInfo(productId);
         }
 
-        public void InsertCartProduct(int cartId, int productId, int quantity)
-        {
-
+        public void InsertCartProduct(int cartId, int productId, int quantity) {
+            return;
         }
 
-        public void RemoveCartProduct(int cartId, int productId)
-        {
-            try
-            {
+        public void RemoveCartProduct(int cartId, int productId) {
+            try {
                 Accessor.RemoveCartProduct(cartId, productId);
-            }
-            catch (ArgumentNullException)
-            {
+            } catch (ArgumentNullException) {
                 return;
             }
 

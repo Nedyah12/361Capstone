@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 using MySql.Data.MySqlClient;
 
@@ -11,8 +8,8 @@ namespace _361Capstone.Accessors {
         private MySqlConnection conn;
         private readonly DatabaseConnection dbConnection = new DatabaseConnection();
 
-        public void InsertPaymentInfo(int userId, int creditCardNumber, int expMonth, int expYear, int cvvCode) {
-            if (userId < 1 || creditCardNumber <= 0 || cvvCode <= 0) {
+        public void InsertPaymentInfo(int userId, string creditCardNumber, int expMonth, int expYear, int cvvCode) {
+            if (userId < 1 || creditCardNumber == null || cvvCode <= 0) {
                 return;
             } else if (expMonth < 1 || expMonth > 12) {
                 return;

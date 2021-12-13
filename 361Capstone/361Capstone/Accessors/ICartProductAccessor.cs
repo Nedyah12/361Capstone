@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace _361Capstone.Accessors {
+﻿namespace _361Capstone.Accessors {
     interface ICartProductAccessor {
         bool InsertCartProduct(int cartId, int productId, int quantity);
         bool RemoveCartProduct(int cartId, int productId);

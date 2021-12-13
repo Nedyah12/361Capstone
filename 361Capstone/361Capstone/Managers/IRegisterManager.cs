@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace _361Capstone.Managers
+﻿namespace _361Capstone.Managers
 {
     interface IRegisterManager
     {

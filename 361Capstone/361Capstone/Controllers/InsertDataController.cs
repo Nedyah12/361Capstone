@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using _361Capstone.Accessors;
-using _361Capstone.Managers;
+﻿using _361Capstone.Managers;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using _361Capstone.Models;
 
 namespace _361Capstone.Controllers {
     public class InsertDataController : Controller {
@@ -25,7 +19,7 @@ namespace _361Capstone.Controllers {
             return View();
         }
 
-        public IActionResult SendData(int userId, int ccn, int expm, int expy, 
+        public IActionResult SendData(int userId, string ccn, int expm, int expy, 
                                       int cvv, string street, string city, string state, 
                                       int zip, string country) {
 

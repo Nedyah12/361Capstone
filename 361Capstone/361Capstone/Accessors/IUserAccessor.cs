@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 
-
 namespace _361Capstone.Accessors {
     interface IUserAccessor {
         int InsertUser(string email, string password);

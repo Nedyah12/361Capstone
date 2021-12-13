@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using _361Capstone.Models;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+
 
 namespace _361Capstone.Managers
 {
@@ -12,6 +9,5 @@ namespace _361Capstone.Managers
         void RemoveCartProduct(int cartId, int productId);
         void ChangeCartProductQuantity(int cartId, int productId, int newQuantity);
         List<string> GetProductInfo(int productId);
-        //Cart GetCart(int IdCart);
     }
 }

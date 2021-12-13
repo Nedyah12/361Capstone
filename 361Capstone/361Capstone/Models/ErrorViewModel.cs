@@ -1,5 +1,3 @@
-using System;
-
 namespace _361Capstone.Models
 {
     public class ErrorViewModel

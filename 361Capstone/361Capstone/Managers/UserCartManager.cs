@@ -2,8 +2,6 @@
 using _361Capstone.Models;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace _361Capstone.Managers
 {
@@ -22,7 +20,6 @@ namespace _361Capstone.Managers
                                             list[8], list[9], list[12], list[11]));
 
             }
-
 
             return productList;
         }

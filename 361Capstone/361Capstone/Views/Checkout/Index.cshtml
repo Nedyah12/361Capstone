@@ -18,6 +18,7 @@
 </head>
 
 <body>
+    <a style="float:right;margin-left:5px" class="btn btn-danger" href="@Url.Action("Logout", "Login")" role="button">Log out</a>
     <a style="float:right" class="btn btn-primary" href="@Url.Action("Index", "UserCart", new { userId = ViewData["UserId"] })" role="button">View Cart</a>
     <div class="grid-container">
 
@@ -29,8 +30,9 @@
 
             <ul class="list-group">
                 @foreach (Product item in (List<Product>)ViewData["Products"]) {
-                    <li class="list-group-item">@item.GetName() (@item.GetStockCount()x)
-                        <p style="float:right">$@Decimal.Round((decimal)(item.GetPrice()*item.GetStockCount()), 2)</p>
+                    <li class="list-group-item">
+                        @item.GetName() (@item.GetStockCount()x)
+                        <p style="float:right">$@Decimal.Round((decimal)(item.GetPrice() * item.GetStockCount()), 2)</p>
                     </li>
                 }
 
@@ -38,9 +40,6 @@
             <h5 style="float:right">Subtotal: $@ViewData["Subtotal"]</h5>
             <br />
 
-
-            <!--Lists items-->
-            <!--For loop to add spaces-->
             <ul style="list-style-type:none;" class="space">
             </ul>
         </div>
@@ -61,14 +60,18 @@
             <p>Country: @ViewData["Country"]</p>
         </div>
 
-        <a class="btn btn-success" href='@Url.Action("CompleteTransaction", "Checkout", new { userId = ViewData["UserId"] })' role="button">Complete Transaction</a>
+        <a class="btn btn-success" id="transactionButton" href='@Url.Action("CompleteTransaction", "Checkout", new { userId = ViewData["UserId"] })' role="button">Complete Transaction</a>
 
     </div>
 </body>
 </html>
 
 <script>
-
+    $(document).ready(function () {
+        if (@ViewData["TotalProducts"] == 0) {
+            $('#transactionButton').hide();
+        }
+    })
 
 
     function addItemToCart(userId, productId, count) {

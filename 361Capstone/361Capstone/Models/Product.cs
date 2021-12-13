@@ -1,24 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace _361Capstone.Models
 {
     public class Product : IProduct
     {
-       
-        /*private int ProductId { get; set; }
-        private int CategoryId { get; set; }
-        private int SaleId { get; set; }
-        private string Name { get; set; }
-        private string Description { get; set; }
-        private string ManInfo { get; set; }
-        private string Dimensions { get; set; }
-        private double Weight { get; set; }
-        private double Rating { get; set; }
-        private string Sku { get; set; }
-        private int StockCount { get; set; }*/
 
         private string ProductId { get; set; }
         private string CategoryId { get; set; }
@@ -54,17 +39,14 @@ namespace _361Capstone.Models
         public int GetProductId()
         {
             return Convert.ToInt32(ProductId);
-            //return ProductId;
         }
         public int GetCategoryId()
         {
             return Convert.ToInt32(CategoryId);
-            //return CategoryId;
         }
         public int GetSaleId()
         {
             return Convert.ToInt32(SaleId);
-            //return SaleId;
         }
         public string GetName()
         {
@@ -85,12 +67,10 @@ namespace _361Capstone.Models
         public double GetWeight()
         {
             return Convert.ToDouble(Weight);
-            //return Weight;
         }
         public double GetRating()
         {
             return Convert.ToDouble(Rating);
-            //return Rating;
         }
         public string GetSku()
         {
@@ -99,7 +79,6 @@ namespace _361Capstone.Models
         public int GetStockCount()
         {
             return Convert.ToInt32(StockCount);
-            //return StockCount;
         }
 
         public double GetPrice() {

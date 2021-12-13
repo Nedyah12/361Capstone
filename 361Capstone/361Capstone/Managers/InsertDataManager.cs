@@ -1,10 +1,4 @@
-﻿using _361Capstone.Engine;
-using _361Capstone.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using _361Capstone.Accessors;
+﻿using _361Capstone.Accessors;
 
 namespace _361Capstone.Managers
 {
@@ -20,7 +14,7 @@ namespace _361Capstone.Managers
             return 1;
         }
 
-        public int SendPaymentInfo(int userId, int ccn, int expm, int expy, int cvv)
+        public int SendPaymentInfo(int userId, string ccn, int expm, int expy, int cvv)
         {
             paymentInfoAccessor.InsertPaymentInfo(userId, ccn, expm, expy, cvv);
             return 1;

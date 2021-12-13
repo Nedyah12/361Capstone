@@ -2,8 +2,6 @@
 using _361Capstone.Models;
 using _361Capstone.Engine;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace _361Capstone.Managers
 {
@@ -38,7 +36,7 @@ namespace _361Capstone.Managers
 
         public void InsertCartProduct(int cartId, int productId, int quantity)
         {
-
+            return;
         }
 
         public void RemoveCartProduct(int cartId, int productId)

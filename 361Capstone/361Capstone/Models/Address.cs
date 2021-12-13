@@ -1,5 +1,4 @@
-﻿using System;
-namespace _361Capstone.Models
+﻿namespace _361Capstone.Models
 {
     public class Address : IAddress
     {

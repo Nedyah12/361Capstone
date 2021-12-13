@@ -12,11 +12,12 @@
     <div class="alert alert-info" role="alert">
         Our records show that you do not have any address/payment information! Please input the needed information to continue to check out.
     </div>
+    <a style="float:right;margin-left:5px" class="btn btn-danger" href="@Url.Action("Logout", "Login")" role="button">Log out</a>
     <form>
         <div class="paymentInfo">
             <h3>Payment Information</h3>
             <label for="creditCardNumber"><b>Credit Card Number: </b></label>
-            <input type="number" id="creditCardNumber" name="creditCardNumber" />
+            <input type="text" id="creditCardNumber" name="creditCardNumber" />
             <br />
             <label for="expMonth"><b>Expiration Month: </b></label>
             <input type="number" id="expMonth" min="1" max="12" name="expMonth" />
@@ -31,19 +32,19 @@
         <div class="addressInfo">
             <h3>Address Information</h3>
             <label for="street"><b>Street: </b></label>
-            <input type="text" name="street" id="street"/>
+            <input type="text" name="street" id="street" />
             <br />
             <label for="city"><b>City: </b></label>
-            <input type="text" name="city" id="city"/>
+            <input type="text" name="city" id="city" />
             <br />
             <label for="state"><b>State: </b></label>
-            <input type="text" name="state" id="state"/>
+            <input type="text" name="state" id="state" />
             <br />
             <label for="zipCode"><b>Zip Code: </b></label>
-            <input type="text" name="zipCode" id="zipCode"/>
+            <input type="text" name="zipCode" id="zipCode" />
             <br />
             <label for="country"><b>Country: </b></label>
-            <input type="text" name="country" id="country"/>
+            <input type="text" name="country" id="country" />
         </div>
     </form>
     <br />

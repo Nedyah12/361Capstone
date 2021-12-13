@@ -1,11 +1,6 @@
-﻿using System;
-using _361Capstone.Models;
+﻿using _361Capstone.Models;
 using _361Capstone.Managers;
-using _361Capstone.Engine;
-using _361Capstone.Accessors;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Http;
 
@@ -59,6 +54,7 @@ namespace _361Capstone.Controllers
             ViewData["ZipCode"] = address.GetZipCode();
             ViewData["Country"] = address.GetCountry();
             ViewData["Subtotal"] = subtotal;
+            ViewData["TotalProducts"] = productList.Count;
 
             return View();
         }

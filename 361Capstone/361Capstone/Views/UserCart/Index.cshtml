@@ -29,6 +29,7 @@
     <div style="display:none" id="transactionFail" class="alert alert-danger" role="alert">
         Error: Your transaction was not completed.
     </div>
+    <a style="float:right;margin-left:5px" class="btn btn-danger" href="@Url.Action("Logout", "Login")" role="button">Log out</a>
     <div class="grid-container">
         <div class="list">
 
@@ -37,21 +38,22 @@
             <!--Lists all lists owned by the given user.-->
             <ul id="cartUL" style="list-style-type:none;" class="item">
                 @foreach (Product product in (List<Product>)ViewData["Products"]) {
-    <li id="cartLI">
-        <a href="@Url.Action("Index", "ProductDetails", new { productId = @product.GetProductId(), userId = ViewData["UserId"]})">@product.GetName()</a> (@product.GetStockCount()x): $@product.GetPrice()/ea
-        <button style="position:relative;bottom:0.35em;float:right" type="button" class="btn btn-danger" onclick="removeItemFromCart(@ViewData["UserId"], @product.GetProductId())">Remove</button>
-    </li>
-}
+                    <li id="cartLI">
+                        <a href="@Url.Action("Index", "ProductDetails", new { productId = @product.GetProductId(), userId = ViewData["UserId"]})">@product.GetName()</a> (@product.GetStockCount()x): $@product.GetPrice()/ea
+                        <button style="position:relative;bottom:0.35em;float:right" type="button" class="btn btn-danger" onclick="removeItemFromCart(@ViewData["UserId"], @product.GetProductId())">Remove</button>
+                    </li>
+                }
             </ul>
 
             <!--Pads the list with empty spaces, if needed.-->
             <ul id="cartUL" style="list-style-type:none;" class="space">
                 @for (int i = (int)ViewData["ListCount"]; i < 10; i++) {
                     if ((int)ViewData["ListCount"] % 2 == 0) {
-    <li id="cartLI" class="startEven"><p> </p></li> } else {
-    <li id="cartLI" class="startOdd"><p> </p></li>
-}
-}
+                        <li id="cartLI" class="startEven"><p> </p></li>
+ } else {
+                        <li id="cartLI" class="startOdd"><p> </p></li>
+                    }
+                }
             </ul>
         </div>
 

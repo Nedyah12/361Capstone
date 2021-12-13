@@ -17,7 +17,9 @@
 </head>
 
 <body>
-    <a style="float:right"class="btn btn-primary" href="@Url.Action("Index", "UserCart", new { userId = ViewData["UserId"] })" role="button">View Cart</a>
+    <a style="float:right;margin-left:5px" class="btn btn-danger" href="@Url.Action("Logout", "Login")" role="button">Log out</a>
+    <a style="float:right" class="btn btn-primary" href="@Url.Action("Index", "UserCart", new { userId = ViewData["UserId"] })" role="button">View Cart</a>
+
     <div class="list">
 
         <h1>@ViewData["Title"]</h1>

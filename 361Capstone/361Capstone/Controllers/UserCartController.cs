@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using _361Capstone.Accessors;
 using _361Capstone.Managers;
 using _361Capstone.Models;
@@ -15,7 +12,6 @@ namespace _361Capstone.Controllers
         private UserCartManager Manager { get; set; } = new UserCartManager();
         private SessionManager SessionMgr { get; set; } = new SessionManager();
 
-        //Displays a page listing all of the user's grocery lists.
         public IActionResult Index(int userId, int removedItem, int transactionStatus)
         {
             string key = HttpContext.Session.GetString("_Key");
@@ -24,7 +20,6 @@ namespace _361Capstone.Controllers
                 return RedirectToAction("Logout", "Login");
             }
 
-            //User user = Manager.GetUser(userId);
             List<Product> productList = Manager.GetUserCartProducts(userId);
 
             ViewData["Products"] = productList;
