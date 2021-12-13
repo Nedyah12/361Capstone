@@ -31,23 +31,30 @@
         <div class="addressInfo">
             <h3>Address Information</h3>
             <label for="street"><b>Street: </b></label>
-            <input type="text" name="street" />
+            <input type="text" name="street" id="street"/>
             <br />
             <label for="city"><b>City: </b></label>
-            <input type="text" name="city" />
+            <input type="text" name="city" id="city"/>
             <br />
             <label for="state"><b>State: </b></label>
-            <input type="text" name="state" />
+            <input type="text" name="state" id="state"/>
             <br />
             <label for="zipCode"><b>Zip Code: </b></label>
-            <input type="text" name="zipCode" />
+            <input type="text" name="zipCode" id="zipCode"/>
             <br />
             <label for="country"><b>Country: </b></label>
-            <input type="text" name="country" />
+            <input type="text" name="country" id="country"/>
         </div>
     </form>
     <br />
-    <a class="btn btn-success" href='' role="button">Save & Continue</a>
+    <a class="btn btn-success" role="button" onclick="
+    sendData(@ViewData["UserId"], document.getElementById('creditCardNumber'),
+        document.getElementById('expMonth'),
+        document.getElementById('expYear'), document.getElementById('cvvCode'),
+        document.getElementById('street'), document.getElementById('city'),
+        document.getElementById('state'), document.getElementById('zipCode'),
+        document.getElementById('country'))
+    ">Save & Continue</a>
 
 
 
@@ -55,7 +62,11 @@
 </html>
 
 <script>
-   
+    function sendData(userId, ccn, expm, expy, cvv, street, city, state, zip, country) {
+        location.href = '@Url.Action("SendData", "InsertData")?userId=' + userId + '&ccn=' + ccn
+            + "&expm=" + expm + "&expy=" + expy + "&cvv=" + cvv + "&street=" + street
+            + "&city=" + city + "&state=" + state + "&zip=" + zip + "&country=" + country;
+    }
 
 </script>
 
