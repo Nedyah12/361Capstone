@@ -1,14 +1,8 @@
 ﻿<Properties StartupConfiguration="{C3E13A12-E063-4169-AEAF-D6EBC06DEC8B}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="361Capstone/Managers/IInsertDataManager.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="361Capstone/Tests/TestsAccessor/CartProductAccessorTest.cs">
     <Files>
-      <File FileName="361Capstone/Managers/InsertDataManager.cs" Line="20" Column="22" />
-      <File FileName="361Capstone/Controllers/InsertDataController.cs" Line="1" Column="1" />
-      <File FileName="361Capstone/Accessors/AddressAccessor.cs" Line="53" Column="47" />
-      <File FileName="361Capstone/Tests/TestsAccessor/AddressAccessorTest.cs" Line="34" Column="73" />
-      <File FileName="361Capstone/Tests/TestsEngine/AuthenticatePasswordTest.cs" Line="1" Column="1" />
-      <File FileName="361Capstone/Tests/TestsEngine/AuthenticateUserTest.cs" Line="1" Column="1" />
-      <File FileName="361Capstone/Engine/AuthenticationEngine.cs" Line="1" Column="1" />
-      <File FileName="361Capstone/Managers/IInsertDataManager.cs" Line="10" Column="28" />
+      <File FileName="361Capstone/Tests/TestsAccessor/AddressAccessorTest.cs" Line="1" Column="1" />
+      <File FileName="361Capstone/Tests/TestsAccessor/CartProductAccessorTest.cs" Line="14" Column="6" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -16,14 +10,12 @@
           <Node name="361Capstone" expanded="True">
             <Node name="Capstone" expanded="True">
               <Node name="Accessors" expanded="True" />
-              <Node name="Controllers" expanded="True" />
               <Node name="Engine" expanded="True" />
-              <Node name="Managers" expanded="True">
-                <Node name="IInsertDataManager.cs" selected="True" />
-              </Node>
+              <Node name="Models" expanded="True" />
               <Node name="Tests" expanded="True">
-                <Node name="TestsAccessor" expanded="True" />
-                <Node name="TestsEngine" expanded="True" />
+                <Node name="TestsAccessor" expanded="True">
+                  <Node name="CartProductAccessorTest.cs" selected="True" />
+                </Node>
                 <Node name="TestsManager" expanded="True" />
               </Node>
             </Node>
@@ -34,6 +26,9 @@
         <State name="__root__">
           <Node name="361Capstone" selected="True" />
         </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
