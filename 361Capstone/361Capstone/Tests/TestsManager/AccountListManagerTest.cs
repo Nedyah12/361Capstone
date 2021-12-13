@@ -12,12 +12,12 @@ namespace _361Capstone.Tests.UnitTesting.TestsManager
     [TestClass]
     public class AccountListManagerTest
     {
-        //[Test]
+        [TestMethod]
         public void getUser_Pass()
         {
             AccountListManager accountListManager = new AccountListManager();
 
-            //User user = accountListManager.GetUser(128);
+            User user = accountListManager.GetUser(128);
 
             /*if (user.GetUserId() != 128)
             {
