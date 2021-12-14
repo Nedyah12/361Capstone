@@ -11,6 +11,8 @@ namespace _361Capstone.Controllers
             return View();
         }
 
+        // The create account button calls this script that creates a new
+        // user in the database with the given input.
         public ActionResult AuthenticateInput(string username, string password)
         {
             AuthenticationEngine engine = new AuthenticationEngine();

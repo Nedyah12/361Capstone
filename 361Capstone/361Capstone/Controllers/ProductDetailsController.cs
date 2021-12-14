@@ -10,6 +10,8 @@ namespace _361Capstone.Controllers
     {
         ProductsManager manager = new ProductsManager();
 
+        // Returns default index page for the product details page
+        // that shows an end user the specific details about a product.
         public IActionResult Index(int productId, int userId, int addedItem) {
             Product product = manager.GetProduct(productId);
 
@@ -36,6 +38,8 @@ namespace _361Capstone.Controllers
             return View();
         }
 
+        // The add to cart button runs this script that adds the product
+        // being viewed to the user's cart.
         public IActionResult AddItemToCart(int userId, int productId, int count) {
             CartProductAccessor accessor = new CartProductAccessor();
             int addedItem = 0;

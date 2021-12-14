@@ -7,6 +7,8 @@ namespace _361Capstone.Accessors {
         private MySqlConnection conn;
         private readonly DatabaseConnection dbConnection = new DatabaseConnection();
 
+        // Inserts a product to the database.
+        // Returns the ID of the added item or returns 0 if there is an error.
         public int InsertProduct(int categoryId, string name, 
                           string description, string manufInfo, 
                           string dimensions, double weight, 
@@ -54,6 +56,8 @@ namespace _361Capstone.Accessors {
             return productId;
         }
 
+        // Returns all the info of a product given a productId.
+        // Returns a list of strings.
         public List<string> GetProductInfo(int productId) {
             if (productId < 1) {
                 return null;
@@ -91,6 +95,7 @@ namespace _361Capstone.Accessors {
             return productInfo;
         }
 
+        // Returns the ID of a product given the name of the product (string).
         public int GetIdFromName(string name) {
             if (name == null || name == "") {
                 return -1;
@@ -119,6 +124,9 @@ namespace _361Capstone.Accessors {
             return productId;
         }
 
+        // Increments the stock count of an item by a given number
+        // of a product that corresponds to the given productId.
+        // Returns the updated count of the product if successful.
         public int IncrementStockCount(int productId, int addNumber) {
             if(addNumber < 1) {
                 return -1;
@@ -150,6 +158,9 @@ namespace _361Capstone.Accessors {
             return updatedCount;
         }
 
+        // Decrements the stock count of an item by a given number
+        // of a product that corresponds to the given productId.
+        // Returns the updated count of the product if successful.
         public int DecrementStockCount(int productId, int removeNumber) {
             if (removeNumber < 1) {
                 return -1;
@@ -189,6 +200,8 @@ namespace _361Capstone.Accessors {
             return updatedCount;
         }
 
+        // Attaches a sale to a product given both a productID and
+        // a saleId.
         public void AttachSale(int productId, int saleId) {
             if (saleId < 1) {
                 return;
@@ -214,6 +227,7 @@ namespace _361Capstone.Accessors {
             return;
         }
 
+        // Detaches a sale from a product that corresponds to the given productId.
         public void DetachSale(int productId) {
             using (conn = dbConnection.GetConnection()) {
                 try {
@@ -234,11 +248,11 @@ namespace _361Capstone.Accessors {
             return;
         }
 
+        // Returns a list of a list of strings that holds all information
+        // about all product information.
         public List<List<String>> GetAllProductInfo() {
             List<List<String>> productInfoStrings = new List<List<String>>();
             
-           // List<string> productInfo = new List<string>();
-
             using (conn = dbConnection.GetConnection()) {
                 try {
                     conn.Open();

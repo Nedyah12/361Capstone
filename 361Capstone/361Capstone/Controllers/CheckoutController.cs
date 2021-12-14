@@ -11,6 +11,9 @@ namespace _361Capstone.Controllers
         private UserCartManager userCartManager { get; set; } = new UserCartManager();
         private CheckoutManager checkoutManager = new CheckoutManager();
         private SessionManager SessionMgr { get; set; } = new SessionManager();
+
+        // Returns the checkout page to the client, where users can see what products
+        // are in their cart and how much they need to spend to compelte the transaction.
         public IActionResult Index(int userId) {
             //Validates the session to ensure lists can only be edited by the user they belong to.
             string key = HttpContext.Session.GetString("_Key");
@@ -59,6 +62,9 @@ namespace _361Capstone.Controllers
             return View();
         }
 
+        // When the complete transaction button is clicked, this script is run
+        // that completes the transaction and tells the database to decrement
+        // the necessary product stock counts.
         public IActionResult CompleteTransaction(int userId) {
             checkoutManager.CompleteTransaction(userId);
             return RedirectToAction("Index", "UserCart", new { userId, removedItem = 0, transactionStatus = 1 });

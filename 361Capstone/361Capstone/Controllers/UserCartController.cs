@@ -12,6 +12,7 @@ namespace _361Capstone.Controllers
         private UserCartManager Manager { get; set; } = new UserCartManager();
         private SessionManager SessionMgr { get; set; } = new SessionManager();
 
+        // Returns the view with information about a specific user's cart.
         public IActionResult Index(int userId, int removedItem, int transactionStatus)
         {
             string key = HttpContext.Session.GetString("_Key");
@@ -30,7 +31,8 @@ namespace _361Capstone.Controllers
             return View();
         }
 
-        //Retrieves values from an HTML form to add a new list to the database.
+        // The 'Remove' button runs this scipt that removes an item
+        // from a user's cart.
         public IActionResult RemoveItemFromCart(int userId, int productId) {
             CartProductAccessor accessor = new CartProductAccessor();
             int removedItem = 0;

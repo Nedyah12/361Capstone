@@ -7,6 +7,7 @@ namespace _361Capstone.Accessors {
         private MySqlConnection conn;
         private readonly DatabaseConnection dbConnection = new DatabaseConnection();
 
+        // Inserts a product with a given quantity into the cart of a user.
         public bool InsertCartProduct(int cartId, int productId, int quantity) {
             if(cartId < 1 || productId < 1 || quantity < 1) {
                 return false;
@@ -33,6 +34,7 @@ namespace _361Capstone.Accessors {
             return true;
         }
 
+        // Removes a given product from a given user's cart.
         public bool RemoveCartProduct(int cartId, int productId) {
             if (cartId < 1 || productId < 1) {
                 return false;
@@ -58,6 +60,7 @@ namespace _361Capstone.Accessors {
             return true;
         }
 
+        // Changes the quantity of a product that already exists in a user's cart.
         public void ChangeCartProductQuantity(int cartId, int productId, int newQuantity) {
             if (cartId < 1 || productId < 1 || newQuantity < 1) {
                 return;

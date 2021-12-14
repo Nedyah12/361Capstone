@@ -8,6 +8,8 @@ namespace _361Capstone.Accessors {
         private MySqlConnection conn;
         private readonly DatabaseConnection dbConnection = new DatabaseConnection();
 
+        // Inserts a category to the database.
+        // Returns the ID of the new category.
         public int InsertCategory(string title) {
             if(title == null || title == "") {
                 return -1;
@@ -36,6 +38,9 @@ namespace _361Capstone.Accessors {
             }
             return categoryId;
         }
+
+        // Returns the ID (int) of the category that has the
+        // given title (string).
         public int GetIdFromTitle(string title) {
             if (title == null || title == "") {
                 return -1;
@@ -63,6 +68,7 @@ namespace _361Capstone.Accessors {
             return categoryId;
         }
 
+        // Attaches a sale to a category based on the category and sale ID's.
         public void AttachSale(int categoryId, int saleId) {
             if (saleId < 1) {
                 return;
@@ -88,6 +94,7 @@ namespace _361Capstone.Accessors {
             return;
         }
 
+        // Detaches a sale from a given category based on the categoryId.
         public void DetachSale(int categoryId) {
             using (conn = dbConnection.GetConnection()) {
                 try {
@@ -108,6 +115,8 @@ namespace _361Capstone.Accessors {
             return;
         }
 
+        // Returns a list of a list of strings with all information regarding
+        // all categories in the database.
         public List<List<String>> GetAllCategories() {
             List<List<String>> allCategories = new List<List<String>>();
 
