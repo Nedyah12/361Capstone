@@ -1,30 +1,42 @@
 ﻿<Properties StartupConfiguration="{C3E13A12-E063-4169-AEAF-D6EBC06DEC8B}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Tests/UnitTests/CheckoutManagerTests.cs">
-    <Files>
-      <File FileName="Tests/Tests.csproj" Line="1" Column="1" />
-      <File FileName="Tests/UnitTests/LoginManagerTests.cs" />
-      <File FileName="361Capstone/Engine/CheckoutEngine.cs" />
-      <File FileName="361Capstone/Managers/CheckoutManager.cs" />
-      <File FileName="Tests/UnitTests/CheckoutManagerTests.cs" Line="49" Column="22" />
-    </Files>
+  <MonoDevelop.Ide.Workbench>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="361Capstone" expanded="True">
             <Node name="Capstone" expanded="True">
               <Node name="Engine" expanded="True" />
+              <Node name="Managers" expanded="True" />
+              <Node name="Tests" expanded="True" selected="True" />
             </Node>
             <Node name="Tests" expanded="True">
-              <Node name="UnitTests" expanded="True">
-                <Node name="CheckoutManagerTests.cs" selected="True" />
-              </Node>
+              <Node name="UnitTests" expanded="True" />
             </Node>
           </Node>
         </State>
       </Pad>
       <Pad Id="ClassPad">
         <State name="__root__">
-          <Node name="361Capstone" selected="True" />
+          <Node name="361Capstone" expanded="True" selected="True">
+            <Node name="Capstone" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.UnitTesting.TestPad">
+        <State name="__root__">
+          <Node name="361Capstone" expanded="True">
+            <Node name="Tests" expanded="True">
+              <Node name="Tests.UnitTests" expanded="True">
+                <Node name="CheckoutEngineTest" expanded="True" />
+                <Node name="CheckoutManagerTests" expanded="True" />
+                <Node name="ListEngineTest" expanded="True" />
+                <Node name="ListManagerTest" expanded="True" />
+                <Node name="LoginEngineTests" expanded="True" />
+                <Node name="LoginManagerTests" expanded="True" selected="True" />
+                <Node name="ProductManagerTests" expanded="True" />
+              </Node>
+            </Node>
+          </Node>
         </State>
       </Pad>
     </Pads>

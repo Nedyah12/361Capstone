@@ -14,7 +14,7 @@ namespace Tests.UnitTests
             //act
             int ret = manager.CheckUsername("a");
             //assert
-            Assert.AreNotEqual(-1, ret);
+            Assert.AreEqual(1, ret);
 
         }
 
@@ -24,7 +24,7 @@ namespace Tests.UnitTests
             //act
             int ret = manager.CheckUsername("Isa_Adrover");
             //assert
-            Assert.AreNotEqual(-1, ret);
+            Assert.AreEqual(2, ret);
 
         }
 

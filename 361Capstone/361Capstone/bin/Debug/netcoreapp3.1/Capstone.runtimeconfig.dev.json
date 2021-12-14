@@ -1,8 +1,8 @@
 {
   "runtimeOptions": {
     "additionalProbingPaths": [
-      "C:\\Users\\Isa\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\Isa\\.nuget\\packages"
+      "/Users/jettdurante/.dotnet/store/|arch|/|tfm|",
+      "/Users/jettdurante/.nuget/packages"
     ]
   }
 }
