@@ -236,3 +236,4 @@ C:\Users\Owner\Source\Repos\361Capstone\361Capstone\Tests\obj\Debug\netcoreapp3.
 C:\Users\Owner\Source\Repos\361Capstone\361Capstone\Tests\obj\Debug\netcoreapp3.1\Tests.dll
 C:\Users\Owner\Source\Repos\361Capstone\361Capstone\Tests\obj\Debug\netcoreapp3.1\Tests.pdb
 C:\Users\Owner\Source\Repos\361Capstone\361Capstone\Tests\obj\Debug\netcoreapp3.1\Tests.genruntimeconfig.cache
+C:\Users\Owner\Source\Repos\361Capstone\361Capstone\Tests\obj\Debug\netcoreapp3.1\Tests.csproj.CopyComplete
