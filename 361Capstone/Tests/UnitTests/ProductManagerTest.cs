@@ -1,6 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Tests
+namespace Tests.UnitTests
 {
     [TestClass]
     public class ProductManagerTest

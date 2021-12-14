@@ -1,22 +1,28 @@
 ﻿<Properties StartupConfiguration="{C3E13A12-E063-4169-AEAF-D6EBC06DEC8B}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Tests/UnitTests/ProductManagerTest.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Tests/UnitTests/LoginManagerTests.cs">
     <Files>
       <File FileName="361Capstone/Tests/TestsAccessor/CartProductAccessorTest.cs" Line="14" Column="6" />
-      <File FileName="Tests/Tests.csproj" Line="12" Column="48" />
-      <File FileName="Tests/UnitTests/ProductManagerTest.cs" Line="1" Column="1" />
+      <File FileName="Tests/Tests.csproj" />
+      <File FileName="Tests/UnitTests/ProductManagerTest.cs" />
+      <File FileName="361Capstone/Managers/LoginManager.cs" />
+      <File FileName="Tests/UnitTests/LoginManagerTests.cs" Line="7" Column="6" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="361Capstone" expanded="True">
             <Node name="Capstone" expanded="True">
+              <Node name="Accessors" expanded="True" />
+              <Node name="Engine" expanded="True" />
+              <Node name="Managers" expanded="True" />
               <Node name="Tests" expanded="True">
+                <Node name="TestsEngine" expanded="True" />
                 <Node name="TestsManager" expanded="True" />
               </Node>
             </Node>
             <Node name="Tests" expanded="True">
               <Node name="UnitTests" expanded="True">
-                <Node name="ProductManagerTest.cs" selected="True" />
+                <Node name="LoginManagerTests.cs" selected="True" />
               </Node>
             </Node>
           </Node>
@@ -28,17 +34,13 @@
         </State>
       </Pad>
       <Pad Id="MonoDevelop.Debugger.WatchPad">
-        <State />
+        <State>
+          <Value>ret</Value>
+        </State>
       </Pad>
       <Pad Id="MonoDevelop.UnitTesting.TestPad">
         <State name="__root__">
-          <Node name="361Capstone" expanded="True">
-            <Node name="Tests" expanded="True">
-              <Node name="Tests" expanded="True" selected="True">
-                <Node name="ProductManagerTest" expanded="True" />
-              </Node>
-            </Node>
-          </Node>
+          <Node name="361Capstone" expanded="True" selected="True" />
         </State>
       </Pad>
     </Pads>
@@ -47,9 +49,7 @@
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint enabled="false" file="/Users/jettdurante/Desktop/361Capstone/361Capstone/361Capstone/Accessors/DatabaseConnection.cs" relfile="361Capstone/Accessors/DatabaseConnection.cs" line="7" column="1" />
-    </BreakpointStore>
+    <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
 </Properties>

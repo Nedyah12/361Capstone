@@ -17,6 +17,7 @@ namespace _361Capstone.Managers
                 result = engine.CheckUsername(username);
             } catch (ArgumentNullException) {
                 result = -1;
+                return result;
             }
             return result;
         }
