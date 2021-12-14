@@ -9,6 +9,7 @@ namespace _361Capstone.Managers
     {
         ListEngine Engine { get; set; } = new ListEngine();
 
+        // Changes the quantity of a product in a user's cart.
         public void ChangeCartProductQuantity(int cartId, int productId, int newQuantity)
         {
             try
@@ -24,11 +25,8 @@ namespace _361Capstone.Managers
             return;
         }
 
-        public Cart GetCart(int cartId)
-        {
-            return Engine.GetCart(cartId);
-        }
-
+        // Returns a list of strings of product information
+        // for a given product.
         public List<string> GetProductInfo(int productId)
         {
             return Engine.GetProductInfo(productId);
@@ -39,6 +37,7 @@ namespace _361Capstone.Managers
             return;
         }
 
+        // Removes a specified product from a user's cart.
         public void RemoveCartProduct(int cartId, int productId)
         {
             try

@@ -8,7 +8,9 @@ namespace _361Capstone.Managers
     public class UserCartManager : IUserCartManager
     {
         UserCartEngine Engine = new UserCartEngine();
-        ProductsManager productsManager = new ProductsManager();
+
+        // Creates a list of product objects and returns it to
+        // the caller.
         public List<Product> GetUserCartProducts(int userId)
         {
             List<Product> productList = new List<Product>();
