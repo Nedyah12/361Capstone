@@ -11,6 +11,7 @@ namespace _361Capstone.Controllers
     {
         readonly ProductsManager manager = new ProductsManager();
 
+        // Default index page for the full list of products in the database.
         public IActionResult Index(int userId) {
             //Retrieves the list from the database.
             List<Product> list = manager.GetAllStoreProducts();
@@ -32,6 +33,7 @@ namespace _361Capstone.Controllers
             return View();
         }
 
+        // This script sends and end user to the product details page.
         public IActionResult GoToProductPage(int productId, int userId) {
             return RedirectToAction("Index", "ProductDetails", new { productId, userId });
         }
