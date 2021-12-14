@@ -7,6 +7,7 @@ namespace _361Capstone.Accessors {
         private MySqlConnection conn;
         private readonly DatabaseConnection dbConnection = new DatabaseConnection();
 
+        // Inserts a cart to the database for a given user.
         public void InsertCart(int userId) {
             if (userId < 1) {
                 return;

@@ -8,6 +8,7 @@ namespace _361Capstone.Accessors {
         private MySqlConnection conn;
         private readonly DatabaseConnection dbConnection = new DatabaseConnection();
 
+        // Inset a user into the database. Returns the ID of the new user.
         public int InsertUser(string username, string password) {
             if (username == null || username == "" || password == null || password == "") {
                 return -1;
@@ -45,7 +46,8 @@ namespace _361Capstone.Accessors {
             return userId;
 
         }
-
+        
+        // Changes the password of a user given their id, to the new given password.
         public void ChangePassword(int userId, string newPassword) {
             if (userId < 1 || newPassword == null || newPassword == "") {
                 return;
@@ -71,6 +73,8 @@ namespace _361Capstone.Accessors {
             return;
         }
 
+        // Checks inputted username and password against the username and password
+        // in the database. Gives the rightaway to the user to login.
         public bool ValidateUserInfo(string username, string password) {
             if (username == null || username == "" || password == null || password == "") {
                 return false;
@@ -101,8 +105,8 @@ namespace _361Capstone.Accessors {
             return false;
         }
 
-        // Checks whether the new email is available or not.
-        // Returns true if email is not in use. Otherwise, returns false.
+        // Retrieves the ID of a user in the database given their username.
+        // Returns 0 if no user is found.
         public int GetUserIdFromUsername(string username) {
             if (username == null || username == "") {
                 return -1;
@@ -131,7 +135,7 @@ namespace _361Capstone.Accessors {
             return userId;
         }
 
-
+        // Returns a username (string) based on a given userId.
         public string GetUsername(int userId) {
             if (userId < 1) {
                 return null;
@@ -166,6 +170,7 @@ namespace _361Capstone.Accessors {
             return userUsername;
         }
 
+        // Retrieves a password (still encrypted with SHA256) and returns a string.
         public string GetPassword(int userId) {
             if (userId < 1) {
                 return null;
@@ -200,6 +205,8 @@ namespace _361Capstone.Accessors {
             return userPassword;
         }
 
+        // Returns an integer list that holds both the productId and
+        // the amount of each product.
         public List<int> GetAllCartItems(int userId) {
             if(userId < 1) {
                 return null;

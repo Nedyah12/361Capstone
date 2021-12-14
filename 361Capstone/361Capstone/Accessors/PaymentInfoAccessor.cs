@@ -8,6 +8,7 @@ namespace _361Capstone.Accessors {
         private MySqlConnection conn;
         private readonly DatabaseConnection dbConnection = new DatabaseConnection();
 
+        // Inserts payment info to the database for a given user.
         public void InsertPaymentInfo(int userId, string creditCardNumber, int expMonth, int expYear, int cvvCode) {
             if (userId < 1 || creditCardNumber == null || cvvCode <= 0) {
                 return;
@@ -38,6 +39,8 @@ namespace _361Capstone.Accessors {
             }
         }
 
+        // Returns a list of strings that holds the payment information for
+        // a given user tied to the userId.
         public List<string> GetPaymentInfo(int userId) {
             if (userId < 1) {
                 return null;

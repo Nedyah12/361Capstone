@@ -9,6 +9,7 @@ namespace _361Capstone.Accessors {
         private MySqlConnection conn;
         private readonly DatabaseConnection dbConnection = new DatabaseConnection();
 
+        // Inserts an address for a user based on the userId.
         public void InsertAddress(int userId, string street, string city, string state, int zipCode, string country) {
             if (userId < 1) {
                 return;
@@ -43,6 +44,8 @@ namespace _361Capstone.Accessors {
             }
         }
 
+        // Returns a list of strings that holds the address information/
+        // for a given user.
         public List<string> GetAddressInfo(int userId) {
             if (userId < 1) {
                 return null;

@@ -7,6 +7,8 @@ namespace _361Capstone.Accessors {
     class SaleAccessor : ISaleAccessor {
         private MySqlConnection conn;
         private readonly DatabaseConnection dbConnection = new DatabaseConnection();
+
+        // Inserts a sale into the database.
         public int InsertSale(string title, int percentage, DateTime startDate, DateTime endDate) {
             if(percentage <= 0 || startDate == null || endDate == null) {
                 return -1;
@@ -38,6 +40,9 @@ namespace _361Capstone.Accessors {
             }
             return saleId;
         }
+
+        // Returns a list of strings that contains the info of a sale 
+        // in the datatbase.
         public List<string> GetSaleInfo(int saleId) {
             if (saleId < 1) {
                 return null;
@@ -74,6 +79,8 @@ namespace _361Capstone.Accessors {
             }
             return saleInfo;
         }
+
+        // Returns the saleId based on a given title of a sale.
         public int GetIdFromTitle(string title) {
             if (title == null || title == "") {
                 return -1;
