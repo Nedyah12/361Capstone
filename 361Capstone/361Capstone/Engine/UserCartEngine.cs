@@ -9,6 +9,9 @@ namespace _361Capstone.Engine
         CartProductAccessor Accessor = new CartProductAccessor();
         UserAccessor userAccessor = new UserAccessor();
         ProductAccessor productAccessor = new ProductAccessor();
+
+        // Returns a list of a list of strings of the information
+        // about each product in a user's cart.
         public List<List<String>> GetUserCartProductInfo(int userId) {
             List<List<String>> allProductInfo = new List<List<String>>();
             List<int> productIdQuantity = new List<int>();

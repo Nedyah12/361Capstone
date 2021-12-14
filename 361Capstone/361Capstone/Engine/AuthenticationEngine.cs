@@ -4,6 +4,8 @@ namespace _361Capstone.Engine
 {
     public class AuthenticationEngine : IAuthenticationEngine
     {
+        // Checks the integrity of the password (string) that the 
+        // user inputted.
         public bool AuthenticatePassword(string password)
         {
             if (password == null)
@@ -14,9 +16,12 @@ namespace _361Capstone.Engine
             {
                 throw new Exception();
             }
-            return password.Length >= 1;
+            // Password requirement: 8 characters.
+            return password.Length >= 8;
         }
 
+        // Verifies the integrity of the username (string)
+        // that the user inputted.
         public bool AuthenticateUser(string username)
         {
             if (username == null)

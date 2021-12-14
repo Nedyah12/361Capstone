@@ -6,6 +6,9 @@ using _361Capstone.Accessors;
 namespace _361Capstone.Managers
 {
     public class ProductsManager : IProductsManager {
+
+        // Returns a list of Product objects of all products in
+        // the store to the caller.
         public List<Product> GetAllStoreProducts() {
             ProductAccessor productAccessor = new ProductAccessor();
 
@@ -24,6 +27,9 @@ namespace _361Capstone.Managers
             return productList;
         }
 
+       
+        // Returns a list of all categories in the database in
+        // category objects to make data-passing easier.
         public List<Category> GetAllCategories() {
             CategoryAccessor categoryAccessor = new CategoryAccessor();
             List<List<String>> allCategories = new List<List<String>>();
@@ -39,6 +45,8 @@ namespace _361Capstone.Managers
             return categories;
         }
 
+        // Returns a product object that is created from information
+        // retrieved from the database.
         public Product GetProduct(int productId) {
             ProductAccessor productAccessor = new ProductAccessor();
             List<String> info = new List<String>();

@@ -9,6 +9,7 @@ namespace _361Capstone.Managers
     {
         CheckoutEngine Engine = new CheckoutEngine();
 
+        // Returns an Address object for a given user.
         public Address GetAddress(int userId) {
             List<String> addressInfo = Engine.GetAddressInfo(userId);
             Address address = new Address(0, 0,"", "","","","");
@@ -24,6 +25,7 @@ namespace _361Capstone.Managers
             return address;
         }
 
+        // Returns a PaymentInfo object for a given user.
         public PaymentInfo GetPaymentInfo(int userId) {
             List<String> paymentInfo = Engine.GetPaymentInfo(userId);
             PaymentInfo payment = new PaymentInfo(0, 0, "", 0, 0, 0);
@@ -38,8 +40,11 @@ namespace _361Capstone.Managers
                 return payment;
             }
             return payment;
-        }  
-        
+        }
+
+        // Completes the transaction, or more specifically, decrements the
+        // stock count of necessary products and removes each product from a
+        // user's cart.
         public void CompleteTransaction(int userId) {
             UserCartManager userCartManager = new UserCartManager();
             List<Product> products = userCartManager.GetUserCartProducts(userId);

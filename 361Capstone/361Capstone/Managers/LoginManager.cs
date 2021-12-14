@@ -10,6 +10,7 @@ namespace _361Capstone.Managers
             engine = new LoginEngine();
         }
 
+        // Checks if the username is already in the database.
         public int CheckUsername(string username) {
             int result;
             try {
@@ -20,6 +21,7 @@ namespace _361Capstone.Managers
             return result;
         }
 
+        // Returns the password of a user in string form.
         public string RetrievePassword(int userId) {
             return engine.RetrievePassword(userId);
         }
