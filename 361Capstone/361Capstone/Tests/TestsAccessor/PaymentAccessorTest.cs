@@ -15,24 +15,21 @@ namespace _361Capstone.Tests.TestsAccessor
         [Test]
         public void GetPaymentInfo_Pass()
         {
-            //PaymentAccessor accessor = new PaymentAccessor();
+            PaymentInfoAccessor accessor = new PaymentInfoAccessor();
+            List<string> payment = accessor.GetPaymentInfo(3);
 
-            //List<String> cardInfo = accessor.GetPaymentInfo(2);
+            bool res = false;
 
-            //List<String> expected = { "2", "1234112341", "1", "2", "metal", "321" };
-            //for (int i = 0; i < 6; i++)
-            //{
-            //    if (!productInfo[i].Equals(expected[i]))
-            //    {
-            //        Microsoft.VisualStudio.TestTools.UnitTesting.Assert(false);
-            //        return;
-            //    }
-            //}
-            //Microsoft.VisualStudio.TestTools.UnitTesting.Assert(true);
-
-            //return;
-
-            //Microsoft.VisualStudio.TestTools.UnitTesting.Assert(true);
+            if (payment[0].Equals("3")
+                && payment[1].Equals("3")
+                && payment[2].Equals("1111222233334444")
+                && payment[3].Equals("1")
+                && payment[4].Equals("25")
+                && payment[5].Equals("123"))
+            {
+                res = true;
+            }
+            Microsoft.VisualStudio.TestTools.UnitTesting.Assert.IsTrue(res);
             return;
         }
     }

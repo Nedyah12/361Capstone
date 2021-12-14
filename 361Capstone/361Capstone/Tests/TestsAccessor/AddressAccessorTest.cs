@@ -15,23 +15,22 @@ namespace _361Capstone.Tests.TestsAccessor
         [Test]
         public void GetAddressInfoTest_Pass()
         {
-            //AddressAccessor accessor = new AddressAccessor();
+            AddressAccessor accessor = new AddressAccessor();
 
-            //List <String> addy = accessor.GetAddressInfo(2);
+            List<string> addy = accessor.GetAddressInfo(3);
 
-            //List <String> expected = { "My Swamp Ct.", "Anytown", "NE", "12345", "AnyCountry" };
-            //    for (int i = 0; i < 5; i++)
-            //{
-            //    if (!addy[i].Equals(expected[i]))
-            //    {
-            //        Microsoft.VisualStudio.TestTools.UnitTesting.Assert(false);
-            //        return;
-            //    } 
-            //}
-            //Microsoft.VisualStudio.TestTools.UnitTesting.Assert(true);
-            //return;
+            bool result = false;
 
-           // Microsoft.VisualStudio.TestTools.UnitTesting.Assert(true);
+            if (addy[1].Equals("3")
+                && addy[2].Equals("123 Ez Street")
+                && addy[3].Equals("Unit")
+                && addy[4].Equals("Test")
+                && addy[5].Equals("12345")
+                && addy[6].Equals("US"))
+            {
+                result = true;
+            }
+            Microsoft.VisualStudio.TestTools.UnitTesting.Assert.IsTrue(result);
             return;
 
         }

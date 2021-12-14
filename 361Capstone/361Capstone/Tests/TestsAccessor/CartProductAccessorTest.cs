@@ -13,49 +13,22 @@ namespace _361Capstone.Tests.TestsAccessor
     public class CartProductAccessorTest
     {
         [Test]
-        public void ChangeQuantity_Pass()
+        public void RemoveFromIllegal_Fail()
         {
-            //CartProductAccessor accessor = new CartProductAccessor();
-            //CartProduct item = accessor.GetCart(2);
+            CartProductAccessor accessor = new CartProductAccessor();
 
-            //accessor.ChangeCartProductQuantity(2, 1, 11);
-            //n = accessor.GetQuantity(2, 1);
-
-            //if (n == 11)
-            //{
-            //    Microsoft.VisualStudio.TestTools.UnitTesting.Assert(true);
-            //} else
-            //{
-            //    Microsoft.VisualStudio.TestTools.UnitTesting.Assert(false);
-            //}
-
-            //return;
-
-            //Microsoft.VisualStudio.TestTools.UnitTesting.Assert(true);
+            Microsoft.VisualStudio.TestTools.UnitTesting.Assert.IsTrue(accessor.RemoveCartProduct(-1, 1));
+            
             return;
         }
 
         [Test]
-        public void ChangeQuantity_Pass2()
+        public void RemoveIllegalProduct_Fail()
         {
-            //CartProductAccessor accessor = new CartProductAccessor();
-            //CartProduct item = accessor.GetCart(2);
+            CartProductAccessor accessor = new CartProductAccessor();
 
-            //accessor.ChangeCartProductQuantity(2, 1, 2);
-            //n = accessor.GetQuantity(2, 1);
+            Microsoft.VisualStudio.TestTools.UnitTesting.Assert.IsTrue(accessor.RemoveCartProduct(1, -1));
 
-            //if (n == 2)
-            //{
-            //    Microsoft.VisualStudio.TestTools.UnitTesting.Assert(true);
-            //}
-            //else
-            //{
-            //    Microsoft.VisualStudio.TestTools.UnitTesting.Assert(false);
-            //}
-
-            //return;
-
-            //Microsoft.VisualStudio.TestTools.UnitTesting.Assert(true);
             return;
         }
     }
