@@ -3,7 +3,7 @@
 namespace Tests.UnitTests
 {
     [TestClass]
-    public class ProductManagerTest
+    public class ProductManagerTests
     {
         //arrange
         _361Capstone.Managers.ProductsManager productsManager = new _361Capstone.Managers.ProductsManager();
