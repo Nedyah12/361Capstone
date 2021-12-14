@@ -16,10 +16,4 @@
   <ItemGroup>
     <ProjectReference Include="..\361Capstone\Capstone.csproj" />
   </ItemGroup>
-  <ItemGroup>
-    <None Remove="TestsManager\" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="TestsManager\" />
-  </ItemGroup>
 </Project>
