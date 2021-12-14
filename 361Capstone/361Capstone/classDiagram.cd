@@ -1,0 +1,503 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="_361Capstone.Accessors.AddressAccessor" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAAAAAAgAAAgAAAAQAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Accessors\AddressAccessor.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="_361Capstone.Accessors.CartAccessor" BaseTypeListCollapsed="true">
+    <Position X="2.25" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAAEAAAAAAAAAAAAQAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Accessors\CartAccessor.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="_361Capstone.Accessors.CartProductAccessor" BaseTypeListCollapsed="true">
+    <Position X="4" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAABAAAAAAAAAAAAAQABAAAQAAAAAAAAAA=</HashCode>
+      <FileName>Accessors\CartProductAccessor.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="_361Capstone.Accessors.CategoryAccessor" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ICAAEAAAAAAAAAAAAQAEAAAAAAQAAAAAAAAACAAAAAA=</HashCode>
+      <FileName>Accessors\CategoryAccessor.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="_361Capstone.Accessors.DatabaseConnection" BaseTypeListCollapsed="true">
+    <Position X="2.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAA=</HashCode>
+      <FileName>Accessors\DatabaseConnection.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="_361Capstone.Accessors.PaymentInfoAccessor" BaseTypeListCollapsed="true">
+    <Position X="4" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAgAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAgAA=</HashCode>
+      <FileName>Accessors\PaymentInfoAccessor.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="_361Capstone.Accessors.ProductAccessor" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAACABACAAAAAQAEAAAAAAQAAAAEAAAAQAAAAEA=</HashCode>
+      <FileName>Accessors\ProductAccessor.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="_361Capstone.Accessors.SaleAccessor" BaseTypeListCollapsed="true">
+    <Position X="2.25" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAEAAAIAAAAIAAAAAAAAAAAAQAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Accessors\SaleAccessor.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="_361Capstone.Accessors.UserAccessor" BaseTypeListCollapsed="true">
+    <Position X="4" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IQAAgAQAAAAAgAgAABAAAAEAAAQAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Accessors\UserAccessor.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="_361Capstone.Controllers.CheckoutController">
+    <Position X="30" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgIAAAAAAAACAAAAAAAAAAAQAAAAEAAAAAAAA=</HashCode>
+      <FileName>Controllers\CheckoutController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="_361Capstone.Controllers.InsertDataController">
+    <Position X="31.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAIAAAAAAAAAAAAAEAAAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>Controllers\InsertDataController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="_361Capstone.Controllers.LoginController">
+    <Position X="33.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAAAAAAAAAAAAAIAAgAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>Controllers\LoginController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="_361Capstone.Controllers.ProductDetailsController">
+    <Position X="30" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAEgAAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>Controllers\ProductDetailsController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="_361Capstone.Controllers.ProductsController">
+    <Position X="31.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAACAAAAAAAAEAAAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>Controllers\ProductsController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="_361Capstone.Controllers.RegistrationController">
+    <Position X="33.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>Controllers\RegistrationController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="_361Capstone.Controllers.UserCartController">
+    <Position X="30" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAgAAAAAAAAAAAAAAAAAAAABAAAAAEAAAAAAAA=</HashCode>
+      <FileName>Controllers\UserCartController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="_361Capstone.Engine.AuthenticationEngine" BaseTypeListCollapsed="true">
+    <Position X="7.5" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA=</HashCode>
+      <FileName>Engine\AuthenticationEngine.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="_361Capstone.Engine.CheckoutEngine" BaseTypeListCollapsed="true">
+    <Position X="9.25" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAAAAAIAQAAAgAAAAAAAAAAAQAAQAAAgAA=</HashCode>
+      <FileName>Engine\CheckoutEngine.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="_361Capstone.Engine.ListEngine" BaseTypeListCollapsed="true">
+    <Position X="11" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAACAAAABAAAAAAAAECAAAAABABAQAAAAAAAAAA=</HashCode>
+      <FileName>Engine\ListEngine.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="_361Capstone.Engine.LoginEngine" BaseTypeListCollapsed="true">
+    <Position X="7.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAgAAAAAAgAAAAAAAAACAAAA=</HashCode>
+      <FileName>Engine\LoginEngine.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="_361Capstone.Engine.RegisterEngine" BaseTypeListCollapsed="true">
+    <Position X="9.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAACAAAAAAAAgAAAAAAACAAA=</HashCode>
+      <FileName>Engine\RegisterEngine.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="_361Capstone.Engine.UserCartEngine" BaseTypeListCollapsed="true">
+    <Position X="11" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAACAAAAAABAAAAAAYAAAAAA=</HashCode>
+      <FileName>Engine\UserCartEngine.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="_361Capstone.Managers.CheckoutManager" BaseTypeListCollapsed="true">
+    <Position X="14" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAAAAAAAAAAAAAAAAAAAAACBAAAAAAAgAA=</HashCode>
+      <FileName>Managers\CheckoutManager.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="_361Capstone.Managers.InsertDataManager" BaseTypeListCollapsed="true">
+    <Position X="15.75" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAIAAAAACAAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>Managers\InsertDataManager.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="_361Capstone.Managers.ListManager" BaseTypeListCollapsed="true">
+    <Position X="17.5" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAAABAAAAAAAAEAAAAAABAAARAAAAAAAAAA=</HashCode>
+      <FileName>Managers\ListManager.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="_361Capstone.Managers.LoginManager" BaseTypeListCollapsed="true">
+    <Position X="14" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAASAAAA=</HashCode>
+      <FileName>Managers\LoginManager.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="_361Capstone.Managers.ProductsManager" BaseTypeListCollapsed="true">
+    <Position X="15.75" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAA=</HashCode>
+      <FileName>Managers\ProductsManager.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="_361Capstone.Managers.RegisterManager" BaseTypeListCollapsed="true">
+    <Position X="17.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAABQAAAAAAAAACAAA=</HashCode>
+      <FileName>Managers\RegisterManager.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="_361Capstone.Managers.SessionManager" BaseTypeListCollapsed="true">
+    <Position X="14" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAA=</HashCode>
+      <FileName>Managers\SessionManager.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="_361Capstone.Managers.UserCartManager" BaseTypeListCollapsed="true">
+    <Position X="15.75" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAJAAAAAAAAAA=</HashCode>
+      <FileName>Managers\UserCartManager.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="_361Capstone.Models.Address" BaseTypeListCollapsed="true">
+    <Position X="21" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QACAAEAAAAAIAAAIAAAAABgAQAKAAAABAAIABAAAAAA=</HashCode>
+      <FileName>Models\Address.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="_361Capstone.Models.Cart" BaseTypeListCollapsed="true">
+    <Position X="22.75" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAACEAAAAgAAACAAABAAAAAAAAACAA=</HashCode>
+      <FileName>Models\Cart.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="_361Capstone.Models.CartProduct" BaseTypeListCollapsed="true">
+    <Position X="24.5" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAACAAAACEAAQAAAAAAAAAAAAAAAiAAACAA=</HashCode>
+      <FileName>Models\CartProduct.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="_361Capstone.Models.Category" BaseTypeListCollapsed="true">
+    <Position X="21" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAAAkAAEAAAAAAAAAAAAAAAAAAAAAAgEAA=</HashCode>
+      <FileName>Models\Category.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="_361Capstone.Models.PaymentInfo" BaseTypeListCollapsed="true">
+    <Position X="24.5" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAABAgAAABCAAAAAiAAACAAAgAACACCAAAAAA=</HashCode>
+      <FileName>Models\PaymentInfo.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="_361Capstone.Models.Product" BaseTypeListCollapsed="true">
+    <Position X="26.25" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAARAACQIgEgAAMAAAAAYAACAAAAEIEQAAAAAgFIE=</HashCode>
+      <FileName>Models\Product.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="_361Capstone.Models.User" BaseTypeListCollapsed="true">
+    <Position X="22.75" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ASAAAEAAAAAAAAgAAQAAAEgAAACAAAACAAAAAAAAgAA=</HashCode>
+      <FileName>Models\User.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Interface Name="_361Capstone.Accessors.IAddressAccessor" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAgAAAgAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Accessors\IAddressAccessor.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="_361Capstone.Accessors.ICartAccessor" Collapsed="true">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Accessors\ICartAccessor.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="_361Capstone.Accessors.ICartProductAccessor" Collapsed="true">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAAAAAAAAAAAAAAABAAAQAAAAAAAAAA=</HashCode>
+      <FileName>Accessors\ICartProductAccessor.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="_361Capstone.Accessors.ICategoryAccessor" Collapsed="true">
+    <Position X="0.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAEAAAAAAAAAAAAQAEAAAAAAAAAAAAAAAACAAAAAA=</HashCode>
+      <FileName>Accessors\ICategoryAccessor.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="_361Capstone.Accessors.IDatabaseConnection" Collapsed="true">
+    <Position X="2.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAA=</HashCode>
+      <FileName>Accessors\IDatabaseConnection.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="_361Capstone.Accessors.IPaymentInfoAccessor" Collapsed="true">
+    <Position X="4" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAA=</HashCode>
+      <FileName>Accessors\IPaymentInfoAccessor.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="_361Capstone.Accessors.IProductAccessor" Collapsed="true">
+    <Position X="0.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACABACAAAAAQAEAAAAAAAAAAAEAAAAQAAAAEA=</HashCode>
+      <FileName>Accessors\IProductAccessor.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="_361Capstone.Accessors.ISaleAccessor" Collapsed="true">
+    <Position X="2.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAIAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Accessors\ISaleAccessor.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="_361Capstone.Accessors.IUserAccessor" Collapsed="true">
+    <Position X="4" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAgAQAAAAAgAgAABAAAAEAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Accessors\IUserAccessor.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="_361Capstone.Engine.IAuthenticationEngine" Collapsed="true">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA=</HashCode>
+      <FileName>Engine\IAuthenticationEngine.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="_361Capstone.Engine.ICheckoutEngine" Collapsed="true">
+    <Position X="9.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAgAA=</HashCode>
+      <FileName>Engine\ICheckoutEngine.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="_361Capstone.Engine.IListEngine" Collapsed="true">
+    <Position X="11" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAAABAAAAAAAAAAAAAAABAAAQAAAAAAAAAA=</HashCode>
+      <FileName>Engine\IListEngine.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="_361Capstone.Engine.ILoginEngine" Collapsed="true">
+    <Position X="7.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAACAAAA=</HashCode>
+      <FileName>Engine\ILoginEngine.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="_361Capstone.Engine.IRegisterEngine" Collapsed="true">
+    <Position X="9.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAACAAA=</HashCode>
+      <FileName>Engine\IRegisterEngine.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="_361Capstone.Engine.IUserCartEngine" Collapsed="true">
+    <Position X="11" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>Engine\IUserCartEngine.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="_361Capstone.Managers.ICheckoutManager" Collapsed="true">
+    <Position X="14" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAgAA=</HashCode>
+      <FileName>Managers\ICheckoutManager.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="_361Capstone.Managers.IInsertDataManager" Collapsed="true">
+    <Position X="15.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Managers\IInsertDataManager.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="_361Capstone.Managers.IListManager" Collapsed="true">
+    <Position X="17.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAAABAAAAAAAAAAAAAAABAAAQAAAAAAAAAA=</HashCode>
+      <FileName>Managers\IListManager.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="_361Capstone.Managers.ILoginManager" Collapsed="true">
+    <Position X="14" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAACAAAA=</HashCode>
+      <FileName>Managers\ILoginManager.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="_361Capstone.Managers.IProductsManager" Collapsed="true">
+    <Position X="15.75" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAA=</HashCode>
+      <FileName>Managers\IProductsManager.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="_361Capstone.Managers.IRegisterManager" Collapsed="true">
+    <Position X="17.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAACAAA=</HashCode>
+      <FileName>Managers\IRegisterManager.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="_361Capstone.Managers.ISessionManager" Collapsed="true">
+    <Position X="14" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAA=</HashCode>
+      <FileName>Managers\ISessionManager.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="_361Capstone.Managers.IUserCartManager" Collapsed="true">
+    <Position X="15.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Managers\IUserCartManager.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="_361Capstone.Models.IAddress" Collapsed="true">
+    <Position X="21" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAEAAAAAIAAAIAAAAABAAQACAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\IAddress.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="_361Capstone.Models.ICart" Collapsed="true">
+    <Position X="22.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAACAAAAAAAAACAAABAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\ICart.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="_361Capstone.Models.ICartProduct" Collapsed="true">
+    <Position X="24.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAAACAAAQAAAAAAAAAAAAAAACAAAAAA=</HashCode>
+      <FileName>Models\ICartProduct.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="_361Capstone.Models.ICategory" Collapsed="true">
+    <Position X="21" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAgAAA=</HashCode>
+      <FileName>Models\ICategory.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="_361Capstone.Models.IPaymentInfo" Collapsed="true">
+    <Position X="24.5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAgAAAAAAAAAAAAAACAAAAAACACAAAAAAA=</HashCode>
+      <FileName>Models\IPaymentInfo.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="_361Capstone.Models.IProduct" Collapsed="true">
+    <Position X="26.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAARAACAAAEAAAMAAAAAAAAAAAAAAIAAAAAAAgBIE=</HashCode>
+      <FileName>Models\IProduct.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="_361Capstone.Models.IUser" Collapsed="true">
+    <Position X="22.75" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAAgAAAAAAEAAAACAAAACAAAAAAAAgAA=</HashCode>
+      <FileName>Models\IUser.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
